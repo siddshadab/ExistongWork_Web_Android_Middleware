@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-level-ind-view
+END
+loan-level-ind-view.component.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-level-ind-view/loan-level-ind-view.component.html
+END
+loan-level-ind-view.component.ts
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-level-ind-view/loan-level-ind-view.component.ts
+END
+loan-level-ind-view.component.scss
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-level-ind-view/loan-level-ind-view.component.scss
+END
+loan-level-ind-view.component.spec.ts
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-level-ind-view/loan-level-ind-view.component.spec.ts
+END

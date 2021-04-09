@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/controller/fields
+END
+VillageArrangmentsScreenFieldsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/controller/fields/VillageArrangmentsScreenFieldsController.java
+END
+VillageBasicsScreenFieldsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/controller/fields/VillageBasicsScreenFieldsController.java
+END
+ScreenFieldsController.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/controller/fields/ScreenFieldsController.java
+END
+ScreenFieldsValuesController.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/controller/fields/ScreenFieldsValuesController.java
+END

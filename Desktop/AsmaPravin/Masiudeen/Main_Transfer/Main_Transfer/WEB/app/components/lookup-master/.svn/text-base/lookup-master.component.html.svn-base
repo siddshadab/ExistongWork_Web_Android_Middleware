@@ -1,0 +1,163 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/lookup-master-view">{{ 'HOME.LOOKUP_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+
+                        <div class="category">{{ 'HOME.LOOKUP_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        
+                        <form [formGroup]="lookupMasterForm">
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.LOOKUP_CODE_TYPE' | translate }}</label> 
+                                        <input type="text" formControlName="mcodetype" placeholder="{{ 'HOME.LOOKUP_CODE_TYPE' | translate }}" ><u></u>
+                                        <em *ngIf="lookupMasterForm.controls['mcodetype'].hasError('required') && (lookupMasterForm.controls['mcodetype'].dirty || lookupMasterForm.controls['mcodetype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcodetype'].hasError('pattern') && (lookupMasterForm.controls['mcodetype'].dirty || lookupMasterForm.controls['mcodetype'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcodetype'].hasError('maxlength') && (lookupMasterForm.controls['mcodetype'].dirty || lookupMasterForm.controls['mcodetype'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                           
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DESCRIPTION' | translate }}</label>
+                                        <input type="text" formControlName="mcodetypedesc" placeholder="{{ 'HOME.DESCRIPTION' | translate }}" ><u></u>
+                                        <em *ngIf="lookupMasterForm.controls['mcodetypedesc'].hasError('required') && (lookupMasterForm.controls['mcodetypedesc'].dirty || lookupMasterForm.controls['mcodetypedesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcodetypedesc'].hasError('maxlength') && (lookupMasterForm.controls['mcodetypedesc'].dirty || lookupMasterForm.controls['mcodetypedesc'].touched)">{{ 'VALIDATION.MAX_100' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DATA_TYPE' | translate }}</label>
+                                        <div>
+											<select formControlName="mcodedatatype">
+                                                <option value="Select" [selected]="true">Select [ 1001 ]</option>
+                                                <option *ngFor="let data of dataTypeLookup" value="{{data.mcodedatatype}}" >{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="lookupMasterForm.controls['mcodedatatype'].hasError('required') && (lookupMasterForm.controls['mcodedatatype'].dirty || lookupMasterForm.controls['mcodedatatype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DATA_LENGTH' | translate }}</label>
+                                        <input type="text" formControlName="mcodedatalen" placeholder="{{ 'HOME.DATA_LENGTH' | translate }}"><u></u>
+                                        <em *ngIf="lookupMasterForm.controls['mcodedatalen'].hasError('required') && (lookupMasterForm.controls['mcodedatalen'].dirty || lookupMasterForm.controls['mcodedatalen'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcodedatalen'].hasError('pattern') && (lookupMasterForm.controls['mcodedatalen'].dirty || lookupMasterForm.controls['mcodedatalen'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcodedatalen'].hasError('maxlength') && (lookupMasterForm.controls['mcodedatalen'].dirty || lookupMasterForm.controls['mcodedatalen'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="category">{{ 'HOME.CODE_TYPE_VALUE' | translate }}</div>
+                                    <div class="vspacer20"></div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.CODE' | translate }}</label>
+                                        <input type="text" formControlName="mcode"  placeholder="{{ 'HOME.CODE' | translate }}"><u></u>
+                                        <em *ngIf="lookupMasterForm.controls['mcode'].hasError('required') && (lookupMasterForm.controls['mcode'].dirty || lookupMasterForm.controls['mcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcode'].hasError('pattern') && (lookupMasterForm.controls['mcode'].dirty || lookupMasterForm.controls['mcode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcode'].hasError('maxlength') && (lookupMasterForm.controls['mcode'].dirty || lookupMasterForm.controls['mcode'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                           
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DESCRIPTION' | translate }}</label>
+                                        <input type="text" formControlName="mcodedesc" placeholder="{{ 'HOME.DESCRIPTION' | translate }}"><u></u>
+                                        <em *ngIf="lookupMasterForm.controls['mcodedesc'].hasError('required') && (lookupMasterForm.controls['mcodedesc'].dirty || lookupMasterForm.controls['mcodedesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterForm.controls['mcodedesc'].hasError('maxlength') && (lookupMasterForm.controls['mcodedesc'].dirty || lookupMasterForm.controls['mcodedesc'].touched)">{{ 'VALIDATION.MAX_100' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.FIELDVALUE1' | translate }}</label>
+                                        <div>
+											<select formControlName="mfield1value">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">YES</option>
+                                                <option value="0">NO</option>
+												
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="lookupMasterForm.controls['mfield1value'].hasError('required') && (lookupMasterForm.controls['mfield1value'].dirty || lookupMasterForm.controls['mfield1value'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <button *ngIf="!multipleDelete" class="button" (click)="onSubmit(lookupMasterForm.value)">{{ 'ACTION.ADD' | translate }}</button>
+                                </div>
+                            </div>
+
+                          
+                        </form>
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <div class="datatable-box" *ngIf="lookuplistpreview.length">
+                                     <div class=" table-responsivebox">                              
+                                        <table id="dt-sample" class="table table-hover previewTable">                                        
+                                            <thead>
+                                                <tr>
+                                                    
+                                                    <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                                    <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                                    <th scope="col">{{ 'HOME.FIELDVALUE1' | translate }}</th>
+                                                    <th scope="col">{{ 'HOME.DELETE' | translate }}</th>
+                                                
+                                                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr *ngFor="let list of lookuplistpreview; let i = index" (dblclick)="dataNavigate(list)">
+                                                    
+                                                    <td>{{list.mcode}}</td>
+                                                    <td>{{list.mcodedesc}}</td>                                          
+                                                    <td>{{list.mfield1value}}</td>
+                                                    <td>  <img class="deleterow" title="Delete" (click)="deleteRow(i);" src="../../../assets/images/icon/Delete2x.png" /></td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                           
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="row form-footer">
+                            <div class="col-6">
+                                <div class="text-left">
+                                    <button class="linkbutton" routerLink="/lookup-master-view">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-footer text-right">
+                                    <button class="button" (click)="SubmitFinalForm()">Submit</button>
+                                </div>
+                            </div>
+                        </div><!--.row-->
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+
+

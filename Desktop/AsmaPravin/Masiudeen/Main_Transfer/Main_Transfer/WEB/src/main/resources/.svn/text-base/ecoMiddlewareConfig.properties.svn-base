@@ -1,0 +1,24 @@
+loginschedule = 0
+customerToOmniSchedule = 0
+loanBasicDeatilsToOmniSchedule = 0
+loanDeatilsToOmniSchedule = 0
+dailyLoanCollectionSchedule = 0
+savingAccountCreationSchedule = 0
+dailySavingsCollectionSchedule = 0
+tdAccountCreationSchedule = 0
+centerToOmniSchedule = 0
+groupToOmniSchedule=0
+socialAndEnvToOmniSchedule=0
+tradeAndNeighRefToOmniSchedule=0
+deviationFormToOmniSchedule=0
+cpvBusinessRecordToOmniSchedule=0
+guatantorToOmniSchedule=1
+LOSURI=http://192.168.103.72:8080/LoanOriginationSystem/rest/ws/generateLead
+OMNIUSER = ITL
+OMNIPASS = Infra#123
+ENDPOINT = http://sezcpu102/SAIJA/OmniService.asmx
+
+
+
+
+

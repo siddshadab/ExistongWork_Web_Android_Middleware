@@ -1,0 +1,169 @@
+10
+
+dir
+2709
+http://sezsvn.infraseepz.lan/svn/eco_mfi/trunk/eCOWeb/MFI/src/app/components
+http://sezsvn.infraseepz.lan/svn/eco_mfi
+
+
+
+2020-10-22T07:19:27.778744Z
+2451
+shantanu.khare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+893bc709-e608-8648-8f27-59ce0dd58d87
+
+user-master-view
+dir
+
+system-parameter-ind-view
+dir
+
+lookup-code-types
+dir
+
+user-access-rights-view
+dir
+
+loan-cycle-parameter-primary
+dir
+
+sub-district-master-ind-view
+dir
+
+nav-bar
+dir
+
+branch-master
+dir
+
+user-master-ind-view
+dir
+
+home
+dir
+
+user-access-rights-ind-view
+dir
+
+country-master
+dir
+
+loan-cycle-parameter-primary-view
+dir
+
+system-parameter
+dir
+
+loan-cycle-parameter-primary-ind-view
+dir
+
+loan-level-view
+dir
+
+login
+dir
+
+state-master
+dir
+
+product-master
+dir
+
+lookup-master-view
+dir
+
+loan-level-ind-view
+dir
+
+state-master-view
+dir
+
+product-master-view
+dir
+
+lookup-master-ind-view
+dir
+
+main
+dir
+
+change-password
+dir
+
+district-master-view
+dir
+
+loan-level-master
+dir
+
+loan-approval-limit
+dir
+
+dashboard
+dir
+
+header
+dir
+
+product-master-ind-view
+dir
+
+state-master-ind-view
+dir
+
+district-master-ind-view
+dir
+
+branch-master-view
+dir
+
+loan-approval-limit-view
+dir
+
+lookup-master
+dir
+
+country-master-view
+dir
+
+sub-district-master
+dir
+
+branch-master-ind-view
+dir
+
+user-master
+dir
+
+loan-approval-limit-ind-view
+dir
+
+system-parameter-view
+dir
+
+user-access-rights
+dir
+
+country-master-ind-view
+dir
+
+sub-district-master-view
+dir
+
+district-master
+dir
+

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app
+END
+app.component.spec.ts
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/app.component.spec.ts
+END
+app.component.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/app.component.html
+END
+app.component.ts
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/app.component.ts
+END
+app.module.ts
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/app.module.ts
+END
+custom-pipe.ts
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/custom-pipe.ts
+END
+app.component.scss
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/app.component.scss
+END
+app-routing.module.ts
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/app-routing.module.ts
+END

@@ -1,0 +1,199 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/lookup-master-view">{{ 'HOME.LOOKUP_MASTER' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <div class="category">
+                            <div class="row">
+                                <div class="col-6">{{ 'HOME.LOOKUP_DETAILS' | translate }}</div>
+                                <div class="col-6 text-right">
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" />
+                                    </div>
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.delete == 1" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" />
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="lookupMasterEditForm" class="lookupMasterEditForm">
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.LOOKUP_CODE_TYPE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{lookupData.lookupComposite.mcodetype | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcodetype" placeholder="{{ 'HOME.LOOKUP_CODE_TYPE' | translate }}" ><u></u>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodetype'].hasError('required') && (lookupMasterEditForm.controls['mcodetype'].dirty || lookupMasterEditForm.controls['mcodetype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodetype'].hasError('pattern') && (lookupMasterEditForm.controls['mcodetype'].dirty || lookupMasterEditForm.controls['mcodetype'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodetype'].hasError('maxlength') && (lookupMasterEditForm.controls['mcodetype'].dirty || lookupMasterEditForm.controls['mcodetype'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->                                    
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.DESCRIPTION' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{lookupData.mcodetypedesc | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcodetypedesc" placeholder="{{ 'HOME.DESCRIPTION' | translate }}"><u></u>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodetypedesc'].hasError('required') && (lookupMasterEditForm.controls['mcodetypedesc'].dirty || lookupMasterEditForm.controls['mcodetypedesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodetypedesc'].hasError('maxlength') && (lookupMasterEditForm.controls['mcodetypedesc'].dirty || lookupMasterEditForm.controls['mcodetypedesc'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div>
+                                </div>                              -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.DATA_TYPE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{lookupData.mcodedatatype | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcodedatatype" placeholder="{{ 'HOME.DATA_TYPE' | translate }}"><u></u>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodedatatype'].hasError('required') && (lookupMasterEditForm.controls['mcodedatatype'].dirty || lookupMasterEditForm.controls['mcodedatatype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodedatatype'].hasError('maxlength') && (lookupMasterEditForm.controls['mcodedatatype'].dirty || lookupMasterEditForm.controls['mcodedatatype'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.DATA_LENGTH' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{lookupData.mcodedatalen | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcodedatalen" placeholder="{{ 'HOME.DATA_LENGTH' | translate }}"><u></u>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodedatalen'].hasError('required') && (lookupMasterEditForm.controls['mcodedatalen'].dirty || lookupMasterEditForm.controls['mcodedatalen'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="lookupMasterEditForm.controls['mcodedatalen'].hasError('maxlength') && (lookupMasterEditForm.controls['mcodedatalen'].dirty || lookupMasterEditForm.controls['mcodedatalen'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div>
+                                 
+                                
+                                                                     
+                            </div> 
+                            <div class="vspacer20"></div>  
+                               
+                            <div class="category">
+                                <div class="row">
+                                    <div class="col-6">{{ 'HOME.CODE_TYPE_VALUE' | translate }}</div>
+                                    
+                                </div>   
+                            </div>
+                             <div class="vspacer20"></div>  
+                                <div class="row"  *ngIf="editActivated">
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.CODE' | translate }}</label>
+                                           
+                                            <input  type="text" formControlName="mcode" placeholder="{{ 'HOME.CODE' | translate }}" ><u></u>
+                                            <em *ngIf="lookupMasterEditForm.controls['mcode'].hasError('required') && (lookupMasterEditForm.controls['mcode'].dirty || lookupMasterEditForm.controls['mcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="lookupMasterEditForm.controls['mcode'].hasError('pattern') && (lookupMasterEditForm.controls['mcode'].dirty || lookupMasterEditForm.controls['mcode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                            <em *ngIf="lookupMasterEditForm.controls['mcode'].hasError('maxlength') && (lookupMasterEditForm.controls['mcode'].dirty || lookupMasterEditForm.controls['mcode'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div><!--.col-12 col-md-4 col-lg-3-->                                    
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.DESCRIPTION' | translate }}</label>
+                                           
+                                            <input  type="text" formControlName="mcodedesc" placeholder="{{ 'HOME.DESCRIPTION' | translate }}"><u></u>
+                                            <em *ngIf="lookupMasterEditForm.controls['mcodedesc'].hasError('required') && (lookupMasterEditForm.controls['mcodedesc'].dirty || lookupMasterEditForm.controls['mcodedesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="lookupMasterEditForm.controls['mcodedesc'].hasError('maxlength') && (lookupMasterEditForm.controls['mcodedesc'].dirty || lookupMasterEditForm.controls['mcodedesc'].touched)">{{ 'VALIDATION.MAX_100' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div><!--.col-12 col-md-4 col-lg-3-->                                        
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.FIELDVALUE1' | translate }}</label>
+                                          
+                                            <div>
+											<select formControlName="mfield1value">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">YES</option>
+                                                <option value="0">NO</option>
+												
+											</select><u></u>
+                                            </div>
+                                        <em *ngIf="lookupMasterEditForm.controls['mfield1value'].hasError('required') && (lookupMasterEditForm.controls['mfield1value'].dirty || lookupMasterEditForm.controls['mfield1value'].touched)">This field is required</em>
+
+                                        
+                                        </div><!--.form-readcontroller-->
+                                    </div>
+                                     <div class="col-12 col-md-4 col-lg-3">
+                                        <button class="button mr-2" *ngIf=" updaterow" (click)="updateRecords(lookupMasterEditForm.value)">{{ 'ACTION.UPDATE' | translate }}</button>
+                                        <button class="button" *ngIf="showcodetype && !updaterow"  (click)="addNewRecords(lookupMasterEditForm.value)" >{{ 'ACTION.ADD' | translate }}</button>
+                                        <button class="linkbutton" (click)=" removeRecords(lookupMasterEditForm.value)" *ngIf=" updaterow">{{ 'ACTION.REMOVE' | translate }}</button>
+                                     </div>
+                                </div>
+                            
+                            <div class="vspacer20"></div>                 
+                        </form>
+
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <div class="datatable-box" >
+                                     <div class=" table-responsivebox">                              
+                                        <table id="dt-sample" class="table table-hover previewTable">                                        
+                                            <thead>
+                                                <tr >
+                                                    
+                                                    <th scope="col" *ngIf="editActivated"></th>
+                                                    <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                                    <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                                    <th scope="col">{{ 'HOME.FIELDVALUE1' | translate }}</th>
+                                                
+                                                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr *ngFor="let list of lookupcodelist;  let i = index"  [ngClass]="{'disablerow': selectedItem != list.lookupComposite.mcode && tempcond == true }">
+                                                    <td *ngIf="editActivated">
+                                                        <label class="selection">
+                                                            <input type="checkbox" name="" [(ngModel)]="list.checked" (change)="editfield( list.checked ,list ,i)" [disabled]="selectedItem != list.lookupComposite.mcode && tempcond == true" >
+                                                        </label>
+                                                    </td>
+                                                    <td>{{list.lookupComposite.mcode}}</td>
+                                                    <td>{{list.mcodedesc}}</td>                                          
+                                                    <td>{{list.mfield1value}}</td>
+                                                    
+                                                    
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                           
+                                 </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row form-footer">
+                            <div class="col-6" *ngIf="!editActivated">
+                                <div class="text-left">
+                                    <button class="linkbutton" routerLink="/lookup-master-view">{{ 'ACTION.BACK' | translate }}</button>
+                                </div>
+                            </div>
+                            <div class="col-6" *ngIf="editActivated">
+                                <div class="text-left">
+                                    <button class="linkbutton" (click)="backToView();">{{ 'ACTION.BACK' | translate }}</button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <!-- <div class="text-right">
+                                    <button class="linkbutton">{{ 'ACTION.UPDATE' | translate }}</button>
+                                </div> -->
+                            </div>
+                        </div><!--.row-->
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+
+

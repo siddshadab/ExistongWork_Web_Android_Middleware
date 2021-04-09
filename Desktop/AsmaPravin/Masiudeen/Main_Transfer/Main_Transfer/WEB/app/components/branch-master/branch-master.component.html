@@ -1,0 +1,404 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/branch-master-view">{{ 'HOME.BRANCH_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!--Alert Start-->
+                        <div *ngIf="!code_exist" class="alert alert-danger code-exist-alert" role="alert">
+                            {{code_exist_message}}
+                        </div>
+                        <!--Alert End-->
+                        <div class="category">{{ 'HOME.BRANCH_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="branchForm" (ngSubmit)="onSubmit(branchForm.value)">
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                        <!-- <input type="text" formControlName="mpbrcode" (keyup)="onKeyUp($event.target.value)" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}"><u></u> -->
+                                        <input type="text" formControlName="mpbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mpbrcode'].hasError('required') && (branchForm.controls['mpbrcode'].dirty || branchForm.controls['mpbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mpbrcode'].hasError('pattern') && (branchForm.controls['mpbrcode'].dirty || branchForm.controls['mpbrcode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mpbrcode'].hasError('maxlength') && (branchForm.controls['mpbrcode'].dirty || branchForm.controls['mpbrcode'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em>
+                                        <!-- <em *ngIf="code_exist">{{ code_exist_message }}</em> -->
+                                    </div><!--.form-control-->
+                                </div>
+                               
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_NAME' | translate }}</label>
+                                        <input type="text" formControlName="mname" placeholder="{{ 'HOME.BRANCH_NAME' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mname'].hasError('required') && (branchForm.controls['mname'].dirty || branchForm.controls['mname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mname'].hasError('maxlength') && (branchForm.controls['mname'].dirty || branchForm.controls['mname'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.BRANCH_EMAIL' | translate }}</label>
+                                        <input type="text" formControlName="mbranchemailid" placeholder="{{ 'HOME.BRANCH_EMAIL' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mbranchemailid'].hasError('maxlength') && (branchForm.controls['mbranchemailid'].dirty || branchForm.controls['mbranchemailid'].touched)">{{ 'VALIDATION.MAX_60' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MBICODE' | translate }}</label>
+                                        <input type="text" formControlName="mbiccode" placeholder="{{ 'HOME.MBICODE' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mbiccode'].hasError('maxlength') && (branchForm.controls['mbiccode'].dirty || branchForm.controls['mbiccode'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_CATEGORY' | translate }}</label>
+                                        <div>
+                                            <select formControlName="mbranchcat">
+                                                <option value="Select" [selected]="true">Select [ 78620 ]</option>
+                                                <option *ngFor="let data of branchCatLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="branchForm.controls['mbranchcat'].hasError('required') && (branchForm.controls['mbranchcat'].dirty || branchForm.controls['mbranchcat'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_TYPE' | translate }}</label>
+                                        <div>
+                                            <select formControlName="mbranchtype">
+                                                <option value="Select" [selected]="true">Select [ 1031 ]</option>
+                                                <option *ngFor="let data of branchTypeLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="branchForm.controls['mbranchtype'].hasError('required') && (branchForm.controls['mbranchtype'].dirty || branchForm.controls['mbranchtype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                        
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_MANAGER' | translate }}</label>
+                                        <input type="text" formControlName="mbrnmanager" placeholder="{{ 'HOME.BRANCH_MANAGER' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div>
+                                            <select formControlName="mbrnmanager">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of reportingUserDropdown" value="{{data.musrcode}}">{{data.musrName}}</option>
+                                            </select><u></u>
+                                        </div> -->
+                                        <em *ngIf="branchForm.controls['mbrnmanager'].hasError('required') && (branchForm.controls['mbrnmanager'].dirty || branchForm.controls['mbrnmanager'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.FORMATION_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mformatndt" placeholder="{{ 'HOME.FORMATION_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="branchForm.controls['mformatndt'].hasError('required') && (branchForm.controls['mformatndt'].dirty || branchForm.controls['mformatndt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.LEGACY_BRANCH_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mlegacybrncd" placeholder="{{ 'HOME.LEGACY_BRANCH_CODE' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mlegacybrncd'].hasError('required') && (branchForm.controls['mlegacybrncd'].dirty || branchForm.controls['mlegacybrncd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mlegacybrncd'].hasError('maxlength') && (branchForm.controls['mlegacybrncd'].dirty || branchForm.controls['mlegacybrncd'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MAX_GROUP_MEMBERS' | translate }}</label>
+                                        <input type="text" formControlName="mmaxgroupmembers" placeholder="{{ 'HOME.MAX_GROUP_MEMBERS' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mmaxgroupmembers'].hasError('pattern') && (branchForm.controls['mmaxgroupmembers'].dirty || branchForm.controls['mmaxgroupmembers'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mmaxgroupmembers'].hasError('maxlength') && (branchForm.controls['mmaxgroupmembers'].dirty || branchForm.controls['mmaxgroupmembers'].touched)">{{ 'VALIDATION.MAX_4' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MIN_GROUP_MEMBERS' | translate }}</label>
+                                        <input type="text" formControlName="mmingroupmembers" placeholder="{{ 'HOME.MIN_GROUP_MEMBERS' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mmingroupmembers'].hasError('pattern') && (branchForm.controls['mmingroupmembers'].dirty || branchForm.controls['mmingroupmembers'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mmingroupmembers'].hasError('maxlength') && (branchForm.controls['mmingroupmembers'].dirty || branchForm.controls['mmingroupmembers'].touched)">{{ 'VALIDATION.MAX_4' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                               
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.LAST_OPEN_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mlastopendate" placeholder="{{ 'HOME.LAST_OPEN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                    </div><!--.form-control-->
+                                </div>   
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PARENT_BRANCH_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mparentbrcode" placeholder="{{ 'HOME.PARENT_BRANCH_CODE' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mparentbrcode'].hasError('required') && (branchForm.controls['mparentbrcode'].dirty || branchForm.controls['mparentbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mparentbrcode'].hasError('pattern') && (branchForm.controls['mparentbrcode'].dirty || branchForm.controls['mparentbrcode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mparentbrcode'].hasError('maxlength') && (branchForm.controls['mparentbrcode'].dirty || branchForm.controls['mparentbrcode'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.SHORT_NAME' | translate }}</label>
+                                        <input type="text" formControlName="mshortname" placeholder="{{ 'HOME.SHORT_NAME' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mshortname'].hasError('maxlength') && (branchForm.controls['mshortname'].dirty || branchForm.controls['mshortname'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.WEEKLY_OFF1' | translate }}</label>
+                                        <div>
+                                            <select formControlName="mweekoff1">
+                                                <option value="Select" [selected]="true">Select [ 1019 ]</option>
+                                                <option *ngFor="let data of branchWeekLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.WEEKLY_OFF2' | translate }}</label>
+                                        <div>
+                                            <select formControlName="mweekoff2">
+                                                <option value="Select" [selected]="true">Select [ 1019 ]</option>
+                                                <option *ngFor="let data of branchWeekLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                                <!-- <option value="1" >Sunday</option>
+                                                <option value="2" >Monday</option>
+                                                <option value="3" >Tuesday</option>
+                                                <option value="4" >Wednesday</option>
+                                                <option value="5" >Thursday</option>
+                                                <option value="6" >Friday</option>
+                                                <option value="7" >Saturday</option> -->
+                                            </select><u></u>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="category">{{ 'HOME.ADDRESS' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.COUNTRY_CODE' | translate }}</label>
+                                        <!-- <input type="text" formControlName="mcountrycd" placeholder="{{ 'HOME.COUNTRY_CODE' | translate }}"><u></u> -->
+                                        <div>
+                                            <select formControlName="mcountrycd" (change)="getState($event);">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of countryDropdown" value="{{data.mcountryid}}" >{{data.mcountryname}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="branchForm.controls['mcountrycd'].hasError('required') && (branchForm.controls['mcountrycd'].dirty || branchForm.controls['mcountrycd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <!-- <em *ngIf="branchForm.controls['mcountrycd'].hasError('maxlength') && (branchForm.controls['mcountrycd'].dirty || branchForm.controls['mcountrycd'].touched)">{{ 'VALIDATION.MAX_3' | translate }}</em> -->
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.STATE' | translate }}</label>
+                                        <!-- <input type="text" formControlName="mstate" placeholder="{{ 'HOME.STATE' | translate }}"><u></u> -->
+                                        <div>
+                                            <select formControlName="mstate" (change)="getDistrict($event);">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of stateDropdown" value="{{data.mstatecd}}" >{{data.mstatedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="branchForm.controls['mstate'].hasError('required') && (branchForm.controls['mstate'].dirty || branchForm.controls['mstate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <!-- <em *ngIf="branchForm.controls['mstate'].hasError('maxlength') && (branchForm.controls['mstate'].dirty || branchForm.controls['mstate'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em> -->
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DISTRICT' | translate }}</label>
+                                        <!-- <input type="text" formControlName="mdistrict" placeholder="{{ 'HOME.DISTRICT' | translate }}"><u></u> -->
+                                        <div>
+                                            <select formControlName="mdistrict" (change)="getCity($event);">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of districtDropdown" value="{{data.mdistcd}}" >{{data.mdistdesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="branchForm.controls['mdistrict'].hasError('required') && (branchForm.controls['mstate'].mdistrict || branchForm.controls['mdistrict'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <!-- <em *ngIf="branchForm.controls['mdistrict'].hasError('maxlength') && (branchForm.controls['mdistrict'].dirty || branchForm.controls['mdistrict'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em> -->
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.CITY_CODE' | translate }}</label>
+                                        <!-- <input type="text" formControlName="mcitycd" placeholder="{{ 'HOME.CITY_CODE' | translate }}"><u></u> -->
+                                        <div>
+                                            <select formControlName="mcitycd">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of cityDropdown" value="{{data.mplacecd}}" >{{data.mplacecddesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="branchForm.controls['mcitycd'].hasError('required') && (branchForm.controls['mcitycd'].dirty || branchForm.controls['mcitycd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <!-- <em *ngIf="branchForm.controls['mcitycd'].hasError('maxlength') && (branchForm.controls['mcitycd'].dirty || branchForm.controls['mcitycd'].touched)">{{ 'VALIDATION.MAX_6' | translate }}</em> -->
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.SECTOR' | translate }}</label>
+                                        <input type="text" formControlName="msector" placeholder="{{ 'HOME.SECTOR' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['msector'].hasError('pattern') && (branchForm.controls['msector'].dirty || branchForm.controls['msector'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['msector'].hasError('maxlength') && (branchForm.controls['msector'].dirty || branchForm.controls['msector'].touched)">{{ 'VALIDATION.MAX_4' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.ADDRESS_LINE1' | translate }}</label>
+                                        <input type="text" formControlName="madd1" placeholder="{{ 'HOME.ADDRESS_LINE1' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['madd1'].hasError('maxlength') && (branchForm.controls['madd1'].dirty || branchForm.controls['madd1'].touched)">{{ 'VALIDATION.MAX_100' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.ADDRESS_LINE2' | translate }}</label>
+                                        <input type="text" formControlName="madd2" placeholder="{{ 'HOME.ADDRESS_LINE2' | translate }}"><u></u>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.ADDRESS_LINE3' | translate }}</label>
+                                        <input type="text" formControlName="madd3" placeholder="{{ 'HOME.ADDRESS_LINE3' | translate }}"><u></u>
+                                    </div><!--.form-control-->
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.POST_ZIP_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mpincode" placeholder="{{ 'HOME.POST_ZIP_CODE' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mpincode'].hasError('required') && (branchForm.controls['mpincode'].dirty || branchForm.controls['mpincode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mpincode'].hasError('pattern') && (branchForm.controls['mpincode'].dirty || branchForm.controls['mpincode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="branchForm.controls['mpincode'].hasError('maxlength') && (branchForm.controls['mpincode'].dirty || branchForm.controls['mpincode'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller">
+                                            <label>{{ 'HOME.FAX_NO' | translate }}</label>
+                                            <input type="text" formControlName="mfaxno1" placeholder="{{ 'HOME.FAX_NO' | translate }}"><u></u>
+                                            <em *ngIf="branchForm.controls['mfaxno1'].hasError('maxlength') && (branchForm.controls['mfaxno1'].dirty || branchForm.controls['mfaxno1'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                        </div><!--.form-control-->
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.TELEPHONE1' | translate }}</label>
+                                        <input type="text" formControlName="mtele1" placeholder="{{ 'HOME.TELEPHONE1' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mtele1'].hasError('maxlength') && (branchForm.controls['mtele1'].dirty || branchForm.controls['mtele1'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.TELEPHONE2' | translate }}</label>
+                                        <input type="text" formControlName="mtele2" placeholder="{{ 'HOME.TELEPHONE2' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mtele2'].hasError('maxlength') && (branchForm.controls['mtele2'].dirty || branchForm.controls['mtele2'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.SWIFT_ADDRESS' | translate }}</label>
+                                        <input type="text" formControlName="mswiftaddr" placeholder="{{ 'HOME.SWIFT_ADDRESS' | translate }}"><u></u>
+                                        <em *ngIf="branchForm.controls['mswiftaddr'].hasError('maxlength') && (branchForm.controls['mswiftaddr'].dirty || branchForm.controls['mswiftaddr'].touched)">{{ 'VALIDATION.MAX_15' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/branch-master-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div><!--.form-footer-->
+                                </div><!--.col-12-->
+                            </div><!--.row-->
+                        </form>
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+<div id="modal-sample" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of reportingUserDropdown; let i = index" (click)="reportingUserSelected(list.musrcode,list.musrName,i);" [class.active]="i == highlightRow">
+                                        <td>{{list.musrcode}}</td>
+                                        <td>{{list.musrName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButton" type="button" class="button" (click)="proceedActionUser();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+

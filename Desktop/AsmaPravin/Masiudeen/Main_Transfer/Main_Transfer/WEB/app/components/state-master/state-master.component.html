@@ -1,0 +1,79 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/state-master-view">{{ 'HOME.STATE_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!--Alert Start-->
+                        <div *ngIf="!code_exist" class="alert alert-danger code-exist-alert" role="alert">
+                            {{code_exist_message}}
+                        </div>
+                        <!--Alert End-->
+                        <div class="category">{{ 'HOME.STATE_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="stateForm" (ngSubmit)="onSubmit(stateForm.value)">
+                            <div class="row form-group">
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.COUNTRY_ID' | translate }}</label>
+                                        <div>
+											<select formControlName="mcountryid">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of countryDropdownData" value="{{data.mcountryid}}">{{data.mcountryname}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="stateForm.controls['mcountryid'].hasError('required') && (stateForm.controls['mcountryid'].dirty || stateForm.controls['mcountryid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.STATE_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mstatecd" placeholder="{{ 'HOME.STATE_CODE' | translate }}"><u></u>
+                                        <em *ngIf="stateForm.controls['mstatecd'].hasError('required') && (stateForm.controls['mstatecd'].dirty || stateForm.controls['mstatecd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.STATE_NAME' | translate }}</label>
+                                        <input type="text" formControlName="mstatedesc" placeholder="{{ 'HOME.STATE_NAME' | translate }}"><u></u>
+                                        <em *ngIf="stateForm.controls['mstatedesc'].hasError('required') && (stateForm.controls['mstatedesc'].dirty || stateForm.controls['mstatedesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/state-master-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div><!--.form-footer-->
+                                </div><!--.col-12-->
+                            </div><!--.row-->
+                        </form>
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+

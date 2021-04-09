@@ -1,0 +1,766 @@
+{
+    "title": "Cartesian Charts",
+    "description": "Demos of various chart types supported in cartesian axes",
+    "image": "images/cartesian_types.png",
+    "status": "Updated",
+    "subItems": [
+        {
+            "type": "parent",
+            "title": "Chart Types",
+            "subItems": [
+                {
+                    "type": "child",
+                    "title": "Line",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "type": "sample",
+                            "title": "Default line chart",
+                            "key": "default_line_chart",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/line_series/default_line_chart.dart",
+                            "description": "This sample demonstrates the default line chart. Marker, tooltip and legend are enabled in this sample. Tap the marker to view information about that data point in a tooltip."
+                        },
+                        {
+                            "type": "sample",
+                            "title": "Line with dashes",
+                            "key": "line_with_dashes",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/line_series/line_with_dashes.dart",
+                            "description": "Line chart is rendered with dashes in this sample."
+                        },
+                        {
+                            "type": "sample",
+                            "title": "Multi-colored line",
+                            "key": "multi_colored_line",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/line_series/multi_colored_line.dart",
+                            "description": "This sample demonstrates the rendering of a line chart with multiple colors. Colors for each data point is mapped from the data source."
+                        },
+                        {
+                            "type": "sample",
+                            "title": "Customized line chart",
+                            "key": "customized_line_chart",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/line_series/customized_line_chart.dart",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Column",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default Column chart",
+                            "key": "default_column_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/column_series/default_column_chart.dart"
+                        },
+                        {
+                            "title": "Column with rounded corners",
+                            "key": "column_with_rounded_corners",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/column_series/column_with_rounded_corners.dart"
+                        },
+                        {
+                            "title": "Back to back column",
+                            "key": "back_to_back_column",
+                            "description":"By default, the columns of various series are placed side by side. In this sample, it is changed to render back to back",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/column_series/back_to_back_column.dart"
+                        },
+                        {
+                            "title": "Column with track",
+                            "key": "column_with_track",
+                            "description": "This sample renders the column chart with track. Track is a rectangular bar drawn from minimum to maximum values of an axis.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/column_series/column_with_track.dart"
+                        },
+                        {
+                            "title": "Column width and spacing",
+                            "key": "column_width_and_spacing",
+                            "description":"You can change the width and spacing of columns by using the options in the properties panel.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/column_series/column_width_and_spacing.dart"
+                        },
+                        {
+                            "title": "Customized column chart",
+                            "key": "customized_column_chart",
+                            "description":"This sample demonstrates the rendering of custom columns. Here, the top edges of the columns are changed to form a triangle.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/column_series/customized_column_chart.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Spline",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default spline chart",
+                            "key": "default_spline_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/spline_series/default_spline_chart.dart"
+                        },
+                        {
+                            "title": "Spline with dashes",
+                            "key": "spline_with_dashes",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/spline_series/spline_with_dashes.dart"
+                        },
+                        {
+                            "title": "Spline types",
+                            "key": "spline_types",
+                            "description":"This sample demonstrates various types of splines. Type can be changed by modifying the options in the properties panel.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/spline_series/spline_types.dart"
+                        },
+                        {
+                            "title": "Vertical spline chart",
+                            "key": "vertical_spline_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/spline_series/vertical_spline_chart.dart"
+                        },
+                        {
+                            "title": "Customized spline chart",
+                            "key": "customized_spline_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/spline_series/customized_spline_chart.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Area",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default area chart",
+                            "key": "default_area_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/default_area_chart.dart"
+                        },
+                        {
+                            "title": "Area with gradient",
+                            "key": "area_with_gradient",
+                            "description":"This sample depicts the area chart filled with gradient colors.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/area_with_gradient.dart"
+
+                        },
+                        {
+                            "title": "Area with empty points",
+                            "key": "area_with_emptypoints",
+                            "description": "This area chart sample renders with gap for null values (empty data points).",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/area_with_emptypoints.dart"
+                        },
+                        {
+                            "title": "Vertical area chart",
+                            "key": "vertical_area_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/vertical_area_chart.dart"
+                        },
+                        {
+                            "title": "Spline area chart",
+                            "key": "spline_area",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/spline_area.dart"
+                        },
+                        {
+                            "title": "Step area chart",
+                            "key": "step_area",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/step_area.dart"
+                        },
+                        {
+                            "title": "Range area chart",
+                            "key": "range_area",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/area_series/range_area.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Bar",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default bar chart",
+                            "key": "default_bar_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bar_series/default_bar_chart.dart"
+                        },
+                        {
+                            "title": "Bar with rounded corners",
+                            "key": "bar_with_rounded_corners",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bar_series/bar_with_rounded_corners.dart"
+                        },
+                        {
+                            "title": "Bar width and spacing",
+                            "key": "bar_width_and_spacing",
+                            "description":"You can change the width and spacing of the bars by using the options in the properties panel.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bar_series/bar_width_and_spacing.dart"
+                        },
+                        {
+                            "title": "Bar with track",
+                            "key": "bar_with_track",
+                            "description":"This sample renders the bar chart with track. Track is a rectangular bar drawn from minimum to maximum values of an axis.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bar_series/bar_with_track.dart"
+                        },
+                        {
+                            "title": "Customized bar chart",
+                            "key": "customized_bar_chart",
+                            "description":"This sample demonstrates the rendering of custom bars. Here, the bars are filled with images, to look like  pattern fill.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bar_series/customized_bar_chart.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Bubble",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default bubble chart",
+                            "key": "default_bubble_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bubble_series/default_bubble_chart.dart"
+                        },
+                        {
+                            "title": "Bubble with various colors",
+                            "key": "bubble_with_various_colors",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bubble_series/bubble_with_various_colors.dart"
+                        },
+                        {
+                            "title": "Bubble filled with gradient",
+                            "key": "bubble_filled_with_gradient",
+                            "description":"This sample depicts the bubble chart filled with gradient colors.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bubble_series/bubble_filled_with_gradient.dart"
+                        },
+                        {
+                            "title": "Bubble with multiple series",
+                            "key": "bubble_with_multiple_series",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/bubble_series/bubble_with_multiple_series.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Scatter",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default with scatter",
+                            "key": "default_scatter_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/scatter_series/default_scatter_chart.dart"
+                        },
+                        {
+                            "title": "Scatter with various shapes",
+                            "key": "scatter_with_various_shapes",
+                            "description":"This sample demonstrates the rendering of a scatter chart with various shapes.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/scatter_series/scatter_with_various_shapes.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Step Line",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default Step line chart",
+                            "key": "default_stepline_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stepLine_series/default_stepline_chart.dart"
+                        },
+                        {
+                            "title": "Step line with dashes",
+                            "key": "stepline_with_dashes",
+                            "description":"A step line chart is rendered with dashes in this sample.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stepLine_series/stepline_with_dashes.dart"
+                        },
+                        {
+                            "title": "Vertical step line chart",
+                            "key": "vertical_stepline_chart",
+                            "description":"The axes in this sample are transposed to form a vertical step line chart.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stepLine_series/vertical_stepline_chart.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Range Column",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default range column chart",
+                            "key": "default_rangecolumn_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/rangecolumn_series/default_rangecolumn_chart.dart"
+                        },
+                        {
+                            "title": "Transposed range column",
+                            "key": "vertical_rangecolumn_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/rangecolumn_series/vertical_rangecolumn_chart.dart"
+                        },
+                        {
+                            "title": "Range column with track",
+                            "key": "rangecolumn_with_track",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/rangecolumn_series/rangecolumn_with_track.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Stacked Charts",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Stacked line chart",
+                            "key": "stacked_line_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stacked_series/stacked_line_chart.dart"
+                        },
+                        {
+                            "title": "Stacked area chart",
+                            "key": "stacked_area_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stacked_series/stacked_area_chart.dart"
+                        },
+                        {
+                            "title": "Stacked column chart",
+                            "key": "stacked_column_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stacked_series/stacked_column_chart.dart"
+                        },
+                        {
+                            "title": "Stacked bar chart",
+                            "key": "stacked_bar_chart",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/cartesian_charts/stacked_series/stacked_bar_chart.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Stacked 100 Charts",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "100% stacked line chart",
+                            "key": "stacked_line_100_chart",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts/stacked_series_100/stacked_line_100_chart.dart"
+                        },
+                        {
+                            "title": "100% stacked area chart",
+                            "key": "stacked_area_100_chart",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts/stacked_series_100/stacked_area_100_chart.dart"
+                        },
+                        {
+                            "title": "100% stacked column chart",
+                            "key": "stacked_column_100_chart",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts/stacked_series_100/stacked_column_100_chart.dart"
+                        },
+                        {
+                            "title": "100% stacked bar chart",
+                            "key": "stacked_bar_100_chart",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts/stacked_series_100/stacked_bar_100_chart.dart"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "parent",
+            "title": "Axis Types",
+            "subItems": [
+                {
+                    "type": "child",
+                    "title": "Numeric",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "type": "sample",
+                            "title": "Default numeric axis",
+                            "key": "default_numeric_axis",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/numeric_types/default_numeric_axis.dart",
+                            "description": "",
+                            "status": ""
+                        },
+                        {
+                            "type": "sample",
+                            "title": "Numeric axis with label format",
+                            "key": "numeric_axis_with_label_format",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/numeric_types/numeric_axis_with_label_format.dart",
+                            "description": "",
+                            "status": ""
+                        },
+                        {
+                            "title": "Inversed numeric axis",
+                            "key": "inversed_numeric_axis",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/numeric_types/inversed_numeric_axis.dart",
+                            "description": "",
+                            "status": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Category",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default category axis",
+                            "key": "default_category_axis",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/category_types/default_category_axis.dart",
+                            "description": "",
+                            "status": ""
+                        },
+                        {
+                            "title": "Arranged by index",
+                            "key": "category_arranged_by_index",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/category_types/category_arranged_by_index.dart",
+                            "description": "By default, category data points will be arranged based on the x values. In this sample, you can arrange the data points based on the index value."
+                        },
+                        {
+                            "title": "Label placement",
+                            "key": "category_label_placement",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/category_types/category_label_placement.dart",
+                            "description": "",
+                            "status": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Date time",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default Date time axis",
+                            "key": "default_datetime_axis",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/date_time_types/default_datetime_axis.dart",
+                            "description": "",
+                            "status": ""
+                        },
+                        {
+                            "title": "Date time axis with label format",
+                            "key": "datetime_axis_with_label_format",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/date_time_types/datetime_axis_with_label_format.dart",
+                            "description": "",
+                            "status": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Logarithmic",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default logarithmic axis",
+                            "key": "default_logarithmic_axis",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/logarithmic_types/default_logarithmic_axis.dart",
+                            "description": "",
+                            "status": ""
+                        },
+                        {
+                            "title": "Inversed logarithmic axis",
+                            "key": "inversed_logarithmic_axis",
+                            "codeLink": "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_types/logarithmic_types/inversed_logarithmic_axis.dart",
+                            "description": "",
+                            "status": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "child",
+            "title": "Axis Features",
+            "displayType": "card",
+            "subItems": [
+                {
+                    "title": "Opposed axes",
+                    "key": "opposed_axes",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/opposed_axes/opposed_axes.dart"
+                },
+                {
+                    "title": "Handling labels collision",
+                    "key": "handling_label_collision",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/handling_label_collision/handling_label_collision.dart"
+                },
+                {
+                    "title": "Edge label placement",
+                    "key": "edgelabel_placement",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/edge_label_placement/edgelabel_placement.dart"
+                },
+                {
+                    "title": "Multiple axis chart",
+                    "key": "multiple_axis_chart",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/multiple_axis_chart/multiple_axis_chart.dart"
+                },
+                {
+                    "title": "Axis crossing",
+                    "key": "axis_crossing",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/axis_crossing/axis_crossing.dart"
+                },
+                {
+                    "title": "Plot band",
+                    "key": "plot_band",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/plot_band/plot_band.dart"
+                },
+                {
+                    "title": "Plot band recurrence",
+                    "key": "plot_band_recurrence",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/axis_features/plot_band/plot_band_recurrence.dart"
+                }
+            ]
+        },
+        {
+            "type": "parent",
+            "title": "Series Features",
+            "subItems": [
+                {
+                    "type": "child",
+                    "title": "Marker",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Various marker shapes",
+                            "key": "various_marker_shapes",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/marker/various_marker_shapes.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Data Label",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default data labels",
+                            "key": "default_datalabels",
+                            "code Link":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/data_label/default_datalabels.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Annotation",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Chart with annotation",
+                            "key": "chart_with_annotation",
+                            "description": "This sample renders the cartesian chart with annotation. A pie chart is rendered as an annotation here.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/annotation/chart_with_annotation.dart"
+                        },
+                        {
+                            "title": "Chart with watermark",
+                            "key": "chart_with_watermark",
+                            "description": "In this sample, annotation is placed at the center of the chart with reduced opacity to form a watermark",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/annotation/chart_with_watermark.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Sorting",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Sorting options",
+                            "key": "sorting_options",
+                            "description":"This sample depicts the sorting feature in a chart. The data points can be sorted in the ascending or descending order based on the x or y value.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/sorting/sorting_options.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Animation",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Series animation",
+                            "key": "series_animation",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/animation/series_animation.dart"
+                        },
+                        {
+                            "title": "Dynamic update",
+                            "key": "dynamic_animation",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/animation/dynamic_animation.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Empty Points",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Chart with empty points",
+                            "key": "chart_with_empty_points",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/series_features/empty_point/chart_with_empty_points.dart"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "child",
+            "title": "Legend",
+            "displayType": "card",
+            "subItems": [
+                {
+                    "title": "Chart with customized legend",
+                    "key": "chart_with_customized_legend",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/legend/chart_with_customized_legend.dart"
+                },
+                {
+                    "title": "Legend with various options",
+                    "key": "cartesian_legend_various_options",
+                    "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/legend/cartesian_legend_various_options.dart"
+                }
+            ]
+        },
+        {
+            "type": "parent",
+            "title": "User Interactions",
+            "subItems": [
+                {
+                    "type": "child",
+                    "title": "Tooltip",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Default tooltip",
+                            "key": "default_tooltip",
+                            "description":"Tooltip is enabled in this sample and to see a tooltip in action, tap the data points in the chart.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/tooltip/default_tooltip.dart"
+                        },
+                        {
+                            "title": "Tooltip position",
+                            "description":"By changing the options, the tooltip can be made to display in the fixed location or at the pointer location itself.",
+                            "key": "tooltip_position",
+                            "status":"New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/tooltip/tooltip_position.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Zooming and Panning",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Pinch zooming",
+                            "key": "pinch_zooming",
+                            "description":"Pinch zooming and panning is enabled in this sample. Pinch the chart to zoom it and swipe the zoomed chart to pan it.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/zooming_panning/pinch_zooming.dart"
+                        },
+                        {
+                            "title": "Selection zooming",
+                            "key": "selection_zooming",
+                            "description": "This sample depicts the working of selection zooming. Long press and drag on the chart to select the region for zooming.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/zooming_panning/selection_zooming.dart"
+                        },
+                        {
+                            "title": "Zooming with custom buttons",
+                            "key": "zooming_with_custom_buttons",
+                            "description":"This sample demonstrates zooming and panning with custom buttons.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/zooming_panning/zooming_with_custom_buttons.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Crosshair",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Chart with crosshair",
+                            "key": "chart_with_crosshair",
+                            "status": "Updated",
+                            "description":"Crosshair is enabled in this sample. Tap the chart to display a crosshair and drag the chart to change the position of the crosshair continuously.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/crosshair/chart_with_crosshair.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Trackball",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Chart with trackball",
+                            "key": "chart_with_trackball",
+                            "status": "Updated",
+                            "description":"Trackball is enabled in this sample. Tap the chart to display the trackball and drag the chart to change the position of the trackball continuously.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/trackball/chart_with_trackball.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Selection",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Selection Modes",
+                            "key": "selection_modes",
+                            "description":"This sample depicts the selection feature in a chart. Tap the data points to select or unselect it.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/user_interactions/selection/selection_modes.dart"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "parent",
+            "title": "Real-time Charts",
+            "subItems": [
+                {
+                    "type": "child",
+                    "title": "Live Updates",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Real-time spline chart",
+                            "key": "real_time_spline_chart",
+                            "description":"This sample demonstrates the live chart. A new data point is added at the end and a point is removed at the start in certain time interval continuously.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/live_update/real_time_spline_chart.dart"
+                        },
+                        {
+                            "title": "Real-time line chart",
+                            "key": "real_time_line_chart",
+                            "status": "New",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/live_update/real_time_line_chart.dart"
+                        },
+                        {
+                            "title": "Vertical live chart",
+                            "key": "vertical_live_chart",
+                            "description": "This sample demonstrates the live chart. A new data point is added at the end  in certain time interval continuously.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/live_update/vertical_live_chart.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Add/Remove Data",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Add/remove points",
+                            "key": "add_remove_points",
+                            "description":"Add or remove the data points from a chart using the buttons placed in the sample.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/add_remove_data/add_remove_points.dart"
+                        },
+                        {
+                            "title": "Add/remove series",
+                            "key": "add_remove_series",
+                            "description":"Add or remove series from the chart using the buttons placed in the sample.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/add_remove_data/add_remove_series.dart"
+                        }
+                    ]
+                },
+                {
+                    "type": "child",
+                    "title": "Update Data Source",
+                    "displayType": "card",
+                    "subItems": [
+                        {
+                            "title": "Update data source",
+                            "key": "update_data_source",
+                            "description":"The data source bound to this chart can be changed with random values dynamically, by tapping the button placed in this sample.",
+                            "codeLink":"https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/update_data_source/update_data_source.dart"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

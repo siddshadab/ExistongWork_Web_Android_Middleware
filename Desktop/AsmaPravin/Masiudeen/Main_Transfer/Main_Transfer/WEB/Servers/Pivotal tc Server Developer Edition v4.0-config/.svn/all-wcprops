@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config
+END
+context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/context.xml
+END
+server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/server.xml
+END
+tomcat-users.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/tomcat-users.xml
+END
+catalina.properties
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/catalina.properties
+END
+catalina.policy
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/catalina.policy
+END
+jmxremote.access
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/jmxremote.access
+END
+jmxremote.password
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/jmxremote.password
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/Servers/Pivotal%20tc%20Server%20Developer%20Edition%20v4.0-config/web.xml
+END

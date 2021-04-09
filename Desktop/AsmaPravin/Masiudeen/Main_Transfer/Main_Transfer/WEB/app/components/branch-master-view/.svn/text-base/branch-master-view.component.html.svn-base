@@ -1,0 +1,100 @@
+<!-- <div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <li>
+            <a href="javascript:;">Master</a>
+        </li>
+        <li>
+            <a href="javascript:;">Parent</a>
+        </li>
+        <li class="current">{{ 'HOME.BRANCH_MASTER' | translate }}</li>
+    </ul>
+</div> -->
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!-- <table #dataTable class="display" style="width:100%">
+                        </table> -->
+                        <div class="row heading">
+                            <div class="col-6">{{ 'HOME.BRANCH_MASTER' | translate }}</div>
+                            <div class="col-6">
+                                <div class="text-right">
+                                    <button *ngIf="!multipleDelete && rightsData.create == 1" class="button" routerLink="/branch-master">{{ 'ACTION.ADD' | translate }}</button>
+                                    <div class="action-img multiple-delete" *ngIf="multipleDelete && rightsData.delete == 1">
+                                        <img (click)="multipleDeleteCheckboxes();" src="../../../assets/images/icon/Delete2x.png" title="Delete" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul>
+                            <li> <input type="checkbox" [(ngModel)]="selectedAll" (change)="selectAll();"/>
+                            </li>
+                            <li *ngFor="let list of branchListArray"> 
+                            <input type="checkbox" [(ngModel)]="list.selected" (change)="checkIfAllSelected();">{{list.mpbrcode}}
+                            </li>
+                          </ul> -->
+                        <div class="datatable-box">
+                            <div class="table-responsivebox">
+                                <table id="dt-sample" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <label class="selection">
+                                                    <input type="checkbox" name="" (change)="allCheckboxes($event)">
+                                                </label>
+                                            </th>
+                                            <th scope="col">{{ 'HOME.BRANCH_CODE' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.BRANCH_NAME' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.BRANCH_ADDRESS' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.BRANCH_TYPE' | translate }}</th>
+                                            <!-- <th scope="col">{{ 'HOME.BRANCH_MANAGER' | translate }}</th> -->
+                                            <th scope="col">{{ 'HOME.BRANCH_EMAIL' | translate }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let list of branchListArray" (dblclick)="dataNavigate(list);">
+                                            <td>
+                                                <label class="selection">
+                                                    <input type="checkbox" name="" value="{{list.mpbrcode}}" [(ngModel)]="list.selected" (change)="toggleVisibility(list,$event);">
+                                                </label>
+                                            </td>
+                                            <td>{{list.mpbrcode}}</td>
+                                            <td>{{list.mname}}</td>
+                                            <td>{{list.madd1}}</td>
+                                            <td>{{list.mbranchtypeDesc}}</td>
+                                            <!-- <td>{{list.mbrnmanager}}</td> -->
+                                            <td>{{list.mbranchemailid}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="dt-extras">
+                                <div class="dt-exports">
+                                    <em>Export to :<span class="chevron"></span></em>
+                                    <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                    <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                    <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                    <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                    <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+<!--Alert Start-->
+<div class="alerts" [ngClass]="{'alertWrapper': alert}">
+    <div class="alert alert-custom" [ngClass]="{'alert-success': alertSuccess, 'alert-danger': !alertSuccess}" role="alert">
+        {{alertMessage}}
+    </div>
+</div>
+<!--Alert End-->
+

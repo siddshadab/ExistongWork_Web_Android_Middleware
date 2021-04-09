@@ -1,0 +1,83 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/country-master-view">{{ 'HOME.COUNTRY_MASTER' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <div class="category">
+                            <div class="row">
+                                <div class="col-6">{{ 'HOME.COUNTRY_DETAILS' | translate }}</div>
+                                <div class="col-6 text-right">
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" />
+                                        <!-- <img *ngIf="!editActivated" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" /> -->
+                                    </div>
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.delete == 1" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" />
+                                        <!-- <img *ngIf="!editActivated" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" /> -->
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="countryViewForm" >
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.COUNTRY_ID' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{countryData.mcountryid | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcountryid" placeholder="Enter {{ 'HOME.BRANCH_NAME' | translate }}"><u></u>
+                                        <em *ngIf="countryViewForm.controls['mcountryid'].hasError('required') && (countryViewForm.controls['mcountryid'].dirty || countryViewForm.controls['mcountryid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.COUNTRY_NAME' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{countryData.mcountryname | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcountryname" placeholder="Enter {{ 'HOME.BRANCH_EMAIL' | translate }}"><u></u>
+                                        <em *ngIf="countryViewForm.controls['mcountryname'].hasError('required') && (countryViewForm.controls['mcountryname'].dirty || countryViewForm.controls['mcountryname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                             
+                            </div>
+
+                            <div class="row form-footer">
+                                <div class="col-6" *ngIf="!editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/country-master-view">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" (click)="backToView();">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div *ngIf="editActivated" class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(countryViewForm.value)">{{ 'ACTION.UPDATE' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->

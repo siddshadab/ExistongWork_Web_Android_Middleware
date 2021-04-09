@@ -1,0 +1,36 @@
+{
+    "HOME": {
+        "TITLE": "Bonjour angulaire avec ngx traduire",
+        "TEXT": "Cette démo a été créée en utilisant ngx translate",
+        "SELECT": "Choisir la langue",
+        "USERNAME": "NOM D'UTILISATEUR",
+        "PASSWORD": "MOT DE PASSE",
+        "ENTER_USERNAME": "Saisissez votre nom d'utilisateur",
+        "ENTER_PASSWORD": "Entrer le mot de passe",
+        "COPYRIGHT": "droits d'auteur @ 2020 InfrasoftTech FINAIRO",
+        "BRANCH_MASTER": "Maître de succursale",
+        "BRANCH_CODE": "Code de succursale",
+        "BRANCH_NAME": "Nom de la filiale",
+        "BRANCH_ADDRESS": "Adresse de la succursale",
+        "BRANCH_TYPE": "Type de branche",
+        "BRANCH_MANAGER": "Directeur de succursale",
+        "BRANCH_EMAIL": "Courriel de la succursale"
+    },
+    "ACTION":{
+        "LOGIN": "S'IDENTIFIER",
+        "ADD": "+ AJOUTER"
+    },
+    "VALIDATION": {
+        "REQUIRED": "Saisissez votre nom d'utilisateur",
+        "MIN_5": "Doit avoir au moins 5 caractères",
+        "MAX_8": "Doit avoir un maximum de 8 caractères"
+    },
+    "NAVIGATION": {
+        "DASHBOARD": "Tableau de bord",
+        "MASTER": "Master",
+        "PARAMS": "Params",
+        "DATA_IMPORT": "Importation de données",
+        "DATA_REVIEW": "Examen des données",
+        "SUBMISSION": "Soumission"
+    }
+}

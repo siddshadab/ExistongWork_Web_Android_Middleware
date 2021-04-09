@@ -1,0 +1,195 @@
+<div class="breadcrumb">
+        <ul class="lst-breadcrumb">
+            <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/product-master-view">{{ 'HOME.PRODUCT_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+        </ul><!--.lst-breadcrumb-->
+    </div>
+    <div class="vspacer20"></div>
+    
+    <main class="main-container">
+        <div class="in-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="in-mcontainer">
+                            <!--Alert Start-->
+                            <div *ngIf="!code_exist" class="alert alert-danger code-exist-alert" role="alert">
+                                {{code_exist_message}}
+                            </div>
+                            <!--Alert End-->
+                            <div class="category">{{ 'HOME.PRODUCT_DETAILS' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <form [formGroup]="productForm">
+                                <div class="row form-group">
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                            <input type="text" formControlName="mlbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                            <a href="javascript:;" data-toggle="modal" data-target="#modal-sample-1"><button class="button sm over-input">Search</button></a>
+                                            <!-- <div>
+                                                <select formControlName="mlbrcode">
+                                                    <option value="Select" [selected]="true">Select</option>
+                                                    <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+                                                </select><u></u>
+                                            </div> -->
+                                            <em *ngIf="productForm.controls['mlbrcode'].hasError('required') && (productForm.controls['mlbrcode'].dirty || productForm.controls['mlbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.PRODUCT_CODE' | translate }}</label>
+                                            <input type="text" formControlName="mprdcd" placeholder="{{ 'HOME.PRODUCT_CODE' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mprdcd'].hasError('required') && (productForm.controls['mprdcd'].dirty || productForm.controls['mprdcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="productForm.controls['mprdcd'].hasError('maxlength') && (productForm.controls['mprdcd'].dirty || productForm.controls['mprdcd'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.CURRENCY_CODE' | translate }}</label>
+                                            <!-- <input type="text" formControlName="mcurcd" placeholder="{{ 'HOME.CURRENCY_CODE' | translate }}"><u></u> -->
+                                            <div>
+                                                <select formControlName="mcurcd">
+                                                    <option value="Select" [selected]="true">Select</option>
+                                                    <option *ngFor="let data of currencyDropdown" value="{{data.mcurrcd}}" >{{data.mcurrdesc}}</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="productForm.controls['mcurcd'].hasError('required') && (productForm.controls['mcurcd'].dirty || productForm.controls['mcurcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-control-->
+                                    </div>                              
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.DIVISION_TYPE' | translate }}</label>
+                                            <div>
+                                                <select formControlName="mdivisiontype">
+                                                    <option value="Select" [selected]="true">Select [ 2121 ]</option>
+                                                    <option *ngFor="let data of divisionTypeLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="productForm.controls['mdivisiontype'].hasError('required') && (productForm.controls['mdivisiontype'].dirty || productForm.controls['mdivisiontype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.INTEREST_RATE' | translate }}</label>
+                                            <input type="text" formControlName="mintrate" placeholder="{{ 'HOME.INTEREST_RATE' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mintrate'].hasError('required') && (productForm.controls['mintrate'].dirty || productForm.controls['mintrate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="productForm.controls['mintrate'].hasError('maxlength') && (productForm.controls['mintrate'].dirty || productForm.controls['mintrate'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em> 
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.MODULE_TYPE' | translate }}</label>
+                                            <div>
+                                                <select formControlName="mmoduletype">
+                                                    <option value="Select" [selected]="true">Select [ 1053 ]</option>
+                                                    <option *ngFor="let data of moduleTypeLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="productForm.controls['mmoduletype'].hasError('required') && (productForm.controls['mmoduletype'].dirty || productForm.controls['mmoduletype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.NAME' | translate }}</label>
+                                            <input type="text" formControlName="mname" placeholder="{{ 'HOME.NAME' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mname'].hasError('required') && (productForm.controls['mname'].dirty || productForm.controls['mname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <!-- <em *ngIf="productForm.controls['mname'].hasError('maxlength') && productForm.controls['mname'].touched">Name should have max 8 char</em> -->
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.NUMBER_OF_GUARANTOR' | translate }}</label>
+                                            <input type="text" formControlName="mnoofguaranter" placeholder="{{ 'HOME.NUMBER_OF_GUARANTOR' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mnoofguaranter'].hasError('required') && (productForm.controls['mnoofguaranter'].dirty || productForm.controls['mnoofguaranter'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>                                       
+                                            <em *ngIf="productForm.controls['mnoofguaranter'].hasError('maxlength') && (productForm.controls['mnoofguaranter'].dirty || productForm.controls['mnoofguaranter'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>                                        
+                                        </div>
+                                    </div>    
+                                </div>                            
+                                <div class="row form-footer">
+                                    <div class="col-6">
+                                        <div class="text-left">
+                                            <button class="linkbutton" routerLink="/product-master-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-footer text-right">
+                                            <button class="button" (click)="onSubmit(productForm.value)">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                        </div>
+                                    </div>
+                                </div><!--.row-->
+                            </form>
+    
+                        </div><!--.in-mcontainer-->
+                    </div><!--.col-12-->
+                </div><!--.row-->
+            </div><!--.container-fluid-->
+        </div><!--.in-main-->
+    </main><!--.main-container-->
+    <!-- ================ Main Page Content - End   ==============-->
+
+    <div id="modal-sample-1" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <div class="mh-top">
+                        <h6>Page Name</h6>
+                    </div>.mt-top -->
+                    <div class="mh-bottom">
+                        <div class="row">
+                            <div class="col-2"></div><!--.col-2-->
+                            <div class="col-8">
+                                <h4>Pick List</h4>
+                            </div><!--.col-8-->
+                            <div class="col-2">
+                                <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                            </div><!--.col-2-->
+                        </div><!--.row-->
+                    </div><!--.mh-bottom-->
+                </div><!--.modal-header-->
+                <div class="modal-body">
+                    <div class="modal-overflow">
+                        <div class="datatable-box">
+                            <div class="table-responsivebox">
+                                <table id="dt-sample" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="highlight" *ngFor="let list of branchDropdownData; let i = index" (click)="branchCodeSelected(list.mpbrcode,list.mname,i);" [class.active]="i == highlightRow">
+                                            <td>{{list.mpbrcode}}</td>
+                                            <td>{{list.mname}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="dt-extras">
+                                <div class="dt-exports">
+                                    <em>Export to :<span class="chevron"></span></em>
+                                    <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                    <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                    <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                    <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                    <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div><!--.modal-overflow-->
+                </div><!--.modal-body-->
+                <div class="modal-footer">
+                    <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                    <button *ngIf="proceedButton" type="button" class="button" (click)="proceedActionBranch();">Proceed</button>
+                </div><!--.modal-footer-->
+            </div><!--.modal-content-->
+        </div><!--.modal-dialog-->
+    </div><!--.modal-->
+    
+    
+    

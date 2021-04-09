@@ -1,0 +1,105 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/system-parameter-view">{{ 'HOME.SYSTEM_PARAMETER' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <div class="category">
+                            <div class="row">
+                                <div class="col-6">{{ 'HOME.SYSTEM_PARAMETER_DETAILS' | translate }}</div>
+                                <div class="col-6 text-right">
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" />
+                                    </div>
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.delete == 1" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" />
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="systemParEditForm" >
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{systemParData.systemParameterCompositeEntity.mcode | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcode" placeholder="{{ 'HOME.CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <em *ngIf="systemParEditForm.controls['mcode'].hasError('required') && (systemParEditForm.controls['mcode'].dirty || systemParEditForm.controls['mcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="systemParEditForm.controls['mcode'].hasError('maxlength') && (systemParEditForm.controls['mcode'].dirty || systemParEditForm.controls['mcode'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{branchName | Custom}}</h6>
+                                        <!-- <input *ngIf="editActivated" type="text" formControlName="mlbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}"><u></u> -->
+                                        <input *ngIf="editActivated" type="text" formControlName="mlbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <!-- <div *ngIf="editActivated">
+											<select formControlName="mlbrcode">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div> -->
+                                        <em *ngIf="systemParEditForm.controls['mlbrcode'].hasError('required') && (systemParEditForm.controls['mlbrcode'].dirty || systemParEditForm.controls['mlbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.CODE_VALUE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{systemParData.mcodevalue | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcodevalue" placeholder="{{ 'HOME.CODE_VALUE' | translate }}"><u></u>
+                                        <em *ngIf="systemParEditForm.controls['mcodevalue'].hasError('maxlength') && (systemParEditForm.controls['mcodevalue'].dirty || systemParEditForm.controls['mcodevalue'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.CODE_DESCRIPTION' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{systemParData.mcodedesc | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcodedesc" placeholder="{{ 'HOME.CODE_DESCRIPTION' | translate }}"><u></u>
+                                        <em *ngIf="systemParEditForm.controls['mcodedesc'].hasError('maxlength') && (systemParEditForm.controls['mcodedesc'].dirty || systemParEditForm.controls['mcodedesc'].touched)">{{ 'VALIDATION.MAX_100' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                
+                            </div>
+
+                            <div class="row form-footer">
+                                <div class="col-6" *ngIf="!editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/system-parameter-view">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" (click)="backToView();">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div *ngIf="editActivated" class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(systemParEditForm.value)">{{ 'ACTION.UPDATE' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+

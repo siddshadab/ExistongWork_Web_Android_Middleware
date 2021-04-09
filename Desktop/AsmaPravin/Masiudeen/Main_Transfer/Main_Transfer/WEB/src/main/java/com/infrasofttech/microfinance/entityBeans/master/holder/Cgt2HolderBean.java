@@ -1,0 +1,36 @@
+package com.infrasofttech.microfinance.entityBeans.master.holder;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
+import com.infrasofttech.microfinance.entityBeans.master.CheckListCGT2Entity;
+
+import lombok.Data;
+
+@Data
+public class Cgt2HolderBean {	
+	
+	private int trefno;
+	private int mrefno;
+	private int loantrefno;
+	private int loanmrefno;
+	private String mleadsid;
+	private String mcgt2doneby;
+	private LocalDateTime mstarttime;
+	private LocalDateTime mendtime;
+	private String mroutefrom;
+	private String mrouteto;
+	private String mremark;
+	private LocalDateTime mcreateddt;	   
+	private String mcreatedby;
+	private LocalDateTime mlastupdatedt;		
+	private String mlastupdateby;		
+	private String mgeolocation;	
+	private String mgeolatd;	
+	private String mgeologd;	
+	private int missynctocoresys;
+	private LocalDateTime mlastsynsdate;
+
+	private List<CheckListCGT2Entity> checkListCgt2Details ;
+
+}

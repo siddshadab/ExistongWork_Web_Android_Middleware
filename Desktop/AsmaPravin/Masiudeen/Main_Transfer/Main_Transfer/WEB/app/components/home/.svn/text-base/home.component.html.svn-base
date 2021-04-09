@@ -1,0 +1,21 @@
+<div class="col-6">
+
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dollar</th>
+            <th scope="col">INR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employeeItem of employeeArray;">
+            <th scope="row">{{employeeItem.id}}</th>
+            <td>{{employeeItem.employee_age}}</td>
+            <td>{{employeeItem.employee_salary}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+

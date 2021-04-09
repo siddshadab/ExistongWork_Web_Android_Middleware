@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/102/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/common/bean
+END
+OmniSoapRequesteBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/common/bean/OmniSoapRequesteBean.java
+END
+OmniSoapResultBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/eco_mfi/!svn/ver/102/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/common/bean/OmniSoapResultBean.java
+END
+CustomerMasterRequestBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/common/bean/CustomerMasterRequestBean.java
+END

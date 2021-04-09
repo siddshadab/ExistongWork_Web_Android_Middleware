@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/eco_mfi/!svn/ver/299/trunk/ecomfi_release/microfinance_V1
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/.project
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/.gitignore
+END
+ecoMiddlewareConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/ecoMiddlewareConfig.properties
+END
+mvnw
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/mvnw
+END
+src.zip
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src.zip
+END
+mvnw.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/mvnw.cmd
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/pom.xml
+END

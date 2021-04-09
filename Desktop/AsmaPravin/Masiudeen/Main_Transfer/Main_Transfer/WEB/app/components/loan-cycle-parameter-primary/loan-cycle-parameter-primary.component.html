@@ -1,0 +1,525 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/loan-cycle-parameter-primary-view">{{ 'HOME.LOAN_CYCLE' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+
+                        <div class="category">{{ 'HOME.PRIMARY_LOAN_CYCLE' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        
+                        <form [formGroup]="loanCycleParPriForm" >
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mlbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample-1"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div>
+											<select formControlName="mlbrcode">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div> -->
+                                        <em *ngIf="loanCycleParPriForm.controls['mlbrcode'].hasError('required') && (loanCycleParPriForm.controls['mlbrcode'].dirty || loanCycleParPriForm.controls['mlbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.LOAN_CYCLE' | translate }}</label>
+                                        <div>
+											<select formControlName="mloancycle">
+                                                <option value="Select" [selected]="true">Select [ 909060 ]</option>
+                                                <option *ngFor="let data of loanCycleLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mloancycle'].hasError('required') && (loanCycleParPriForm.controls['mloancycle'].dirty || loanCycleParPriForm.controls['mloancycle'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.GROUP_TYPE' | translate }}</label>
+                                        <div>
+											<select formControlName="mgrtype">
+                                                <option value="Select" [selected]="true">Select [ 1076 ]</option>
+                                                <option *ngFor="let data of groupTypeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mgrtype'].hasError('required') && (loanCycleParPriForm.controls['mgrtype'].dirty || loanCycleParPriForm.controls['mgrtype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.GROUP_CYCLE' | translate }}</label>
+                                        <div>
+											<select formControlName="mgrpcycyn">
+												<option value="Select" [selected]="true">Select [ 30125 ]</option>
+												<option *ngFor="let data of groupCycleLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mgrpcycyn'].hasError('required') && (loanCycleParPriForm.controls['mgrpcycyn'].dirty || loanCycleParPriForm.controls['mgrpcycyn'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.CUSTOMER_TYPE' | translate }}</label>
+                                        <div>
+											<select formControlName="mcusttype">
+                                                <option value="Select" [selected]="true">Select [ 1060 ]</option>
+                                                <option *ngFor="let data of customerTypeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mcusttype'].hasError('required') && (loanCycleParPriForm.controls['mcusttype'].dirty || loanCycleParPriForm.controls['mcusttype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.EFFECTIVE_DATE' | translate }}</label>
+                                        <input type="text" formControlName="meffdate" placeholder="{{ 'HOME.EFFECTIVE_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['meffdate'].hasError('required') && (loanCycleParPriForm.controls['meffdate'].dirty || loanCycleParPriForm.controls['meffdate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PRODUCT_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mprdcd" placeholder="{{ 'HOME.PRODUCT_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample-2"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div>
+											<select formControlName="mprdcd">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of productDropdownData" value="{{data.mprdCd}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div> -->
+                                        <em *ngIf="loanCycleParPriForm.controls['mprdcd'].hasError('required') && (loanCycleParPriForm.controls['mprdcd'].dirty || loanCycleParPriForm.controls['mprdcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>    
+                            </div>
+
+                            <div class="category">{{ 'HOME.FREQUENCY' | translate }}</div>
+                            <div class="vspacer20"></div>
+
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.FREQUENCY' | translate }}</label>
+                                        <div>
+											<select formControlName="mfrequency">
+                                                <option value="Select" [selected]="true">Select [ 909019 ]</option>
+                                                <option *ngFor="let data of frequencyLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mfrequency'].hasError('required') && (loanCycleParPriForm.controls['mfrequency'].dirty || loanCycleParPriForm.controls['mfrequency'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.GENDER' | translate }}</label>
+                                        <div>
+											<select formControlName="mgender">
+												<option value="Select" [selected]="true">Select [ 1139 ]</option>
+												<option *ngFor="let data of genderLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.INCREMENT_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mincramount" placeholder="{{ 'HOME.INCREMENT_AMOUNT' | translate }}"><u></u>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.LOGIC' | translate }}</label>
+                                        <div>
+											<select formControlName="mlogic">
+												<option value="Select" [selected]="true">Select [ 909061 ]</option>
+												<option *ngFor="let data of groupCycleLogicLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MAX_AGE_GROUP' | translate }}</label>
+                                        <input type="text" formControlName="mmaxage" placeholder="{{ 'HOME.MAX_AGE_GROUP' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxage'].hasError('pattern') && (loanCycleParPriForm.controls['mmaxage'].dirty || loanCycleParPriForm.controls['mmaxage'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxage'].hasError('maxlength') && (loanCycleParPriForm.controls['mmaxage'].dirty || loanCycleParPriForm.controls['mmaxage'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MIN_AGE_GROUP' | translate }}</label>
+                                        <input type="text" formControlName="mminage" placeholder="{{ 'HOME.MIN_AGE_GROUP' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminage'].hasError('pattern') && (loanCycleParPriForm.controls['mminage'].dirty || loanCycleParPriForm.controls['mminage'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminage'].hasError('maxlength') && (loanCycleParPriForm.controls['mminage'].dirty || loanCycleParPriForm.controls['mminage'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MAX_NO_OF_GROUP_MEMBERS' | translate }}</label>
+                                        <input type="text" formControlName="mmaxnoofgrpmems" placeholder="{{ 'HOME.MAX_NO_OF_GROUP_MEMBERS' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxnoofgrpmems'].hasError('required') && (loanCycleParPriForm.controls['mmaxnoofgrpmems'].dirty || loanCycleParPriForm.controls['mmaxnoofgrpmems'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxnoofgrpmems'].hasError('pattern') && (loanCycleParPriForm.controls['mmaxnoofgrpmems'].dirty || loanCycleParPriForm.controls['mmaxnoofgrpmems'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxnoofgrpmems'].hasError('maxlength') && (loanCycleParPriForm.controls['mmaxnoofgrpmems'].dirty || loanCycleParPriForm.controls['mmaxnoofgrpmems'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MIN_NO_OF_GROUP_MEMBERS' | translate }}</label>
+                                        <input type="text" formControlName="mminnoofgrpmems" placeholder="{{ 'HOME.MIN_NO_OF_GROUP_MEMBERS' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminnoofgrpmems'].hasError('required') && (loanCycleParPriForm.controls['mminnoofgrpmems'].dirty || loanCycleParPriForm.controls['mminnoofgrpmems'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminnoofgrpmems'].hasError('pattern') && (loanCycleParPriForm.controls['mminnoofgrpmems'].dirty || loanCycleParPriForm.controls['mminnoofgrpmems'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminnoofgrpmems'].hasError('maxlength') && (loanCycleParPriForm.controls['mminnoofgrpmems'].dirty || loanCycleParPriForm.controls['mminnoofgrpmems'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MAX_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mmaxamount" placeholder="{{ 'HOME.MAX_AMOUNT' | translate }}"><u></u>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MIN_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mminamount" placeholder="{{ 'HOME.MIN_AMOUNT' | translate }}"><u></u>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MAX_PERIOD' | translate }}</label>
+                                        <input type="text" formControlName="mmaxperiod" placeholder="{{ 'HOME.MAX_PERIOD' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxperiod'].hasError('pattern') && (loanCycleParPriForm.controls['mmaxperiod'].dirty || loanCycleParPriForm.controls['mmaxperiod'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxperiod'].hasError('maxlength') && (loanCycleParPriForm.controls['mmaxperiod'].dirty || loanCycleParPriForm.controls['mmaxperiod'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MIN_PERIOD' | translate }}</label>
+                                        <input type="text" formControlName="mminperiod" placeholder="{{ 'HOME.MIN_PERIOD' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminperiod'].hasError('pattern') && (loanCycleParPriForm.controls['mminperiod'].dirty || loanCycleParPriForm.controls['mminperiod'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminperiod'].hasError('maxlength') && (loanCycleParPriForm.controls['mminperiod'].dirty || loanCycleParPriForm.controls['mminperiod'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.MULTIPLE_FACTOR' | translate }}</label>
+                                        <input type="text" formControlName="mmultiplefactor" placeholder="{{ 'HOME.MULTIPLE_FACTOR' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmultiplefactor'].hasError('pattern') && (loanCycleParPriForm.controls['mmultiplefactor'].dirty || loanCycleParPriForm.controls['mmultiplefactor'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmultiplefactor'].hasError('maxlength') && (loanCycleParPriForm.controls['mmultiplefactor'].dirty || loanCycleParPriForm.controls['mmultiplefactor'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.NO_OF_INSTANCE_CYCLE' | translate }}</label>
+                                        <input type="text" formControlName="mnoofinstlclosure" placeholder="{{ 'HOME.NO_OF_INSTANCE_CYCLE' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mnoofinstlclosure'].hasError('pattern') && (loanCycleParPriForm.controls['mnoofinstlclosure'].dirty || loanCycleParPriForm.controls['mnoofinstlclosure'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mnoofinstlclosure'].hasError('maxlength') && (loanCycleParPriForm.controls['mnoofinstlclosure'].dirty || loanCycleParPriForm.controls['mnoofinstlclosure'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.TENTOR' | translate }}</label>
+                                        <input type="text" formControlName="mtenor" placeholder="{{ 'HOME.TENTOR' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mtenor'].hasError('pattern') && (loanCycleParPriForm.controls['mtenor'].dirty || loanCycleParPriForm.controls['mtenor'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mtenor'].hasError('maxlength') && (loanCycleParPriForm.controls['mtenor'].dirty || loanCycleParPriForm.controls['mtenor'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="category">{{ 'HOME.SECONDARY_LOAN_CYCLE' | translate }}</div>
+                            <div class="vspacer20"></div>
+
+                            <div class="row form-group">
+                                <!-- <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.FREQUENCY' | translate }}</label>
+                                        <div>
+											<select formControlName="mfrequency1">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="W">Weekly</option>
+                                                <option value="M">Monthly</option>
+												<option value="Q">Quaterly</option>
+                                                <option value="Y">Yearly</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mfrequency1'].hasError('required') && (loanCycleParPriForm.controls['mfrequency1'].dirty || loanCycleParPriForm.controls['mfrequency1'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.RULE_TYPE' | translate }}</label>
+                                        <div>
+											<select formControlName="mruletype">
+                                                <option value="Select" [selected]="true">Select [ 75559 ]</option>
+                                                <option *ngFor="let data of ruleTypeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriForm.controls['mruletype'].hasError('required') && (loanCycleParPriForm.controls['mruletype'].dirty || loanCycleParPriForm.controls['mruletype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.UPTO_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="muptoamount" placeholder="{{ 'HOME.UPTO_AMOUNT' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['muptoamount'].hasError('required') && (loanCycleParPriForm.controls['muptoamount'].dirty || loanCycleParPriForm.controls['muptoamount'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['muptoamount'].hasError('pattern') && (loanCycleParPriForm.controls['muptoamount'].dirty || loanCycleParPriForm.controls['muptoamount'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['muptoamount'].hasError('maxlength') && (loanCycleParPriForm.controls['muptoamount'].dirty || loanCycleParPriForm.controls['muptoamount'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MIN_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mminamount" placeholder="{{ 'HOME.MIN_AMOUNT' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminamount'].hasError('required') && (loanCycleParPriForm.controls['mminamount'].dirty || loanCycleParPriForm.controls['mminamount'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminamount'].hasError('pattern') && (loanCycleParPriForm.controls['mminamount'].dirty || loanCycleParPriForm.controls['mminamount'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mminamount'].hasError('maxlength') && (loanCycleParPriForm.controls['mminamount'].dirty || loanCycleParPriForm.controls['mminamount'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MAX_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mmaxamount" placeholder="{{ 'HOME.MAX_AMOUNT' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxamount'].hasError('required') && (loanCycleParPriForm.controls['mmaxamount'].dirty || loanCycleParPriForm.controls['mmaxamount'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxamount'].hasError('pattern') && (loanCycleParPriForm.controls['mmaxamount'].dirty || loanCycleParPriForm.controls['mmaxamount'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriForm.controls['mmaxamount'].hasError('maxlength') && (loanCycleParPriForm.controls['mmaxamount'].dirty || loanCycleParPriForm.controls['mmaxamount'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <button class="button" (click)="onSubmit(loanCycleParPriForm.value)">{{ 'ACTION.ADD' | translate }}</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <div class="datatable-box" *ngIf="loanCycleListPreview.length">
+                                         <div class=" table-responsivebox">                              
+                                            <table id="dt-sample" class="table table-hover previewTable">                                        
+                                                <thead>
+                                                    <tr>   
+                                                        <th scope="col">{{ 'HOME.FREQUENCY' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.RULE_TYPE' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.UPTO_AMOUNT' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.MIN_AMOUNT' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.MAX_AMOUNT' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.DELETE' | translate }}</th>                                   
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr *ngFor="let list of loanCycleListPreview; let i = index" (dblclick)="dataNavigate(list)">
+                                                        <td>{{list.mfrequency}}</td>
+                                                        <td>{{list.mruletype}}</td>
+                                                        <td>{{list.muptoamount}}</td>
+                                                        <td>{{list.mminamount}}</td>                                          
+                                                        <td>{{list.mmaxamount}}</td>
+                                                        <td><img class="deleterow action-img" title="Delete" (click)="deleteRow(i);" src="../../../assets/images/icon/Delete2x.png" /></td>
+                                                        
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                               
+                                     </div>
+                                </div>
+                            </div>
+
+                            <!-- <div formArrayName="datas">
+                                <div *ngFor="let dat of loanCycleParPriForm.controls.datas.controls;let i=index">
+                                    <label>Data 1</label>
+                                    <input type="text" [formControlName]="itemQty">
+                                    <label>Data 2</label>
+                                    <input type="text" [formControlName]="itemName">
+                                </div>
+                            </div> -->
+                            
+
+                            <!-- <div class="container" style="margin-top: 5%">    
+                                <table class="table table-striped table-bordered">    
+                                    <thead>    
+                                        <tr>    
+                                            <th>Action</th>    
+                                            <th>Nmae</th>    
+                                            <th>Email</th>    
+                                            <th>Phone</th>    
+                                        </tr>    
+                                    </thead>    
+                                    <tbody>    
+                                         <tr *ngFor="let dynamic of dynamicArray; let i = index;">    
+                                          <td>    
+                                            <i class="fa fa-trash fa-2x"></i>    
+                                          </td>    
+                                            <td>    
+                                              <input formControlName="name{{i}}" [(ngModel)]="dynamicArray[i].name" class="form-control" type="text" />    
+                                            </td>    
+                                            <td>    
+                                              <input formControlName="email{{i}}" [(ngModel)]="dynamicArray[i].email" class="form-control" type="email" />    
+                                            </td>    
+                                            <td>    
+                                              <input formControlName="phone{{i}}" [(ngModel)]="dynamicArray[i].phone" class="form-control" type="number"/>    
+                                            </td>    
+                                        </tr>    
+                                        <tr>    
+                                          <td (click)="addRow()">    
+                                            <i class="fa fa-plus fa-2x"></i>    
+                                          </td>    
+                                        </tr>    
+                                    </tbody>    
+                                </table>    
+                            </div>   -->
+
+                            <div class="row form-footer">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/loan-cycle-parameter-primary-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="submitFinalForm(loanCycleParPriForm.value)">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+<div id="modal-sample-1" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of branchDropdownData; let i = index" (click)="branchCodeSelected(list.mpbrcode,list.mname,i);" [class.active]="i == highlightRowBranch">
+                                        <td>{{list.mpbrcode}}</td>
+                                        <td>{{list.mname}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButtonBranch" type="button" class="button" (click)="proceedActionBranch();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+<div id="modal-sample-2" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of productDropdownData; let i = index" (click)="productCodeSelected(list.mprdCd,list.mname,i);" [class.active]="i == highlightRowProduct">
+                                        <td>{{list.mprdCd}}</td>
+                                        <td>{{list.mname}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButtonProduct" type="button" class="button" (click)="proceedActionProduct();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+
+

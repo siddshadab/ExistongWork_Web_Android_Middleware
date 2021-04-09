@@ -1,0 +1,379 @@
+<!-- ================ Global Navigation - Start ==============-->
+<!-- <div *ngFor="let data of navMenuData">
+    <div>{{data[0][0]}}</div>
+    <div>{{data[0][1]}}</div>
+    <div>{{data[0][2]}}</div>
+    <div>{{data[0][3]}}</div>
+    <div>{{data[0][4]}}</div>
+</div> -->
+<nav class="global-nav sticky-nav">
+    <div class="in-glnav">
+        <div class="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="glnav-content">
+                        <div class="navigation-items">
+                            <ul id="main-nav" class="lst-navigation">
+
+                                <li *ngFor="let data of navMenuData;">
+                                    <div *ngIf="data.url;then content else other_content">here is ignored</div>    
+                                    <ng-template #content><a routerLink="{{data.url}}" class="{{data.icon}}">{{ data.menu | translate}}<span class="chevron"></span></a></ng-template>
+                                    <ng-template #other_content><a (click)='$event.preventDefault();' class="{{data.icon}}">{{ data.menu | translate}}<span class="chevron"></span></a></ng-template>
+                                    <!-- <a routerLink="{{data.url}}" class="glni-datareview">{{ data.menu | translate}}<span class="chevron"></span></a> -->
+                                    <div *ngIf="data.subMenu.length > 0" class="subnavigation-items-new">
+                                        <ul class="lst-subnavigation">
+                                            <li *ngFor="let subData of data.subMenu;">
+                                                <div *ngIf="subData.url;then subcontent else other_subcontent">here is ignored</div>    
+                                                <ng-template #subcontent><a routerLink="{{subData.url}}" (click)="userAccessRightsData(subData);">{{subData.menu}}</a></ng-template>
+                                                <ng-template #other_subcontent><a class="has-subdata" href="javascript:;">{{subData.menu}}<span class="chevron"></span></a></ng-template>
+                                                <!-- <a routerLink="{{subData.url}}" (click)="userAccessRightsData(subData,$event);">{{subData.menu}}</a>
+                                                <a href="javascript:;" (click)="userAccessRightsData(subData,$event);">{{subData.menu}}</a> -->
+                                                <div class="subnavigation-items-sub-new">
+                                                    <ul class="lst-subnavigation">
+                                                        <li *ngFor="let subOfSubData of subData.subMenu;">
+                                                            <a routerLink="{{subOfSubData.url}}" (click)="userAccessRightsData(subOfSubData);">{{subOfSubData.menu}}</a>      
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <!-- <li>
+                                                <a routerLink="/user-master-view" (click)="userAccessRightsData('data');">User Master</a>
+                                            </li> -->
+                                            
+                                        </ul><!--.lst-subnavigation-->
+                                    </div><!--.subnavigation-items-->
+                                </li>
+
+
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-dashboard active last-active" routerLink="/dashboard">{{ 'NAVIGATION.DASHBOARD' | translate}}</a>
+                                </li> -->
+                                <!-- <li >
+                                    <a href="javascript:;" class="glni-datareview">{{ 'NAVIGATION.MASTER' | translate}}<span class="chevron"></span></a>
+                                    <div class="subnavigation-items-new">
+                                        <ul class="lst-subnavigation">
+                                            <li *ngFor="let data of navMenuData;">
+                                                <a routerLink="/user-master-view" (click)="userAccessRightsData(data);">{{data.menu}}</a>
+                                            </li>
+                                            <li>
+                                                <a routerLink="/user-master-view" (click)="userAccessRightsData('data');">User Master</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/user-access-rights-view">User Access Rights Master</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/product-master-view">Product Master</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/branch-master-view">Branch Master</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/loan-level-view">Loan Level Master </a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/loan-approval-limit-view">Loan Approval Limit</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/loan-cycle-parameter-primary-view">Loan Cycle</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/lookup-master-view">Lookup Master</a>
+                                            </li>
+                                            <li routerLinkActive="active" >
+                                                <a routerLink="/system-parameter-view">System Parameter</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a class="glni-datareview">{{ 'NAVIGATION.PARAMS' | translate}}<span class="chevron"></span></a>
+                                    <div class="subnavigation-items-new">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">Look Up</a>
+                                                <div class="subnavigation-items-sub-new">
+                                                    <ul class="lst-subnavigation">
+                                                        <li>
+                                                            <a href="javascript:;" routerLink="/lookup-code-type">Look Up Code Types</a>    
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">Account Holders</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">Financials Only</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Mock Up</a>
+                                                <div class="subnavigation-items-sub-new">
+                                                    <ul class="lst-subnavigation">
+                                                        <li>
+                                                            <a href="javascript:;">Holders</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">Financials</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-dataimport">{{ 'NAVIGATION.DATA_IMPORT' | translate}}<span class="chevron"></span></a>
+                                    <div class="subnavigation-items-new">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">Reporting FI</a>
+                                                <div class="subnavigation-items-sub-new">
+                                                    <ul class="lst-subnavigation">
+                                                        <li>
+                                                            <a href="javascript:;">Reporting FI</a>      
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">Account Holders</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">Financials Only</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Account Holders</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Financials Only</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-datareview">{{ 'NAVIGATION.DATA_REVIEW' | translate}}<span class="chevron"></span></a>
+                                    <div class="subnavigation-items-new">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">Review FI Data</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Review Account Holder Data</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-submission">{{ 'NAVIGATION.SUBMISSION' | translate}}<span class="chevron"></span></a>
+                                    <div class="subnavigation-items-new">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">FI Reporting Statistics</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">XML Generation</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Encryption &amp; Decryption</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">FI Status Tracking</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Auto Submission</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Decrypt FRS Notification</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-reports">Reports<span class="chevron"></span></a>
+                                    <div class="subnavigation-items">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">Closed Account Count</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Undocumented Account Count</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">FI Reporting Count</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">FI Export Data</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Export Account Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Export Client Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">FATCA Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Jusrisdiction Reporting Statistic</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-configuration">Configuration<span class="chevron"></span></a>
+                                    <div class="subnavigation-items">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">Report Submission</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Super Organisation Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Organisation Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Jurisdiction Organisation Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Module Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Role Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Main Menu Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Sub Menu Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Module Configuration</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Role Configuration</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Menu Configuration</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Template</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-admin">Admin<span class="chevron"></span></a>
+                                    <div class="subnavigation-items">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">FI Packaging Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">ISO Country</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">ISO Currency</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Lookup Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Lookup Value Master</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Download Files</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">User Master</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="javascript:;" class="glni-settings">Settings<span class="chevron"></span></a>
+                                    <div class="subnavigation-items">
+                                        <ul class="lst-subnavigation">
+                                            <li>
+                                                <a href="javascript:;">Reset Password</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                                <li class="mb-template">
+                                    <a href="javascript:;">Download Template</a>
+                                </li>
+                                <li class="mb-help">
+                                    <a href="javascript:;">Help & Search</a>
+                                </li>
+                                <li class="mb-logout">
+                                    <a href="javascript:;">Logout</a>
+                                </li>
+                            </ul><!--.lst-navigation-->
+                        </div><!--.navigation-items-->
+                    </div><!--.glnav-content-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-glnav-->
+</nav><!--.global-nav-->
+<!-- ================ Global Navigation - End   ==============-->
+<!-- <div id="floating-nav" style="background-color: wheat;padding: 30px;position: absolute;top: 126px;width: 100%;z-index: 150;display: none;">
+    <ul>
+        <li style="display: inline-block;padding-right: 50px;">
+            <a href="javascript:;" class="glni-datareview">Data Review<span class="chevron"></span></a>
+            <div class="subnavigation-items-new">
+                <ul class="lst-subnavigation">
+                    <li>
+                        <a href="javascript:;">Review FI Data</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Review Account Holder Data</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Review FI Data</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Review Account Holder Data</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Review FI Data</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Review Account Holder Data</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li style="display: inline-block;padding-right: 50px;">
+            <a href="javascript:;" class="glni-submission">Submission<span class="chevron"></span></a>
+            <div class="subnavigation-items-new">
+                <ul class="lst-subnavigation">
+                    <li>
+                        <a href="javascript:;">FI Reporting Statistics</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">XML Generation</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Encryption &amp; Decryption</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">FI Status Tracking</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Auto Submission</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Decrypt FRS Notification</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    
+</div> -->
+
+<!-- <div id="hoverOverMe">Hover over me</div>
+<div id="output">Output</div> -->

@@ -1,0 +1,208 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+         <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/user-access-rights-view">{{ 'HOME.USER_ACCESS_RIGHTS' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+
+                        <div class="category">{{ 'HOME.USER_ACCESS_RIGHTS_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+
+                        <form [formGroup]="userAccessRightsForm" >
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.GROUP_CODE' | translate }}</label>
+                                        <div>
+											<select formControlName="mgrpcd">
+                                                <option value="Select" [selected]="true">Select [ 1009 ]</option>
+                                                <option *ngFor="let data of groupCodeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="userAccessRightsForm.controls['mgrpcd'].hasError('required') && (userAccessRightsForm.controls['mgrpcd'].dirty || userAccessRightsForm.controls['mgrpcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MENU_ID' | translate }}</label>
+                                        <input type="text" formControlName="menuid" placeholder="{{ 'HOME.MENU_ID' | translate }}"><u></u>
+                                        <em *ngIf="userAccessRightsForm.controls['menuid'].hasError('required') && (userAccessRightsForm.controls['menuid'].dirty || userAccessRightsForm.controls['menuid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userAccessRightsForm.controls['menuid'].hasError('pattern') && (userAccessRightsForm.controls['menuid'].dirty || userAccessRightsForm.controls['menuid'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="userAccessRightsForm.controls['menuid'].hasError('maxlength') && (userAccessRightsForm.controls['menuid'].dirty || userAccessRightsForm.controls['menuid'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.USER_CODE' | translate }}</label>
+                                        <input type="text" formControlName="musrcode" placeholder="{{ 'HOME.USER_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div>
+											<select formControlName="musrcode">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of reportingUserDropdown" value="{{data.musrcode}}">{{data.musrName}}</option>
+											</select><u></u>
+                                        </div> -->
+                                        <em *ngIf="userAccessRightsForm.controls['musrcode'].hasError('required') && (userAccessRightsForm.controls['musrcode'].dirty || userAccessRightsForm.controls['musrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>                              
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.AUTHORITY' | translate }}</label>
+                                        <div>
+                                            <select formControlName="authoritye">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="userAccessRightsForm.controls['authoritye'].hasError('required') && (userAccessRightsForm.controls['authoritye'].dirty || userAccessRightsForm.controls['authoritye'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.CREATE' | translate }}</label>
+                                        <div>
+                                            <select formControlName="createe">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="userAccessRightsForm.controls['createe'].hasError('required') && (userAccessRightsForm.controls['createe'].dirty || userAccessRightsForm.controls['createe'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BROWSE' | translate }}</label>
+                                        <div>
+                                            <select formControlName="browsee">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="userAccessRightsForm.controls['browsee'].hasError('required') && (userAccessRightsForm.controls['browsee'].dirty || userAccessRightsForm.controls['browsee'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DELETE' | translate }}</label>
+                                        <div>
+                                            <select formControlName="deletee">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="userAccessRightsForm.controls['deletee'].hasError('required') && (userAccessRightsForm.controls['deletee'].dirty || userAccessRightsForm.controls['deletee'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MODIFY' | translate }}</label>
+                                        <div>
+                                            <select formControlName="modifye">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="userAccessRightsForm.controls['modifye'].hasError('required') && (userAccessRightsForm.controls['modifye'].dirty || userAccessRightsForm.controls['modifye'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>    
+                            </div>                            
+                            <div class="row form-footer">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/user-access-rights-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(userAccessRightsForm.value)">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+<div id="modal-sample" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of reportingUserDropdown; let i = index" (click)="reportingUserSelected(list.musrcode,list.musrName,i);" [class.active]="i == highlightRow">
+                                        <td>{{list.musrcode}}</td>
+                                        <td>{{list.musrName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButton" type="button" class="button" (click)="proceedActionUser();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+

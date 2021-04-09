@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans
+END
+SubDistrictsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/SubDistrictsEntity.java
+END
+StatesEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/StatesEntity.java
+END
+DesignationEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/DesignationEntity.java
+END
+AreaEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/AreaEntity.java
+END
+DistrictsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/DistrictsEntity.java
+END
+CountriesEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/CountriesEntity.java
+END
+AreaCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/AreaCompositePrimaryEntity.java
+END

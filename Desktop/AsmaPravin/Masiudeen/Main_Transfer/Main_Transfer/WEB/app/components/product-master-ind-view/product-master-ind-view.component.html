@@ -1,0 +1,157 @@
+<div class="breadcrumb">
+        <ul class="lst-breadcrumb">
+            <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/product-master-view">{{ 'HOME.PRODUCT_MASTER' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+        </ul><!--.lst-breadcrumb-->
+    </div>
+    <div class="vspacer20"></div>
+    <main class="main-container">
+        <div class="in-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="in-mcontainer">
+                            <div class="category">
+                                <div class="row">
+                                    <div class="col-6">{{ 'HOME.PRODUCT_DETAILS' | translate }}</div>
+                                    <div class="col-6 text-right">
+                                        <div class="action-img">
+                                            <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" />
+                                        </div>
+                                        <div class="action-img">
+                                            <img *ngIf="!editActivated && rightsData.delete == 1" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" />
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="vspacer20"></div>
+                            <form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm.value)">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.productComposieEntity.mlbrcode | Custom}}</h6>
+                                            <input *ngIf="editActivated" type="text" formControlName="mlbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                            <!-- <a *ngIf="editActivated" href="javascript:;" data-toggle="modal" data-target="#modal-sample-1"><button class="button sm over-input">Search</button></a> -->
+                                            <!-- <div *ngIf="editActivated">
+                                                <select formControlName="mlbrcode">
+                                                    <option value="Select">Select</option>
+                                                    <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+                                                </select><u></u>
+                                            </div> -->
+                                            <em *ngIf="productForm.controls['mlbrcode'].hasError('required') && (productForm.controls['mlbrcode'].dirty || productForm.controls['mlbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div><!--.col-12 col-md-4 col-lg-3-->                                    
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.PRODUCT_CODE' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.productComposieEntity.mprdcd | Custom}}</h6>
+                                            <input *ngIf="editActivated" type="text" formControlName="mprdcd" placeholder="{{ 'HOME.PRODUCT_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                            <em *ngIf="productForm.controls['mprdcd'].hasError('required') && (productForm.controls['mprdcd'].dirty || productForm.controls['mprdcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="productForm.controls['mprdcd'].hasError('maxlength') && (productForm.controls['mprdcd'].dirty || productForm.controls['mprdcd'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div><!--.col-12 col-md-4 col-lg-3-->                                        
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.NAME' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.mname | Custom}}</h6>
+                                            <input *ngIf="editActivated" type="text" formControlName="mname" placeholder="{{ 'HOME.NAME' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mname'].hasError('required') && (productForm.controls['mname'].dirty || productForm.controls['mname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <!-- <em *ngIf="productForm.controls['mname'].hasError('maxlength') && productForm.controls['mname'].touched">Name should have max 8 char</em> -->
+                                        </div><!--.form-readcontroller-->
+                                    </div><!--.col-12 col-md-4 col-lg-3-->
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.CURRENCY_CODE' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.mcurcd | Custom}}</h6>
+                                            <!-- <input *ngIf="editActivated" type="text" formControlName="mcurcd" placeholder="{{ 'HOME.CURRENCY_CODE' | translate }}"><u></u> -->
+                                            <div *ngIf="editActivated">
+                                                <select formControlName="mcurcd">
+                                                    <option value="Select">Select</option>
+                                                    <option *ngFor="let data of currencyDropdown" value="{{data.mcurrcd}}" >{{data.mcurrdesc}}</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="productForm.controls['mcurcd'].hasError('required') && (productForm.controls['mcurcd'].dirty || productForm.controls['mcurcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div><!--.col-12 col-md-4 col-lg-3-->
+                                    <div class="col-12 col-md-4 col-lg-3">                                                                   
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.DIVISION_TYPE' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.mdivisiontypeDesc | Custom}}</h6>
+                                            <div *ngIf="editActivated">
+                                                <select formControlName="mdivisiontype">
+                                                    <option value="Select">Select [ 2121 ]</option>
+                                                    <option *ngFor="let data of divisionTypeLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="productForm.controls['mdivisiontype'].hasError('required') && (productForm.controls['mdivisiontype'].dirty || productForm.controls['mdivisiontype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div>    
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.INTEREST_RATE' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.mintrate | Custom}}</h6>
+                                            <input *ngIf="editActivated" type="text" formControlName="mintrate" placeholder="{{ 'HOME.INTEREST_RATE' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mintrate'].hasError('required') && (productForm.controls['mintrate'].dirty || productForm.controls['mintrate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="productForm.controls['mintrate'].hasError('maxlength') && (productForm.controls['mintrate'].dirty || productForm.controls['mintrate'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div>    
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.MODULE_TYPE' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.mmoduletypeDesc | Custom}}</h6>
+                                            <div *ngIf="editActivated">
+                                                <select formControlName="mmoduletype">
+                                                    <option value="Select">Select [ 1053 ]</option>
+                                                    <option *ngFor="let data of moduleTypeLookup" value="{{data.lookupComposite.mcode}}" >{{data.mcodedesc}}</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="productForm.controls['mmoduletype'].hasError('required') && (productForm.controls['mmoduletype'].dirty || productForm.controls['mmoduletype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="{{formClass}}">
+                                            <label>{{ 'HOME.NUMBER_OF_GUARANTOR' | translate }}</label>
+                                            <h6 *ngIf="!editActivated">{{productData.mnoofguaranter | Custom}}</h6>
+                                            <input *ngIf="editActivated" type="text" formControlName="mnoofguaranter" placeholder="{{ 'HOME.NUMBER_OF_GUARANTOR' | translate }}"><u></u>
+                                            <em *ngIf="productForm.controls['mnoofguaranter'].hasError('required') && (productForm.controls['mnoofguaranter'].dirty || productForm.controls['mnoofguaranter'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>                                       
+                                            <em *ngIf="productForm.controls['mnoofguaranter'].hasError('maxlength') && (productForm.controls['mnoofguaranter'].dirty || productForm.controls['mnoofguaranter'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                        </div><!--.form-readcontroller-->
+                                    </div>                                        
+                                </div>                        
+                            </form>
+                            <div class="row form-footer">
+                                <div class="col-6" *ngIf="!editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/product-master-view">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" (click)="backToView();">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div *ngIf="editActivated" class="col-6">
+                                    <div class="text-right">
+                                        <button class="linkbutton" (click)="updateProduct(productForm.value);">{{ 'ACTION.UPDATE' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+    
+                        </div><!--.in-mcontainer-->
+                    </div><!--.col-12-->
+                </div><!--.row-->
+            </div><!--.container-fluid-->
+        </div><!--.in-main-->
+    </main><!--.main-container-->
+    <!-- ================ Main Page Content - End   ==============-->
+    
+    
+    
+    

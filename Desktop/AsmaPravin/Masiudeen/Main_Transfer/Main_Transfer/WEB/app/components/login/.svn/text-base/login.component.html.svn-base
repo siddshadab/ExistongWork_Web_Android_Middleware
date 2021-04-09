@@ -1,0 +1,133 @@
+<div class="login-container">
+    <div class="rolling-world">
+        <div class="world-container">
+            <img class="world-image world-1" src="../../assets/images/background/world-map.png">
+            <img class="world-image world-2" src="../images/background/world-map.png">
+            <img class="world-image world-3" src="../images/background/world-map.png">
+        </div><!--.world-container-->
+    </div><!--.rolling-world-->
+    <div class="adbanner-container">
+        <div class="promo-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../assets/images/banner/bg-promo.jpg" class="abanner">
+                        <h1 data-swiper-parallax="-500">Financial Reporting System</h1>
+                        <p data-swiper-parallax="-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="javascript:;" data-swiper-parallax="-200">Know More</a>
+                    </div><!--.swiper-slide-->
+                    <div class="swiper-slide">
+                        <h1 data-swiper-parallax="-500">Data Cleansing</h1>
+                        <p data-swiper-parallax="-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="javascript:;" data-swiper-parallax="-200">Know More</a>
+                    </div><!--.swiper-slide-->
+                    <div class="swiper-slide">
+                        <h1 data-swiper-parallax="-500">BORT</h1>
+                        <p data-swiper-parallax="-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="javascript:;" data-swiper-parallax="-200">Know More</a>
+                    </div><!--.swiper-slide-->
+                    <div class="swiper-slide">
+                        <h1 data-swiper-parallax="-500">BEPS</h1>
+                        <p data-swiper-parallax="-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="javascript:;" data-swiper-parallax="-200">Know More</a>
+                    </div><!--.swiper-slide-->
+                </div><!--.swiper-wrapper-->
+                <div class="swiper-pagination"></div><!--.swiper-pagination-->
+                <div class="swiper-button-prev"></div><!--.swiper-button-prev-->
+                <div class="swiper-button-next"></div><!--.swiper-button-next-->
+            </div><!--.swiper-container-->
+        </div><!--.promo-container-->
+    </div><!--.adbanner-container-->
+    <div class="loginform-container">
+        <div class="login-header">
+            <div class="language-bar">
+                <div class="lang-dropdown">
+                    <a href="javascript:;" class="btn-selectlang">Language : <em>English</em><i></i></a>
+                    <!-- <label for="">
+                        {{ 'HOME.SELECT' | translate }}
+                        <select class="form-control" #langselect (change)="translate.use(langselect.value)">
+                            <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+                        </select>
+                    </label> -->
+                    <div class="language-list">
+                        <ul class="lst-languages">
+                            <!-- <li>
+                                <a href="javascript:;" class="language-selected">English</a>
+                            </li> -->
+                            <li *ngFor="let lang of translate.getLangs(); let i = index;">
+                                <a *ngIf="i==0;else elseBlock" class="language-selected" href="javascript:;" (click)="translate.use(lang)">{{ lang }}</a>
+                                <ng-template #elseBlock><a href="javascript:;" (click)="translate.use(lang)">{{ lang }}</a></ng-template>
+                            </li>
+
+                            <!-- <li>
+                                <a href="javascript:;">اردو</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">मराठी</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">ગુજરાતી</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">தமிழ்</a>
+                            </li>-->
+                        </ul><!--.lst-languages-->
+                    </div><!--.language-list-->
+                </div><!--.lang-dropdown-->
+            </div><!--.language-bar-->
+            <div class="brand-logo">
+                <img src="../assets/images/logo/brand-logo.png" alt="MFI">
+                <!-- <img src="../../assets/images/logo/omni-frs-logo.png"> -->
+            </div><!--.brand-logo-->
+        </div><!--.login-header-->
+        <div class="vspacer20"></div>
+        <form [formGroup]="myForm" (ngSubmit)="onlogin(myForm.value)">
+        <div class="login-form">
+            <div class="row form-group">
+                <div class="col-12">
+                    <div class="form-controller ic-username">
+                        <label>{{ 'HOME.USERNAME' | translate }}</label>
+                        <input type="text" formControlName="musrcode" placeholder="{{ 'HOME.ENTER_USERNAME' | translate}}"><u></u>
+                        <em *ngIf="myForm.controls['musrcode'].hasError('required') && myForm.controls['musrcode'].touched">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                    </div><!--.form-control-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+            <div class="row form-group">
+                <div class="col-12">
+                    <div class="form-controller ic-password">
+                        <label>{{ 'HOME.PASSWORD' | translate }}</label>
+                        <input type="password" formControlName="musrpass" placeholder="{{ 'HOME.ENTER_PASSWORD' | translate}}"><u></u>
+                        <em *ngIf="myForm.controls['musrpass'].hasError('required') && myForm.controls['musrpass'].touched">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                        <em *ngIf="myForm.controls['musrpass'].hasError('minlength') && myForm.controls['musrpass'].touched">{{ 'VALIDATION.MIN_5' | translate }}</em>
+                        <em *ngIf="myForm.controls['musrpass'].hasError('maxlength') && myForm.controls['musrpass'].touched">{{ 'VALIDATION.MAX_5' | translate }}</em>
+                    </div><!--.form-control-->
+                    
+                </div><!--.col-12-->
+            </div><!--.row-->
+            <!-- <div class="row form-group">
+                <div class="col-12">
+                    <div class="form-controller ic-group">
+                        <label>Device Id</label>
+                        <input type="text" formControlName="mregdevicemacid" placeholder="Enter device id here"><u></u>
+                        <em *ngIf="myForm.controls['mregdevicemacid'].hasError('required') && myForm.controls['mregdevicemacid'].touched">Device Id Required</em>    
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-footer">
+                        <button class="button">{{ 'ACTION.LOGIN' | translate }}</button>
+                    </div><!--.form-footer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.login-form-->
+        </form>
+        <div class="login-footer">
+            <p class="copyrights">{{ 'HOME.COPYRIGHT' | translate}}</p>
+        </div><!--.login-footer-->
+    </div><!--.loginform-container-->
+</div><!--.login-container-->

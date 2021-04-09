@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-master-view
+END
+user-master-view.component.html
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-master-view/user-master-view.component.html
+END
+user-master-view.component.ts
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-master-view/user-master-view.component.ts
+END
+user-master-view.component.scss
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-master-view/user-master-view.component.scss
+END
+user-master-view.component.spec.ts
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-master-view/user-master-view.component.spec.ts
+END

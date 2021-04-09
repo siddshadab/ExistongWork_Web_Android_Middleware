@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations
+END
+CustomURLFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations/CustomURLFilter.java
+END
+CustomWebSecurityConfigurer.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations/CustomWebSecurityConfigurer.java
+END
+AppConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations/AppConfig.java
+END
+DatabaseConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations/DatabaseConfig.java
+END
+ConfigurationInitializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations/ConfigurationInitializer.java
+END
+SqlServerDialectWithNvarchar.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/configurations/SqlServerDialectWithNvarchar.java
+END

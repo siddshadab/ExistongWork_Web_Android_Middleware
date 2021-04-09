@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/2706/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl
+END
+CIFLoanClosureSubmitServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/eco_mfi/!svn/ver/1995/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFLoanClosureSubmitServiceImpl.java
+END
+OmniCustomerMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 196
+/svn/eco_mfi/!svn/ver/2466/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniCustomerMasterServiceImpl.java
+END
+OmniTradeAndNeighbourRefCheckServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 206
+/svn/eco_mfi/!svn/ver/544/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniTradeAndNeighbourRefCheckServiceImpl.java
+END
+CIFSavingWithdrawalAuthSubmit.java
+K 25
+svn:wc:ra_dav:version-url
+V 196
+/svn/eco_mfi/!svn/ver/2158/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFSavingWithdrawalAuthSubmit.java
+END
+TDClosureServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/eco_mfi/!svn/ver/1728/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/TDClosureServiceImpl.java
+END
+OmniCustomerLoanBasicDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 206
+/svn/eco_mfi/!svn/ver/1932/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniCustomerLoanBasicDetailsServiceImpl.java
+END
+CIFLoanClosureServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/eco_mfi/!svn/ver/38/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFLoanClosureServiceImpl.java
+END
+InternalBankTransferServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/eco_mfi/!svn/ver/2342/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/InternalBankTransferServiceImpl.java
+END
+OmniCenterMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/eco_mfi/!svn/ver/1607/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniCenterMasterServiceImpl.java
+END
+OmniDisbursedListAuthorizationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 208
+/svn/eco_mfi/!svn/ver/2345/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniDisbursedListAuthorizationServiceImpl.java
+END
+OmniKycMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/eco_mfi/!svn/ver/923/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniKycMasterServiceImpl.java
+END
+OmniCustomerLoanCashFlowServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 202
+/svn/eco_mfi/!svn/ver/1704/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniCustomerLoanCashFlowServiceImpl.java
+END
+OmniDeviationFormServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/eco_mfi/!svn/ver/544/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniDeviationFormServiceImpl.java
+END
+LoanSimulatorServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/eco_mfi/!svn/ver/2611/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/LoanSimulatorServiceImpl.java
+END
+BulkLoanPreClosureSubmitServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 202
+/svn/eco_mfi/!svn/ver/2227/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/BulkLoanPreClosureSubmitServiceImpl.java
+END
+CIFSavingAuthDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/eco_mfi/!svn/ver/2343/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFSavingAuthDetailsServiceImpl.java
+END
+OmniSavingsCollectionListServiceImpl.java.bak
+K 25
+svn:wc:ra_dav:version-url
+V 205
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniSavingsCollectionListServiceImpl.java.bak
+END
+CIFServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/eco_mfi/!svn/ver/1513/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFServiceImpl.java
+END
+CIFSavingAccClosureSubmitServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/eco_mfi/!svn/ver/2068/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFSavingAccClosureSubmitServiceImpl.java
+END
+OmniDisbursedListServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/eco_mfi/!svn/ver/2706/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniDisbursedListServiceImpl.java
+END
+OmniMiniStatementServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniMiniStatementServiceImpl.java
+END
+OmniSavingsCollectionListServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/eco_mfi/!svn/ver/1283/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniSavingsCollectionListServiceImpl.java
+END
+CIFTransactionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/eco_mfi/!svn/ver/2384/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFTransactionServiceImpl.java
+END
+OmniGuarantorDetailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/eco_mfi/!svn/ver/1442/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniGuarantorDetailServiceImpl.java
+END
+OmniCustomerLoanMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 199
+/svn/eco_mfi/!svn/ver/347/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniCustomerLoanMasterServiceImpl.java
+END
+TDClosureDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/eco_mfi/!svn/ver/2067/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/TDClosureDetailsServiceImpl.java
+END
+BulkLoanPreClosureServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/eco_mfi/!svn/ver/270/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/BulkLoanPreClosureServiceImpl.java
+END
+OmniDailyLoanCollectionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 201
+/svn/eco_mfi/!svn/ver/1272/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniDailyLoanCollectionServiceImpl.java
+END
+CIFSavingAccClosureServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 196
+/svn/eco_mfi/!svn/ver/896/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFSavingAccClosureServiceImpl.java
+END
+CIFRepayScheduleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFRepayScheduleServiceImpl.java
+END
+CIFDisbursmentServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/eco_mfi/!svn/ver/1488/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFDisbursmentServiceImpl.java
+END
+CIFCustAuthServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/eco_mfi/!svn/ver/1084/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFCustAuthServiceImpl.java
+END
+OmniSocialAndEnvironmentalServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/eco_mfi/!svn/ver/544/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniSocialAndEnvironmentalServiceImpl.java
+END
+OmniCustomerLoanCPVBusinessRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 210
+/svn/eco_mfi/!svn/ver/908/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniCustomerLoanCPVBusinessRecordServiceImpl.java
+END
+OmniTDReceiptsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/eco_mfi/!svn/ver/1740/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniTDReceiptsServiceImpl.java
+END
+OmniSavingsListServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/eco_mfi/!svn/ver/2466/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniSavingsListServiceImpl.java
+END
+OmniGroupMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/eco_mfi/!svn/ver/1438/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/OmniGroupMasterServiceImpl.java
+END
+CustAuthViewServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/eco_mfi/!svn/ver/1047/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CustAuthViewServiceImpl.java
+END
+GrtAdditionalDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/eco_mfi/!svn/ver/2104/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/GrtAdditionalDetailsServiceImpl.java
+END
+CIFLoanPaymentHistoryServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 199
+/svn/eco_mfi/!svn/ver/2184/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/servicesImpl/CIFLoanPaymentHistoryServiceImpl.java
+END

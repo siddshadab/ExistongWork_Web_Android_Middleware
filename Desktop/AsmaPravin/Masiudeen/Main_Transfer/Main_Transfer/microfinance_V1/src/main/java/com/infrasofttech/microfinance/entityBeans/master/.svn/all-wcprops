@@ -1,0 +1,623 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eco_mfi/!svn/ver/2706/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master
+END
+SpeedoMeterCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SpeedoMeterCompositePrimaryEntity.java
+END
+CGTCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CGTCompositePrimaryEntity.java
+END
+CustomerBusinessExpenseEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/204/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerBusinessExpenseEntity.java
+END
+DataSourceMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/1565/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/DataSourceMasterEntity.java
+END
+SystemParameterCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SystemParameterCompositeEntity.java
+END
+CreditBereauLoanEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CreditBereauLoanEntity.java
+END
+CheckListEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CheckListEntity.java
+END
+CustomerFingerPrintEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/2259/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerFingerPrintEntity.java
+END
+TDInterestSlabCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDInterestSlabCompositeEntity.java
+END
+CustomerLoanEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2706/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerLoanEntity.java
+END
+CustomerAddressDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/461/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerAddressDetailsEntity.java
+END
+ProductComposieEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ProductComposieEntity.java
+END
+LoanApprovalLimitCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanApprovalLimitCompositeEntity.java
+END
+LookupMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2466/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LookupMasterEntity.java
+END
+ProspectCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ProspectCompositePrimaryEntity.java
+END
+CheckListGRTEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CheckListGRTEntity.java
+END
+InterestOffsetCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/InterestOffsetCompositeEntity.java
+END
+CheckListCGT1Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CheckListCGT1Entity.java
+END
+CustomerCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerCompositePrimaryEntity.java
+END
+UserMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/2442/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/UserMasterEntity.java
+END
+DailyLoanCollectedEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/2105/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/DailyLoanCollectedEntity.java
+END
+DisbursmentListEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/1177/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/DisbursmentListEntity.java
+END
+ProspectCompositeLoanEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ProspectCompositeLoanEntity.java
+END
+CustomerProductwiseCycleCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/eco_mfi/!svn/ver/1533/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerProductwiseCycleCompositeEntity.java
+END
+CGT1Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CGT1Entity.java
+END
+ImageMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/210/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ImageMasterEntity.java
+END
+SocialAndEnvironmentalEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/607/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SocialAndEnvironmentalEntity.java
+END
+CustomerBorrowingDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/202/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerBorrowingDetailsEntity.java
+END
+ChartsMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2562/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ChartsMasterEntity.java
+END
+CustomerLoanCashFlowEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/815/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerLoanCashFlowEntity.java
+END
+ReportFilterCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/2702/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ReportFilterCompositeEntity.java
+END
+CustomerHouseholdExpenseEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/207/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerHouseholdExpenseEntity.java
+END
+CustomerPaymentMethodDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/eco_mfi/!svn/ver/208/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerPaymentMethodDetailsEntity.java
+END
+UserVaultBalanceCompositetEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/eco_mfi/!svn/ver/1412/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/UserVaultBalanceCompositetEntity.java
+END
+CustomerAssetDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/201/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerAssetDetailsEntity.java
+END
+LookupComposieEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eco_mfi/!svn/ver/2466/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LookupComposieEntity.java
+END
+TDParameterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/391/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDParameterEntity.java
+END
+CustomerFamilyDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/206/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerFamilyDetailsEntity.java
+END
+CreditBereauResultMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CreditBereauResultMasterEntity.java
+END
+CustomerProductwiseCycleEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/1533/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerProductwiseCycleEntity.java
+END
+InternalBankTransferEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/2065/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/InternalBankTransferEntity.java
+END
+RoleMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/RoleMasterEntity.java
+END
+GLAccountEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/274/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/GLAccountEntity.java
+END
+ProductEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/2581/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ProductEntity.java
+END
+MiniStatementEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/MiniStatementEntity.java
+END
+UserAccessRightsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/362/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/UserAccessRightsEntity.java
+END
+PathTrackerMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2446/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/PathTrackerMasterEntity.java
+END
+SystemParameterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/1140/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SystemParameterEntity.java
+END
+CustomerMultiliteCompositeKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerMultiliteCompositeKey.java
+END
+CentersFoundationEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/496/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CentersFoundationEntity.java
+END
+LoanLevelMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eco_mfi/!svn/ver/502/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanLevelMasterEntity.java
+END
+LoanApprovalLimitEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanApprovalLimitEntity.java
+END
+CustomerLoanCPVBusinessRecordEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/eco_mfi/!svn/ver/1413/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerLoanCPVBusinessRecordEntity.java
+END
+CheckListCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CheckListCompositePrimaryEntity.java
+END
+KycMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/1107/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/KycMasterEntity.java
+END
+SecondaryUserMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/2417/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SecondaryUserMasterEntity.java
+END
+LoanCycleParameterSecondaryCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanCycleParameterSecondaryCompositeEntity.java
+END
+DeviationFormEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/607/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/DeviationFormEntity.java
+END
+GroupsFoundationEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/497/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/GroupsFoundationEntity.java
+END
+TDReceiptsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/1739/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDReceiptsEntity.java
+END
+ContactPointVerificationEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/1231/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ContactPointVerificationEntity.java
+END
+SpeedoMeterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SpeedoMeterEntity.java
+END
+CustomerPPIDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/2466/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerPPIDetailsEntity.java
+END
+DisbursedListEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/2288/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/DisbursedListEntity.java
+END
+ReportFilterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2702/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ReportFilterEntity.java
+END
+SavingsCollectionListEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/432/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SavingsCollectionListEntity.java
+END
+LoanCycleParameterSecondaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanCycleParameterSecondaryEntity.java
+END
+ProspectCreationEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ProspectCreationEntity.java
+END
+CurrentLocationMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/2544/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CurrentLocationMasterEntity.java
+END
+DailyLoanCollectionEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/1523/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/DailyLoanCollectionEntity.java
+END
+TransactionModeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TransactionModeEntity.java
+END
+UserActivityEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/1369/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/UserActivityEntity.java
+END
+TDParameterCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/390/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDParameterCompositeEntity.java
+END
+GRTEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/GRTEntity.java
+END
+LicenseMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/1789/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LicenseMasterEntity.java
+END
+SubLookupMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2466/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SubLookupMasterEntity.java
+END
+InterestSlabEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/InterestSlabEntity.java
+END
+CustomerEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/2564/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerEntity.java
+END
+LoanCycleParameterPrimaryCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanCycleParameterPrimaryCompositeEntity.java
+END
+GuarantorEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/2294/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/GuarantorEntity.java
+END
+InterestOffsetEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/InterestOffsetEntity.java
+END
+SavingsListEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/1931/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/SavingsListEntity.java
+END
+ChartsFilterMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/2409/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ChartsFilterMasterEntity.java
+END
+BranchMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/61/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/BranchMasterEntity.java
+END
+LoanCycleParameterPrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanCycleParameterPrimaryEntity.java
+END
+MenuMasterEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/1411/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/MenuMasterEntity.java
+END
+LoanCompositePrimaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanCompositePrimaryEntity.java
+END
+TradeAndNeighbourRefCheckEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/eco_mfi/!svn/ver/1182/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TradeAndNeighbourRefCheckEntity.java
+END
+TDOffsetInterestSlabCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDOffsetInterestSlabCompositeEntity.java
+END
+InterestSlabCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/InterestSlabCompositeEntity.java
+END
+CustomerBusinessDetailsEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/203/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CustomerBusinessDetailsEntity.java
+END
+LoanUtilizationEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanUtilizationEntity.java
+END
+MutilineCompositeKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/MutilineCompositeKey.java
+END
+RepaymentFrequencyEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/RepaymentFrequencyEntity.java
+END
+UserAccressRightsCompositeEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/eco_mfi/!svn/ver/362/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/UserAccressRightsCompositeEntity.java
+END
+TDInterestSlabEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDInterestSlabEntity.java
+END
+ProspectCompositePrimaryEntityAdhaar.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/ProspectCompositePrimaryEntityAdhaar.java
+END
+CheckListCGT2Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CheckListCGT2Entity.java
+END
+LoanImageEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/2610/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanImageEntity.java
+END
+TDOffsetInterestSlabEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/TDOffsetInterestSlabEntity.java
+END
+CGT2Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/CGT2Entity.java
+END
+UserVaultBalanceEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/1412/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/UserVaultBalanceEntity.java
+END
+LoanCycleWiseLimitEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/2118/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/LoanCycleWiseLimitEntity.java
+END

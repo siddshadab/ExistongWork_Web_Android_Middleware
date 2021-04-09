@@ -1,0 +1,95 @@
+10
+
+dir
+2682
+http://sezsvn.infraseepz.lan/svn/eco_mfi/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance
+http://sezsvn.infraseepz.lan/svn/eco_mfi
+
+
+
+2021-02-15T11:02:18.867928Z
+2682
+shantanu.khare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+893bc709-e608-8648-8f27-59ce0dd58d87
+
+repository
+dir
+
+test
+dir
+
+omni
+dir
+
+controller
+dir
+
+services
+dir
+
+utility
+dir
+
+entityBeans
+dir
+
+servicesimpl
+dir
+
+externalinterfaces
+dir
+
+MicrofinanceV1Application.java
+file
+
+
+
+
+2019-08-30T06:44:39.439228Z
+1e046bd662aa865cfdc7138c1541ab63
+2019-08-30T06:38:02.522351Z
+11
+shantanu.khare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+934
+
+configurations
+dir
+
+schedular
+dir
+

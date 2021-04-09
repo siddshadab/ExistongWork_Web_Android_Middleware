@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-approval-limit-view
+END
+loan-approval-limit-view.component.html
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-approval-limit-view/loan-approval-limit-view.component.html
+END
+loan-approval-limit-view.component.ts
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-approval-limit-view/loan-approval-limit-view.component.ts
+END
+loan-approval-limit-view.component.scss
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-approval-limit-view/loan-approval-limit-view.component.scss
+END
+loan-approval-limit-view.component.spec.ts
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/loan-approval-limit-view/loan-approval-limit-view.component.spec.ts
+END

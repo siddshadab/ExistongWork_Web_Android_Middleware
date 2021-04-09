@@ -1,0 +1,563 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+         <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/user-master-view">{{ 'HOME.USER_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!--Alert Start-->
+                        <div *ngIf="!code_exist" class="alert alert-danger code-exist-alert" role="alert">
+                            {{code_exist_message}}
+                        </div>
+                        <!--Alert End-->
+                        <div class="category">{{ 'HOME.USER_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        <!-- <div class="row">
+                            <div class="col-12">
+                                <div class="vertical-align-mid pad-15">If you do not know the Latitude and longitude value. Please click here</div>
+                                <div class="vertical-align-mid pad-15"><button class="button sm" (click)="getLocationCoords();">Get Location</button></div>
+                            </div>
+                        </div>
+                        <div class="vspacer20"></div> -->
+                        <form [formGroup]="userForm">
+                            <!-- <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Latitude</label>
+                                        <input id="latitude" type="text" formControlName="mgeolatd" placeholder="Enter latitude"><u></u>
+                                        <em *ngIf="userForm.controls['mgeolatd'].hasError('required') && userForm.controls['mgeolatd'].touched">Please enter latitude here</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Longitude</label>
+                                        <input id="longitude" type="text" formControlName="mgeologd" placeholder="Enter longitude"><u></u>
+                                        <em *ngIf="userForm.controls['mgeologd'].hasError('required') && userForm.controls['mgeologd'].touched">Please enter longitude here</em>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.USER_CODE' | translate }}</label>
+                                        <input type="text" formControlName="musrcode" placeholder="{{ 'HOME.USER_CODE' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['musrcode'].hasError('required') && (userForm.controls['musrcode'].dirty || userForm.controls['musrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['musrcode'].hasError('maxlength') && (userForm.controls['musrcode'].dirty || userForm.controls['musrcode'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.USER_NAME' | translate }}</label>
+                                        <input type="text" formControlName="musrname" placeholder="{{ 'HOME.USER_NAME' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['musrname'].hasError('required') && (userForm.controls['musrname'].dirty || userForm.controls['musrname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['musrname'].hasError('maxlength') && (userForm.controls['musrname'].dirty || userForm.controls['musrname'].touched)">{{ 'VALIDATION.MAX_35' | translate }}</em>
+
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.SHORT_NAME' | translate }}</label>
+                                        <input type="text" formControlName="musrshortname" placeholder="{{ 'HOME.SHORT_NAME' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['musrshortname'].hasError('required') && (userForm.controls['musrshortname'].dirty || userForm.controls['musrshortname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['musrshortname'].hasError('maxlength') && (userForm.controls['musrshortname'].dirty || userForm.controls['musrshortname'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.GENDER' | translate }} </label>
+                                        <!-- <input type="text" formControlName="mgender" placeholder="{{ 'HOME.GENDER' | translate }}"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample"><button class="button sm over-input">Search</button></a> -->
+                                        <div>
+											<select formControlName="mgender">
+                                                <option value="Select" [selected]="true">Select [ 1139 ]</option>
+                                                <option *ngFor="let data of genderLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="userForm.controls['mgender'].hasError('required') && (userForm.controls['mgender'].dirty || userForm.controls['mgender'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DESIGNATION' | translate }}</label>
+                                        <input type="text" formControlName="musrdesignation" placeholder="{{ 'HOME.DESIGNATION' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['musrdesignation'].hasError('required') && (userForm.controls['musrdesignation'].dirty || userForm.controls['musrdesignation'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.EMAIL_ID' | translate }}</label>
+                                        <input type="text" formControlName="memailid" placeholder="{{ 'HOME.EMAIL_ID' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['memailid'].hasError('required') && (userForm.controls['memailid'].dirty || userForm.controls['memailid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MOBILE' | translate }}</label>
+                                        <input type="text" formControlName="mmobile" placeholder="{{ 'HOME.MOBILE' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mmobile'].hasError('required') && (userForm.controls['mmobile'].dirty || userForm.controls['mmobile'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                        <input type="text" formControlName="musrbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample-1"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div>
+											<select formControlName="musrbrcode">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div> -->
+                                        <!-- <input type="text" formControlName="musrbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}"><u></u> -->
+                                        <em *ngIf="userForm.controls['musrbrcode'].hasError('required') && (userForm.controls['musrbrcode'].dirty || userForm.controls['musrbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <!-- <em *ngIf="userForm.controls['musrbrcode'].hasError('pattern') && (userForm.controls['musrbrcode'].dirty || userForm.controls['musrbrcode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="userForm.controls['musrbrcode'].hasError('maxlength') && (userForm.controls['musrbrcode'].dirty || userForm.controls['musrbrcode'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em> -->
+                                    </div><!--.form-control-->
+                                </div>    
+                            </div>
+
+                            <div class="category">{{ 'HOME.LOGIN_LOGOUT' | translate }}</div>
+                            <div class="vspacer20"></div>
+
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.AUTO_LOGOUT_PERIOD' | translate }}</label>
+                                        <input type="text" formControlName="mautologoutperiod" placeholder="{{ 'HOME.AUTO_LOGOUT_PERIOD' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mautologoutperiod'].hasError('required') && (userForm.controls['mautologoutperiod'].dirty || userForm.controls['mautologoutperiod'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.AUTO_LOGOUT' | translate }}</label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mautologoutyn" value="1" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mautologoutyn" value="0" >
+                                            <em>No</em>
+                                        </label>
+                                        <em *ngIf="userForm.controls['mautologoutyn'].hasError('required') && (userForm.controls['mautologoutyn'].dirty || userForm.controls['mautologoutyn'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MAX_BAD_LOGINS_PER_DAY' | translate }}</label>
+                                        <input type="text" formControlName="mmaxbadlginperday" placeholder="{{ 'HOME.MAX_BAD_LOGINS_PER_DAY' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mmaxbadlginperday'].hasError('required') && (userForm.controls['mmaxbadlginperday'].dirty || userForm.controls['mmaxbadlginperday'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Next System Login Date</label>
+                                        <input type="text" formControlName="mnextsyslgindt" placeholder="Select date" bsDatepicker  (bsValueChange)="onValueChange($event)" [bsConfig]="{dateInputFormat: 'YYYY-MM-DD'}"><u></u>
+                                        <em *ngIf="userForm.controls['mnextsyslgindt'].hasError('required') && userForm.controls['mnextsyslgindt'].touched">Please enter next system login date here</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.NEXT_SYSTEM_LOGIN_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mnextsyslgindt" placeholder="{{ 'HOME.NEXT_SYSTEM_LOGIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userForm.controls['mnextsyslgindt'].hasError('required') && (userForm.controls['mnextsyslgindt'].dirty || userForm.controls['mnextsyslgindt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MAX_BAD_LOGINS_PER_INSTANCE' | translate }}</label>
+                                        <input type="text" formControlName="mmaxbadlginperinst" placeholder="{{ 'HOME.MAX_BAD_LOGINS_PER_INSTANCE' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mmaxbadlginperinst'].hasError('required') && (userForm.controls['mmaxbadlginperinst'].dirty || userForm.controls['mmaxbadlginperinst'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.NUMBER_OF_BAD_LOGINS' | translate }}</label>
+                                        <input type="text" formControlName="mnoofbadlogins" placeholder="{{ 'HOME.NUMBER_OF_BAD_LOGINS' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mnoofbadlogins'].hasError('required') && (userForm.controls['mnoofbadlogins'].dirty || userForm.controls['mnoofbadlogins'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.BAD_LOGIN_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mbadloginsdt" placeholder="{{ 'HOME.BAD_LOGIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userForm.controls['mbadloginsdt'].hasError('required') && (userForm.controls['mbadloginsdt'].dirty || userForm.controls['mbadloginsdt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <div class="category">{{ 'HOME.PASSWORD' | translate }}</div>
+                            <div class="vspacer20"></div>
+
+                            <div class="row form-group">
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.USER_PASSWORD' | translate }}</label>
+                                        <input type="password" formControlName="musrpass" placeholder="{{ 'HOME.USER_PASSWORD' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['musrpass'].hasError('required') && (userForm.controls['musrpass'].dirty || userForm.controls['musrpass'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller">
+                                        <label>{{ 'HOME.LAST_PASSWORD_CHANGE_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mlastpwdchgdt" placeholder="{{ 'HOME.LAST_PASSWORD_CHANGE_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <!-- <em *ngIf="userForm.controls['mlastpwdchgdt'].hasError('required') && (userForm.controls['mlastpwdchgdt'].dirty || userForm.controls['mlastpwdchgdt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em> -->
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PASSWORD_CHANGE_PERIOD' | translate }}</label>
+                                        <input type="text" formControlName="mpwdchgperioddays" placeholder="{{ 'HOME.PASSWORD_CHANGE_PERIOD' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mpwdchgperioddays'].hasError('required') && (userForm.controls['mpwdchgperioddays'].dirty || userForm.controls['mpwdchgperioddays'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['mpwdchgperioddays'].hasError('maxlength') && (userForm.controls['mpwdchgperioddays'].dirty || userForm.controls['mpwdchgperioddays'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PASSWORD_CHANGE_FORCED' | translate }}</label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mpwdchgforcedyn" value="1" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mpwdchgforcedyn" value="0" >
+                                            <em>No</em>
+                                        </label>
+                                        <em *ngIf="userForm.controls['mpwdchgforcedyn'].hasError('required') && (userForm.controls['mpwdchgforcedyn'].dirty || userForm.controls['mpwdchgforcedyn'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.NEXT_PASSWORD_CHANGE_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mnextpwdchgdt" placeholder="{{ 'HOME.NEXT_PASSWORD_CHANGE_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userForm.controls['mnextpwdchgdt'].hasError('required') && (userForm.controls['mnextpwdchgdt'].dirty || userForm.controls['mnextpwdchgdt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <div class="category">{{ 'HOME.GENERAL' | translate }}</div>
+                            <div class="vspacer20"></div>
+
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.GROUP_CODE' | translate }}</label>
+                                        <div>
+											<select formControlName="mgrpcd">
+                                                <option value="Select" [selected]="true">Select [ 1009 ]</option>
+                                                <option *ngFor="let data of groupCodeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="userForm.controls['mgrpcd'].hasError('required') && (userForm.controls['mgrpcd'].dirty || userForm.controls['mgrpcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.JOIN_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mjoindate" placeholder="{{ 'HOME.JOIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userForm.controls['mjoindate'].hasError('required') && (userForm.controls['mjoindate'].dirty || userForm.controls['mjoindate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.LAST_SYSTEM_LOGIN_DATE' | translate }}</label>
+                                        <input type="text" formControlName="mlastsyslidt" placeholder="{{ 'HOME.LAST_SYSTEM_LOGIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userForm.controls['mlastsyslidt'].hasError('required') && (userForm.controls['mlastsyslidt'].dirty || userForm.controls['mlastsyslidt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.REGISTER_DEVICE_MAC_ID' | translate }}</label>
+                                        <input type="text" formControlName="mregdevicemacid" placeholder="{{ 'HOME.REGISTER_DEVICE_MAC_ID' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mregdevicemacid'].hasError('required') && (userForm.controls['mregdevicemacid'].dirty || userForm.controls['mregdevicemacid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.CUSTOMER_ACCESS_LEVEL' | translate }}</label>
+                                        <input type="text" formControlName="mcustaccesslvl" placeholder="{{ 'HOME.CUSTOMER_ACCESS_LEVEL' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mcustaccesslvl'].hasError('required') && (userForm.controls['mcustaccesslvl'].dirty || userForm.controls['mcustaccesslvl'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.REPORTING_USER' | translate }}</label>
+                                        <!-- <input type="text" formControlName="mreportinguser" placeholder="{{ 'HOME.REPORTING_USER' | translate }}"><u></u> -->
+                                        <input type="text" formControlName="mreportinguser" placeholder="{{ 'HOME.REPORTING_USER' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#modal-sample"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div>
+                                            <select formControlName="mreportinguser">
+                                                <option value="Select" [selected]="true">Select</option>
+                                                <option *ngFor="let data of reportingUserDropdown" value="{{data.musrcode}}">{{data.musrName}}</option>
+                                            </select><u></u>
+                                        </div> -->
+                                        <em *ngIf="userForm.controls['mreportinguser'].hasError('required') && (userForm.controls['mreportinguser'].dirty || userForm.controls['mreportinguser'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.STATUS' | translate }}</label>
+                                        <div>
+											<select formControlName="mstatus">
+                                                <option value="Select" [selected]="true">Select [ 1010 ]</option>
+                                                <option *ngFor="let data of statusLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <!-- <label class="selection">
+                                            <input type="radio" formControlName="mstatus" value="1" >
+                                            <em>Active</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mstatus" value="0" >
+                                            <em>Inactive</em>
+                                        </label> -->
+                                        <em *ngIf="userForm.controls['mstatus'].hasError('required') && (userForm.controls['mstatus'].dirty || userForm.controls['mstatus'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.REASON' | translate }}</label>
+                                        <input type="text" formControlName="mreason" placeholder="{{ 'HOME.REASON' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mreason'].hasError('required') && (userForm.controls['mreason'].dirty || userForm.controls['mreason'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.SUSPENDED_DATE' | translate }}</label>
+                                        <input type="text" formControlName="msusdate" placeholder="{{ 'HOME.SUSPENDED_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userForm.controls['msusdate'].hasError('required') && (userForm.controls['msusdate'].dirty || userForm.controls['msusdate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PERMISSION_NUMBER' | translate }}</label>
+                                        <input type="text" formControlName="mpermnum" placeholder="{{ 'HOME.PERMISSION_NUMBER' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mpermnum'].hasError('required') && (userForm.controls['mpermnum'].dirty || userForm.controls['mpermnum'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['mpermnum'].hasError('maxlength') && (userForm.controls['mpermnum'].dirty || userForm.controls['mpermnum'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.LOGIN_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mlogcode" placeholder="{{ 'HOME.LOGIN_CODE' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mlogcode'].hasError('required') && (userForm.controls['mlogcode'].dirty || userForm.controls['mlogcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['mlogcode'].hasError('maxlength') && (userForm.controls['mlogcode'].dirty || userForm.controls['mlogcode'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em>
+                                    </div>
+                                </div> -->
+                            
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.REPORTING_MANAGER' | translate }}</label>
+                                        <input type="text" formControlName="mreportman" placeholder="{{ 'HOME.REPORTING_MANAGER' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mreportman'].hasError('required') && (userForm.controls['mreportman'].dirty || userForm.controls['mreportman'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PER_INSTANCE' | translate }}</label>
+                                        <input type="text" formControlName="mperinstance" placeholder="{{ 'HOME.PER_INSTANCE' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mperinstance'].hasError('required') && (userForm.controls['mperinstance'].dirty || userForm.controls['mperinstance'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.LOGIN_FROM_OTHER_BRANCH' | translate }}</label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mlogotherbranch" value="1" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mlogotherbranch" value="0" >
+                                            <em>No</em>
+                                        </label>
+                                        <em *ngIf="userForm.controls['mlogotherbranch'].hasError('required') && (userForm.controls['mlogotherbranch'].dirty || userForm.controls['mlogotherbranch'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MULTI_BRANCH_ACCESS' | translate }}</label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mmultibracc" value="1" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mmultibracc" value="0" >
+                                            <em>No</em>
+                                        </label>
+                                        <em *ngIf="userForm.controls['mmultibracc'].hasError('required') && (userForm.controls['mmultibracc'].dirty || userForm.controls['mmultibracc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.PERIOD_IN_DAYS_FREQUENCY' | translate }}</label>
+                                        <input type="text" formControlName="mdaysfreq" placeholder="{{ 'HOME.PERIOD_IN_DAYS_FREQUENCY' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['mdaysfreq'].hasError('required') && (userForm.controls['mdaysfreq'].dirty || userForm.controls['mdaysfreq'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userForm.controls['mdaysfreq'].hasError('maxlength') && (userForm.controls['mdaysfreq'].dirty || userForm.controls['mdaysfreq'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.OLD_PASSWORD' | translate }}</label>
+                                        <input type="text" formControlName="moldpass1" placeholder="{{ 'HOME.OLD_PASSWORD' | translate }}"><u></u>
+                                        <em *ngIf="userForm.controls['moldpass1'].hasError('required') && (userForm.controls['moldpass1'].dirty || userForm.controls['moldpass1'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>     -->
+                                
+                            </div>
+
+                            <div class="row form-footer">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/user-master-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(userForm.value)">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+<div id="modal-sample" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of reportingUserDropdown; let i = index" (click)="reportingUserSelected(list.musrcode,list.musrName,i);" [class.active]="i == highlightRowUser">
+                                        <td>{{list.musrcode}}</td>
+                                        <td>{{list.musrName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButtonUser" type="button" class="button" (click)="proceedActionUser();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+
+<div id="modal-sample-1" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of branchDropdownData; let i = index" (click)="branchCodeSelected(list.mpbrcode,list.mname,i);" [class.active]="i == highlightRowBranch">
+                                        <td>{{list.mpbrcode}}</td>
+                                        <td>{{list.mname}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButtonBranch" type="button" class="button" (click)="proceedActionBranch();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+

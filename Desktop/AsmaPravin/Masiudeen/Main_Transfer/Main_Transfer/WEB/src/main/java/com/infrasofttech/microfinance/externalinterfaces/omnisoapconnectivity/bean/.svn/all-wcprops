@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/bean
+END
+TMsgInParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/bean/TMsgInParam.java
+END
+TMsgOutParam.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/bean/TMsgOutParam.java
+END

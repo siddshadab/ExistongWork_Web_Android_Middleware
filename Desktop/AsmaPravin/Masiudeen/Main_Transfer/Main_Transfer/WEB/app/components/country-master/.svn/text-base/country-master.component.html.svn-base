@@ -1,0 +1,67 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/country-master-view">{{ 'HOME.COUNTRY_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!--Alert Start-->
+                        <div *ngIf="!code_exist" class="alert alert-danger code-exist-alert" role="alert">
+                            {{code_exist_message}}
+                        </div>
+                        <!--Alert End-->
+                        <div class="category">{{ 'HOME.COUNTRY_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="countryForm" (ngSubmit)="onSubmit(countryForm.value)">
+                            <div class="row form-group">
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.COUNTRY_ID' | translate }}</label>
+                                        <input type="text" formControlName="mcountryid" placeholder="{{ 'HOME.COUNTRY_ID' | translate }}"><u></u>
+                                        <em *ngIf="countryForm.controls['mcountryid'].hasError('required') && (countryForm.controls['mcountryid'].dirty || countryForm.controls['mcountryid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.COUNTRY_NAME' | translate }}</label>
+                                        <input type="text" formControlName="mcountryname" placeholder="{{ 'HOME.COUNTRY_NAME' | translate }}"><u></u>
+                                        <em *ngIf="countryForm.controls['mcountryname'].hasError('required') && (countryForm.controls['mcountryname'].dirty || countryForm.controls['mcountryname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/country-master-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div><!--.form-footer-->
+                                </div><!--.col-12-->
+                            </div><!--.row-->
+                        </form>
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+

@@ -1,0 +1,148 @@
+10
+
+dir
+2709
+http://sezsvn.infraseepz.lan/svn/eco_mfi/trunk/eCOWeb/microfinance_V1/.metadata/.plugins
+http://sezsvn.infraseepz.lan/svn/eco_mfi
+
+
+
+2020-10-22T07:52:33.543279Z
+2452
+shantanu.khare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+893bc709-e608-8648-8f27-59ce0dd58d87
+
+org.eclipse.jdt.core
+dir
+
+org.eclipse.wst.server.core
+dir
+
+org.eclipse.core.runtime
+dir
+
+org.eclipse.m2e.core
+dir
+
+org.eclipse.ui
+dir
+
+org.eclipse.tm.terminal.view.ui
+dir
+
+org.eclipse.oomph.setup
+dir
+
+org.eclipse.userstorage.oauth
+dir
+
+org.eclipse.mylyn.context.core
+dir
+
+org.springsource.ide.eclipse.commons.gettingstarted
+dir
+
+org.springsource.ide.eclipse.dashboard.ui
+dir
+
+org.eclipse.oomph.setup.ui
+dir
+
+org.eclipse.pde.core
+dir
+
+org.springframework.ide.eclipse.boot.dash
+dir
+
+org.springsource.ide.eclipse.commons.frameworks.core
+dir
+
+org.eclipse.mylyn.github.ui
+dir
+
+org.eclipse.rse.ui
+dir
+
+org.eclipse.wst.jsdt.core
+dir
+
+org.eclipse.mylyn.bugzilla.core
+dir
+
+org.eclipse.mylyn.tasks.ui
+dir
+
+org.eclipse.emf.common.ui
+dir
+
+org.eclipse.buildship.core
+dir
+
+org.eclipse.ui.ide
+dir
+
+org.eclipse.debug.core
+dir
+
+org.springframework.ide.eclipse.beans.core.metadata
+dir
+
+org.eclipse.rse.core
+dir
+
+org.springframework.ide.eclipse.boot
+dir
+
+org.eclipse.ltk.core.refactoring
+dir
+
+org.springframework.ide.eclipse.aop.core
+dir
+
+org.eclipse.m2e.core.ui
+dir
+
+org.eclipse.epp.logging.aeri.ide
+dir
+
+org.eclipse.jdt.launching
+dir
+
+org.eclipse.e4.workbench
+dir
+
+org.eclipse.jst.ws.jaxrs.ui
+dir
+
+org.eclipse.m2e.logback.configuration
+dir
+
+org.eclipse.jdt.ui
+dir
+
+org.eclipse.wst.sse.core
+dir
+
+org.eclipse.ui.workbench
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.wst.common.modulecore
+dir
+

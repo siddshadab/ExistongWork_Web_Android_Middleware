@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-access-rights-ind-view
+END
+user-access-rights-ind-view.component.html
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-access-rights-ind-view/user-access-rights-ind-view.component.html
+END
+user-access-rights-ind-view.component.ts
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-access-rights-ind-view/user-access-rights-ind-view.component.ts
+END
+user-access-rights-ind-view.component.scss
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-access-rights-ind-view/user-access-rights-ind-view.component.scss
+END
+user-access-rights-ind-view.component.spec.ts
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/eco_mfi/!svn/ver/2451/trunk/eCOWeb/MFI/src/app/components/user-access-rights-ind-view/user-access-rights-ind-view.component.spec.ts
+END

@@ -1,0 +1,6 @@
+.form-controller input[disabled] , .form-controller select[disabled] {
+    background-color: #f5f4f4;
+}
+.previewTable tr:nth-child(odd){    background-color: rgba(0, 100, 186, 0.05);}
+table .deleterow{width:25px; cursor:pointer}
+.form-controller > em {background-color: #fff;}

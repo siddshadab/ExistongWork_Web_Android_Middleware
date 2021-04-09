@@ -1,0 +1,102 @@
+<!-- <div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <li>
+            <a href="javascript:;">Master</a>
+        </li>
+        <li>
+            <a href="javascript:;">Parent</a>
+        </li>
+        <li class="current">{{ 'HOME.LOAN_LEVEL_MASTER' | translate }}</li>
+    </ul>
+</div> -->
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!-- <table #dataTable class="display" style="width:100%">
+                        </table> -->
+                        <div class="row heading">
+                            <div class="col-6">{{ 'HOME.LOAN_LEVEL_MASTER' | translate }}</div>
+                            <div class="col-6">
+                                <div class="text-right">
+                                    <button *ngIf="!multipleDelete && rightsData.create == 1" class="button" routerLink="/loan-level-master">{{ 'ACTION.ADD' | translate }}</button>
+                                    <div class="action-img multiple-delete" *ngIf="multipleDelete && rightsData.delete == 1">
+                                        <img (click)="multipleDeleteCheckboxes();" src="../../../assets/images/icon/Delete2x.png" title="Delete" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="datatable-box">
+                            <div class="table-responsivebox">
+                                <table id="dt-sample" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                <label class="selection">
+                                                    <input type="checkbox" name="" (change)="allCheckboxes($event)">
+                                                </label>
+                                            </th>
+                                            <th scope="col">{{ 'HOME.MREF_NO' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.BUTTON_ID' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.BUTTON_NAME' | translate }}</th>
+                                            <!-- <th scope="col">{{ 'HOME.PRODUCT_NAME' | translate }}</th> -->
+                                            <th scope="col">{{ 'HOME.STAGE_ID' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.PRODUCT_CODE' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.ORDER_ID' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.MANDATORY' | translate }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+  
+                                        <tr *ngFor="let list of loanLevelListArray" (dblclick)="dataNavigate(list);">
+                                            <td>
+                                                <label class="selection">
+                                                    <input type="checkbox" name="" value="{{list.mrefno}}" [(ngModel)]="list.selected" (change)="toggleVisibility(list,$event);">
+                                                </label>
+                                            </td>
+                                            <td>{{list.mrefno}}</td>
+                                            <td>{{list.mbuttonid}}</td>
+                                            <td>{{list.mbuttonname}}</td>
+                                            <!-- <td>{{list.mproductname}}</td> -->
+                                            <td>{{list.mstageid}}</td>
+                                            <td>{{list.mprdcd}}</td>
+                                            <td>{{list.morderid}}</td>
+                                            <!-- <td>{{list.mismandatory}}</td> -->
+                                            <div *ngIf="list.mismandatory == 1;then content else other_content"></div>    
+                                            <ng-template #content><td>Yes</td></ng-template>
+                                            <ng-template #other_content><td>No</td></ng-template>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="dt-extras">
+                                <div class="dt-exports">
+                                    <em>Export to :<span class="chevron"></span></em>
+                                    <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                    <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                    <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                    <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                    <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+<!--Alert Start-->
+<div class="alerts" [ngClass]="{'alertWrapper': alert}">
+    <div class="alert alert-custom" [ngClass]="{'alert-success': alertSuccess, 'alert-danger': !alertSuccess}" role="alert">
+        {{alertMessage}}
+    </div>
+</div>
+<!--Alert End-->
+
+

@@ -1,0 +1,455 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/eco_mfi/!svn/ver/2706/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl
+END
+ReportFilterMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2702/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/ReportFilterMasterServiceImpl.java
+END
+CustomerProductwiseCycleServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/1554/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerProductwiseCycleServicesImpl.java
+END
+SubLookupMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SubLookupMasterServiceImpl.java
+END
+DataSourceMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2561/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DataSourceMasterServiceImpl.java
+END
+DailyLoanCollectionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DailyLoanCollectionImpl.java
+END
+CreditBereauResultMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CreditBereauResultMasterServiceImpl.java
+END
+CustomerFamilyDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerFamilyDetailsServiceImpl.java
+END
+TDInterestSlabServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/TDInterestSlabServicesImpl.java
+END
+DailyLoanCollectedImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/2194/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DailyLoanCollectedImpl.java
+END
+SpeedoMeterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SpeedoMeterServiceImpl.java
+END
+CustomerPPIDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerPPIDetailsServiceImpl.java
+END
+DisbursedListServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2341/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DisbursedListServiceImpl.java
+END
+ProspectCreationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2651/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/ProspectCreationServiceImpl.java
+END
+CheckListGRTServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CheckListGRTServiceImpl.java
+END
+TDReceiptsServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/1743/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/TDReceiptsServicesImpl.java
+END
+GRTServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/GRTServiceImpl.java
+END
+CGT1ServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CGT1ServiceImpl.java
+END
+CGT2ServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CGT2ServiceImpl.java
+END
+CustomerAddressDetailsServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerAddressDetailsServicesImpl.java
+END
+CustomerLoanCashFlowServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/2701/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerLoanCashFlowServiceImpl.java
+END
+SavingsCollectionListServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/443/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SavingsCollectionListServicesImpl.java
+END
+LoanCycleParameterSecondaryServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanCycleParameterSecondaryServicesImpl.java
+END
+LookupMasterServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LookupMasterServicesImpl.java
+END
+CustomerLoanServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2706/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerLoanServiceImpl.java
+END
+CountriesServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CountriesServiceImpl.java
+END
+TradeAndNeighbourRefCheckServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/2138/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/TradeAndNeighbourRefCheckServiceImpl.java
+END
+MenuMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/1412/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/MenuMasterServiceImpl.java
+END
+ImagesMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/1835/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/ImagesMasterServiceImpl.java
+END
+DisbursementListServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/1345/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DisbursementListServicesImpl.java
+END
+GuarantorServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/2296/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/GuarantorServicesImpl.java
+END
+InterestOffsetServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/InterestOffsetServicesImpl.java
+END
+SavingsListServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2149/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SavingsListServicesImpl.java
+END
+CentersFoundationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/2647/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CentersFoundationServiceImpl.java
+END
+DistrictsServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DistrictsServicesImpl.java
+END
+AreaServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eco_mfi/!svn/ver/1064/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/AreaServicesImpl.java
+END
+LoanImageServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/2667/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanImageServiceImpl.java
+END
+SocialAndEnvironmentalServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/2137/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SocialAndEnvironmentalServiceImpl.java
+END
+LoanCycleWiseLimitServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2121/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanCycleWiseLimitServiceImpl.java
+END
+CustomerServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/2651/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerServiceImpl.java
+END
+LoanCycleParameterPrimaryServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanCycleParameterPrimaryServicesImpl.java
+END
+KycMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/2136/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/KycMasterServiceImpl.java
+END
+UserAccessRightsServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/1412/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/UserAccessRightsServicesImpl.java
+END
+MiniStatementServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/MiniStatementServicesImpl.java
+END
+SubDistrictsServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SubDistrictsServicesImpl.java
+END
+DeviationFormServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2134/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/DeviationFormServiceImpl.java
+END
+GroupsFoundationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/1611/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/GroupsFoundationServiceImpl.java
+END
+CustomerAssetDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerAssetDetailsServiceImpl.java
+END
+CreditBereauLoanServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CreditBereauLoanServiceImpl.java
+END
+SystemParameterServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2651/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/SystemParameterServicesImpl.java
+END
+BranchMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/BranchMasterServiceImpl.java
+END
+GLAccountServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/277/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/GLAccountServiceImpl.java
+END
+LoanApprovalLimitServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanApprovalLimitServicesImpl.java
+END
+LoanLevelServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/1033/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanLevelServiceImpl.java
+END
+TDOffsetInterestSlabServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/TDOffsetInterestSlabServicesImpl.java
+END
+UserVaultBalanceServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/1308/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/UserVaultBalanceServicesImpl.java
+END
+LoanUtilizationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LoanUtilizationServiceImpl.java
+END
+CheckListCGT1ServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CheckListCGT1ServiceImpl.java
+END
+CheckListCGT2ServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CheckListCGT2ServiceImpl.java
+END
+ScreenFieldsServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/ScreenFieldsServicesImpl.java
+END
+TransactionModeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/TransactionModeServiceImpl.java
+END
+LicenseMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/1844/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/LicenseMasterServiceImpl.java
+END
+CustomerLoanCPVBusinessRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/eco_mfi/!svn/ver/2148/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerLoanCPVBusinessRecordServiceImpl.java
+END
+CustomerBorrowingDetailsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerBorrowingDetailsServiceImpl.java
+END
+CustomerHouseholdExpenseServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerHouseholdExpenseServiceImpl.java
+END
+CustomerBusinessExpenseServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerBusinessExpenseServiceImpl.java
+END
+TDParameterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/eco_mfi/!svn/ver/396/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/TDParameterServiceImpl.java
+END
+CheckListServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CheckListServiceImpl.java
+END
+CustomerFingerPrintServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/2252/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CustomerFingerPrintServiceImpl.java
+END
+UserMasterDetailsSeviceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2442/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/UserMasterDetailsSeviceImpl.java
+END
+ProductServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/ProductServiceImpl.java
+END
+InterestSlabServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/InterestSlabServicesImpl.java
+END
+ChartsMasterServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/1417/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/ChartsMasterServicesImpl.java
+END
+StatesServicesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/StatesServicesImpl.java
+END
+RepaymentFrequencyServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/11/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/RepaymentFrequencyServiceImpl.java
+END
+CurrentLocationMasterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/2470/trunk/ecomfi_release/microfinance_V1/src/main/java/com/infrasofttech/microfinance/servicesimpl/CurrentLocationMasterServiceImpl.java
+END

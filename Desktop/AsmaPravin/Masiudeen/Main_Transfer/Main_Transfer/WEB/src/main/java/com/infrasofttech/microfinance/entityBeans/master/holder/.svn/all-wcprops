@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder
+END
+AddressMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/AddressMasterHolder.java
+END
+InternalBankTransferHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/InternalBankTransferHolderBean.java
+END
+TDClosureHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/TDClosureHolder.java
+END
+CustomerBusinessExpenseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerBusinessExpenseHolder.java
+END
+StatusHistoryHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/StatusHistoryHolder.java
+END
+MiniStatementHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/MiniStatementHolderBean.java
+END
+LoanCyclePrimaryHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanCyclePrimaryHolder.java
+END
+CustomerAddressDetailsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerAddressDetailsHolder.java
+END
+DeleteBranchHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/DeleteBranchHolder.java
+END
+CustomerPPIDetailsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerPPIDetailsHolder.java
+END
+LookupMasterEntityHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LookupMasterEntityHolder.java
+END
+LoanCycleParameterSecondaryHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanCycleParameterSecondaryHolder.java
+END
+CustomerDedupHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerDedupHolder.java
+END
+Cgt2HolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/Cgt2HolderBean.java
+END
+CustAuthHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustAuthHolderBean.java
+END
+CIFHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CIFHolderBean.java
+END
+TDOffsetInterstSlabHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/TDOffsetInterstSlabHolder.java
+END
+CutomerLoanTillGrtHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CutomerLoanTillGrtHolder.java
+END
+HerarchyHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/HerarchyHolderBean.java
+END
+CIFTransactionHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CIFTransactionHolderBean.java
+END
+ImageMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/ImageMasterHolder.java
+END
+CIFLoanClosureHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CIFLoanClosureHolderBean.java
+END
+ChartsMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/ChartsMasterHolder.java
+END
+CustomerBorrowingDetailsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerBorrowingDetailsHolder.java
+END
+BulkLoanPreClosureHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/BulkLoanPreClosureHolderBean.java
+END
+CustomerHouseholdExpenseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerHouseholdExpenseHolder.java
+END
+CustomerPaymentMethodDetailsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerPaymentMethodDetailsHolder.java
+END
+CustomerAssetDetailsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerAssetDetailsHolder.java
+END
+AreaHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/AreaHolder.java
+END
+CustomerFamilyDetailsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerFamilyDetailsHolder.java
+END
+BranchMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/BranchMasterHolder.java
+END
+JsonMenuMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/JsonMenuMasterHolder.java
+END
+LosResponseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LosResponseHolder.java
+END
+MenuAndAccessRightsHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/MenuAndAccessRightsHolderBean.java
+END
+LoanApprovalCompositeHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanApprovalCompositeHolder.java
+END
+LoanLevelHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanLevelHolder.java
+END
+UserAccessRightsHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/UserAccessRightsHolder.java
+END
+GrtHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/GrtHolderBean.java
+END
+Cgt1HolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/Cgt1HolderBean.java
+END
+LoanCyclePrimarySecondaryHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanCyclePrimarySecondaryHolder.java
+END
+SystemParameterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/SystemParameterHolder.java
+END
+ProspectHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/ProspectHolderBean.java
+END
+CustomerHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerHolderBean.java
+END
+MenuHolderBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/MenuHolderBean.java
+END
+CustomerDataholder.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/CustomerDataholder.java
+END
+ProductMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/ProductMasterHolder.java
+END
+LoanApprovalLimitHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanApprovalLimitHolder.java
+END
+LoanApprovalHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/LoanApprovalHolder.java
+END
+UserDetailsMasterHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/entityBeans/master/holder/UserDetailsMasterHolder.java
+END

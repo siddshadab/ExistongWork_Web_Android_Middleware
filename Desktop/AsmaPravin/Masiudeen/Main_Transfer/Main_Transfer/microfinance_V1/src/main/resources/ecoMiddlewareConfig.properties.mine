@@ -1,0 +1,26 @@
+loginschedule = 1
+customerToOmniSchedule = 0
+loanBasicDeatilsToOmniSchedule = 0
+loanDeatilsToOmniSchedule = 0
+dailyLoanCollectionSchedule = 0
+savingAccountCreationSchedule = 0
+dailySavingsCollectionSchedule = 0
+tdAccountCreationSchedule = 0
+centerToOmniSchedule = 0
+groupToOmniSchedule=0
+socialAndEnvToOmniSchedule=1
+tradeAndNeighRefToOmniSchedule=1
+deviationFormToOmniSchedule=1
+customerLoanCashFlow=0
+LOSURI=http://192.168.103.72:8080/LoanOriginationSystem/rest/ws/generateLead
+OMNIUSER = ar
+OMNIPASS = Infra#123
+ENDPOINT = http://sezcpu118/Fullerton/OmniService.asmx
+#OMNIUSER = 10
+#OMNIPASS = Infra#123
+#ENDPOINT = http://sezcpu102/SAIJA/OmniService.asmx
+
+
+
+
+

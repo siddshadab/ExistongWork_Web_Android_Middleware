@@ -1,0 +1,465 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/user-master-view">{{ 'HOME.USER_MASTER' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <div class="category">
+                            <div class="row">
+                                <div class="col-6">{{ 'HOME.USER_DETAILS' | translate }}</div>
+                                <div class="col-6 text-right">
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="userEdit();" src="../../../assets/images/icon/Edit2x.png" />
+                                    </div>
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.delete == 1" (click)="userDelete();" src="../../../assets/images/icon/Delete2x.png" />
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="userViewForm" >
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.USER_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.musrcode | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="musrcode" placeholder="{{ 'HOME.USER_CODE' | translate }}" readonly><u></u>
+                                        <em *ngIf="userViewForm.controls['musrcode'].hasError('required') && (userViewForm.controls['musrcode'].dirty || userViewForm.controls['musrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userViewForm.controls['musrcode'].hasError('maxlength') && (userViewForm.controls['musrcode'].dirty || userViewForm.controls['musrcode'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.USER_NAME' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.musrname | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="musrname" placeholder="{{ 'HOME.USER_NAME' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['musrname'].hasError('required') && (userViewForm.controls['musrname'].dirty || userViewForm.controls['musrname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userViewForm.controls['musrname'].hasError('maxlength') && (userViewForm.controls['musrname'].dirty || userViewForm.controls['musrname'].touched)">{{ 'VALIDATION.MAX_35' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.SHORT_NAME' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.musrshortname | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="musrshortname" placeholder="{{ 'HOME.SHORT_NAME' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['musrshortname'].hasError('required') && (userViewForm.controls['musrshortname'].dirty || userViewForm.controls['musrshortname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userViewForm.controls['musrshortname'].hasError('maxlength') && (userViewForm.controls['musrshortname'].dirty || userViewForm.controls['musrshortname'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.GENDER' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mgenderDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+                                            <select formControlName="mgender">
+                                                <option value="Select">Select [ 1139 ]</option>
+                                                <option *ngFor="let data of genderLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="userViewForm.controls['mgender'].hasError('required') && (userViewForm.controls['mgender'].dirty || userViewForm.controls['mgender'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.DESIGNATION' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.musrdesignation | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="musrdesignation" placeholder="{{ 'HOME.DESIGNATION' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['musrdesignation'].hasError('required') && (userViewForm.controls['musrdesignation'].dirty || userViewForm.controls['musrdesignation'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.EMAIL_ID' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.memailid | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="memailid" placeholder="{{ 'HOME.EMAIL_ID' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['memailid'].hasError('required') && (userViewForm.controls['memailid'].dirty || userViewForm.controls['memailid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.MOBILE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mmobile | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmobile" placeholder="{{ 'HOME.MOBILE' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mmobile'].hasError('required') && (userViewForm.controls['mmobile'].dirty || userViewForm.controls['mmobile'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{branchName | Custom }}</h6>
+                                        <!-- <input *ngIf="editActivated" type="text" formControlName="musrbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}"><u></u> -->
+                                        <input *ngIf="editActivated" type="text" formControlName="musrbrcode" placeholder="{{ 'HOME.BRANCH_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a *ngIf="editActivated" href="javascript:;" data-toggle="modal" data-target="#modal-sample-1"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div *ngIf="editActivated">
+											<select formControlName="musrbrcode">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div> -->
+                                        <em *ngIf="userViewForm.controls['musrbrcode'].hasError('required') && (userViewForm.controls['musrbrcode'].dirty || userViewForm.controls['musrbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <!-- <em *ngIf="userViewForm.controls['musrbrcode'].hasError('pattern') && (userViewForm.controls['musrbrcode'].dirty || userViewForm.controls['musrbrcode'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="userViewForm.controls['musrbrcode'].hasError('maxlength') && (userViewForm.controls['musrbrcode'].dirty || userViewForm.controls['musrbrcode'].touched)">{{ 'VALIDATION.MAX_10' | translate }}</em> -->
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                            </div>
+                            <div class="vspacer20"></div>
+                            <div class="category">{{ 'HOME.LOGIN_LOGOUT' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.AUTO_LOGOUT_PERIOD' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mautologoutperiod | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mautologoutperiod" placeholder="{{ 'HOME.AUTO_LOGOUT_PERIOD' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mautologoutperiod'].hasError('required') && (userViewForm.controls['mautologoutperiod'].dirty || userViewForm.controls['mautologoutperiod'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.MAX_BAD_LOGINS_PER_DAY' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mmaxbadlginperday | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmaxbadlginperday" placeholder="{{ 'HOME.MAX_BAD_LOGINS_PER_DAY' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mmaxbadlginperday'].hasError('required') && (userViewForm.controls['mmaxbadlginperday'].dirty || userViewForm.controls['mmaxbadlginperday'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.NEXT_SYSTEM_LOGIN_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mnextsyslgindt | Custom | date :'yyyy-MM-dd'}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mnextsyslgindt" placeholder="{{ 'HOME.NEXT_SYSTEM_LOGIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userViewForm.controls['mnextsyslgindt'].hasError('required') && (userViewForm.controls['mnextsyslgindt'].dirty || userViewForm.controls['mnextsyslgindt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.MAX_BAD_LOGINS_PER_INSTANCE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mmaxbadlginperinst | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmaxbadlginperinst" placeholder="{{ 'HOME.MAX_BAD_LOGINS_PER_INSTANCE' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mmaxbadlginperinst'].hasError('required') && (userViewForm.controls['mmaxbadlginperinst'].dirty || userViewForm.controls['mmaxbadlginperinst'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.NUMBER_OF_BAD_LOGINS' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mnoofbadlogins | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mnoofbadlogins" placeholder="{{ 'HOME.NUMBER_OF_BAD_LOGINS' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mnoofbadlogins'].hasError('required') && (userViewForm.controls['mnoofbadlogins'].dirty || userViewForm.controls['mnoofbadlogins'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                            </div>
+                            <div class="vspacer20"></div>
+                            <div class="category">{{ 'HOME.PASSWORD' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.USER_PASSWORD' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.musrpass | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="password" formControlName="musrpass" placeholder="{{ 'HOME.USER_PASSWORD' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['musrpass'].hasError('required') && (userViewForm.controls['musrpass'].dirty || userViewForm.controls['musrpass'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.LAST_PASSWORD_CHANGE_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mlastpwdchgdt | Custom | date :'yyyy-MM-dd'}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mlastpwdchgdt" placeholder="{{ 'HOME.LAST_PASSWORD_CHANGE_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.PASSWORD_CHANGE_PERIOD' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mpwdchgperioddays | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mpwdchgperioddays" placeholder="{{ 'HOME.PASSWORD_CHANGE_PERIOD' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mpwdchgperioddays'].hasError('required') && (userViewForm.controls['mpwdchgperioddays'].dirty || userViewForm.controls['mpwdchgperioddays'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="userViewForm.controls['mpwdchgperioddays'].hasError('maxlength') && (userViewForm.controls['mpwdchgperioddays'].dirty || userViewForm.controls['mpwdchgperioddays'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.PASSWORD_CHANGE_FORCED' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mpwdchgforcedyn | Custom}}</h6>
+                                        <label *ngIf="editActivated" class="selection">
+                                            <input type="radio" formControlName="mpwdchgforcedyn" value="1" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label *ngIf="editActivated" class="selection">
+                                            <input type="radio" formControlName="mpwdchgforcedyn" value="0" >
+                                            <em>No</em>
+                                        </label>
+                                        <em *ngIf="userViewForm.controls['mpwdchgforcedyn'].hasError('required') && (userViewForm.controls['mpwdchgforcedyn'].dirty || userViewForm.controls['mpwdchgforcedyn'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.NEXT_PASSWORD_CHANGE_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mnextpwdchgdt | Custom | date :'yyyy-MM-dd'}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mnextpwdchgdt" placeholder="{{ 'HOME.NEXT_PASSWORD_CHANGE_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userViewForm.controls['mnextpwdchgdt'].hasError('required') && (userViewForm.controls['mnextpwdchgdt'].dirty || userViewForm.controls['mnextpwdchgdt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                            </div>
+                            <div class="vspacer20"></div>
+                            <div class="category">{{ 'HOME.GENERAL' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.GROUP_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mgrpcdDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mgrpcd">
+                                                <option value="Select">Select [ 1009 ]</option>
+                                                <option *ngFor="let data of groupCodeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="userViewForm.controls['mgrpcd'].hasError('required') && (userViewForm.controls['mgrpcd'].dirty || userViewForm.controls['mgrpcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.JOIN_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mjoindate | Custom | date :'yyyy-MM-dd'}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mjoindate" placeholder="{{ 'HOME.JOIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userViewForm.controls['mjoindate'].hasError('required') && (userViewForm.controls['mjoindate'].dirty || userViewForm.controls['mjoindate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.LAST_SYSTEM_LOGIN_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mlastsyslidt | Custom | date :'yyyy-MM-dd'}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mlastsyslidt" placeholder="{{ 'HOME.LAST_SYSTEM_LOGIN_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userViewForm.controls['mlastsyslidt'].hasError('required') && (userViewForm.controls['mlastsyslidt'].dirty || userViewForm.controls['mlastsyslidt'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <!-- <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>Extension Number</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mextnno | Custom}}</h6>
+                                        <em>Please enter email here</em>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-md-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.REGISTER_DEVICE_MAC_ID' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mregdevicemacid | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mregdevicemacid" placeholder="{{ 'HOME.REGISTER_DEVICE_MAC_ID' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mregdevicemacid'].hasError('required') && (userViewForm.controls['mregdevicemacid'].dirty || userViewForm.controls['mregdevicemacid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.CUSTOMER_ACCESS_LEVEL' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mcustaccesslvl | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mcustaccesslvl" placeholder="{{ 'HOME.CUSTOMER_ACCESS_LEVEL' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mcustaccesslvl'].hasError('required') && (userViewForm.controls['mcustaccesslvl'].dirty || userViewForm.controls['mcustaccesslvl'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.REPORTING_USER' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{reportUsrName | Custom}}</h6>
+                                        <!-- <input *ngIf="editActivated" type="text" formControlName="mreportinguser" placeholder="{{ 'HOME.REPORTING_USER' | translate }}"><u></u> -->
+                                        <input *ngIf="editActivated" type="text" formControlName="mreportinguser" placeholder="{{ 'HOME.REPORTING_USER' | translate }}" [attr.disabled]="true"><u></u>
+                                        <a *ngIf="editActivated" href="javascript:;" data-toggle="modal" data-target="#modal-sample"><button class="button sm over-input">Search</button></a>
+                                        <!-- <div *ngIf="editActivated">
+                                            <select formControlName="mreportinguser">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of reportingUserDropdown" value="{{data.musrcode}}">{{data.musrName}}</option>
+                                            </select><u></u>
+                                        </div> -->
+                                        <em *ngIf="userViewForm.controls['mreportinguser'].hasError('required') && (userViewForm.controls['mreportinguser'].dirty || userViewForm.controls['mreportinguser'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.STATUS' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mstatusDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mstatus">
+                                                <option value="Select">Select [ 1010 ]</option>
+                                                <option *ngFor="let data of statusLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="userViewForm.controls['mstatus'].hasError('required') && (userViewForm.controls['mstatus'].dirty || userViewForm.controls['mstatus'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.REASON' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.mreason | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mreason" placeholder="{{ 'HOME.REASON' | translate }}"><u></u>
+                                        <em *ngIf="userViewForm.controls['mreason'].hasError('required') && (userViewForm.controls['mreason'].dirty || userViewForm.controls['mreason'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.SUSPENDED_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{userData.msusdate | Custom | date :'yyyy-MM-dd'}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="msusdate" placeholder="{{ 'HOME.SUSPENDED_DATE' | translate }}" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="userViewForm.controls['msusdate'].hasError('required') && (userViewForm.controls['msusdate'].dirty || userViewForm.controls['msusdate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div>
+                                </div>
+                                
+                            </div><!--.row-->
+                            <div class="row form-footer">
+                                <div class="col-6" *ngIf="!editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/user-master-view">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" (click)="backToView();">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(userViewForm.value)">{{ 'ACTION.UPDATE' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+<div id="modal-sample" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of reportingUserDropdown; let i = index" (click)="reportingUserSelected(list.musrcode,list.musrName,i);" [class.active]="i == highlightRow">
+                                        <td>{{list.musrcode}}</td>
+                                        <td>{{list.musrName}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButton" type="button" class="button" (click)="proceedActionUser();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+
+<div id="modal-sample-1" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>Pick List</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="datatable-box">
+                        <div class="table-responsivebox">
+                            <table id="dt-sample" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                        <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight" *ngFor="let list of branchDropdownData; let i = index" (click)="branchCodeSelected(list.mpbrcode,list.mname,i);" [class.active]="i == highlightRow">
+                                        <td>{{list.mpbrcode}}</td>
+                                        <td>{{list.mname}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="dt-extras">
+                            <div class="dt-exports">
+                                <em>Export to :<span class="chevron"></span></em>
+                                <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button *ngIf="proceedButton" type="button" class="button" (click)="proceedActionBranch();">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+

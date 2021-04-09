@@ -1,0 +1,380 @@
+<app-header></app-header>
+<app-nav-bar></app-nav-bar>
+
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        
+                        <div class="breadcrumb">
+                            <ul class="lst-breadcrumb">
+                                <li>
+                                    <a href="javascript:;">Look Up Code Types</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="javascript:;">Parent</a>
+                                </li>
+                                <li class="current">Current</li> -->
+                                <!-- <li>
+                                    <a>Browse</a>
+                                </li>
+                                <li>
+                                    <a>Create</a>
+                                </li>
+                                <li>
+                                    <a>Edit</a>
+                                </li> -->
+                            </ul><!--.lst-breadcrumb-->
+                        </div>
+                        <div class="vspacer20"></div>
+                        
+                        <form [formGroup]="lookupCodeTypeForm">
+                            <div class="row form-group">
+
+                                <input type="hidden" formControlName="musrcode">
+                                <input type="hidden" formControlName="mregdevicemacid">
+                                
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Look Up Code Types</label>
+                                        <input type="text" formControlName="mcode" placeholder="Enter code" #code><u></u>
+                                        <em>Please enter look up code here</em>
+                                    </div><!--.form-control-->
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcode'].hasError('required') && lookupCodeTypeForm.controls['mcode'].touched">
+                                        Please enter look up code here
+                                    </div>
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcode'].hasError('pattern') && lookupCodeTypeForm.controls['mcode'].touched">
+                                        Please enter numbers only
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <button class="button" (click)="verifyLookupCode(code.value)">Verify</button>
+                                    <!-- <button class="button" (click)="openModal()">Add code</button>
+                                    <button class="button" (click)="openModal()">View codes</button> -->
+                                    <a class="pad-15" href="javascript:;" data-toggle="modal" data-target="#modal-sample">Add code</a>
+                                    <a class="pad-15" href="javascript:;" data-toggle="modal" data-target="#modal-sample1">View codes</a>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller">
+                                        <label>Data</label>
+                                        <div>
+                                            <select>
+                                                <option *ngFor='let data of superData' [value]="data.id">{{data.Name | Custom: data.id}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Data Type</label>
+                                        <div>
+											<select formControlName="mcodedatatype">
+												<option value="Select" [selected]="true">Select</option>
+												<option value="Boolean">Boolean</option>
+                                                <option value="Character">Character</option>
+                                                <option value="Date">Date</option>
+                                                <option value="Number">Number</option>
+                                                <option value="Time">Time</option>
+											</select><u></u>
+										</div>
+                                    </div><!--.form-control-->
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcodedatatype'].hasError('required') && lookupCodeTypeForm.controls['mcodedatatype'].touched">
+                                        Please select data type
+                                    </div>
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcodedatatype'].hasError('selectInput')">
+                                        Please select required data type
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Field Length</label>
+                                        <input type="text" formControlName="mcodedatalen" placeholder="Enter length"><u></u>
+                                        <em>Please enter field length here</em>
+                                    </div><!--.form-control-->
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcodedatalen'].hasError('required') && lookupCodeTypeForm.controls['mcodedatalen'].touched">
+                                        Please enter field length here
+                                    </div>
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcodedatalen'].hasError('pattern') && lookupCodeTypeForm.controls['mcodedatalen'].touched">
+                                        Please enter numbers only
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">        
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Look-Up Type</label>
+                                        <div>
+											<select formControlName="mcodetype">
+                                                <option value="Select" [selected]="true">Select</option>
+												<option value="system-lookup">System lookup</option>
+                                                <option value="user-lookup">User Lookup</option>
+											</select><u></u>
+										</div>
+                                    </div><!--.form-control-->
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcodetype'].hasError('required') && lookupCodeTypeForm.controls['mcodetype'].touched">
+                                        Please select look-up type
+                                    </div>
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['mcodetype'].hasError('selectInput')">
+                                        Please select required look-up type
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Secured</label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="secured" value="1" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="secured" value="0" >
+                                            <em>No</em>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">    
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller control-mandatory">
+                                        <label>Field-1</label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mfieldvalue" value="1" [checked]='true' (click)="setField1(1)" >
+                                            <em>Yes</em>
+                                        </label>
+                                        <label class="selection">
+                                            <input type="radio" formControlName="mfieldvalue" value="0" (click)="setField1(0)" >
+                                            <em>No</em>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form-group" [ngClass]="{'d-none':hideElement}">    
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller">
+                                        <label>Name</label>
+                                        <input type="text" formControlName="name" placeholder="Enter name"><u></u>
+                                        <em>Please enter remarks here</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller">
+                                        <label>Type</label>
+                                        <div>
+											<select formControlName="type">
+                                                <option>Select</option>
+												<option>Character</option>
+                                                <option>Date</option>
+                                                <option>Number</option>
+                                                <option>Time</option>
+											</select><u></u>
+										</div>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller">
+                                        <label>Length</label>
+                                        <input type="text" formControlName="length" placeholder="Enter length"><u></u>
+                                        <em>Please enter remarks here</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller">
+                                        <label>Decimal length</label>
+                                        <input type="text" formControlName="decimal_length" placeholder="Enter decimal length"><u></u>
+                                        <em>Please enter remarks here</em>
+                                    </div><!--.form-control-->
+                                </div>
+                            </div>
+
+                            <div class="row form-group">    
+                                <div class="col-12 col-md-6">
+                                    <div class="form-controller">
+                                        <label>Remarks</label>
+                                        <input type="text" formControlName="remarks" placeholder="Enter remarks"><u></u>
+                                        <em>Please enter remarks here</em>
+                                    </div><!--.form-control-->
+                                    <div class="alert alert-danger" *ngIf="lookupCodeTypeForm.controls['remarks'].hasError('required') && lookupCodeTypeForm.controls['remarks'].touched">
+                                        Please enter field length here
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(lookupCodeTypeForm.value)">Submit</button>
+                                    </div><!--.form-footer-->
+                                </div><!--.col-12-->
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+<div id="modal-sample" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <h5 class="modal-title h4">Large modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button> -->
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>LookUp Code </h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <form [formGroup]="lookupCodeForm">
+                        <div class="row form-group">
+
+                            <!-- <input type="hidden" formControlName="musrcode">
+                            <input type="hidden" formControlName="mregdevicemacid"> -->
+                            
+                            <div class="col-12 col-md-6">
+                                <div class="form-controller control-mandatory">
+                                    <label>Look Up Code</label>
+                                    <input type="text" formControlName="mcode" placeholder="Enter code"><u></u>
+                                    <em>Please enter look up code here</em>
+                                </div><!--.form-control-->
+                                <div class="alert alert-danger" *ngIf="lookupCodeForm.controls['mcode'].hasError('required') && lookupCodeForm.controls['mcode'].touched">
+                                    Please enter look up code here
+                                </div>
+                                <div class="alert alert-danger" *ngIf="lookupCodeForm.controls['mcode'].hasError('pattern') && lookupCodeForm.controls['mcode'].touched">
+                                    Please enter numbers only
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-controller control-mandatory">
+                                    <label>Description</label>
+                                    <input type="text" formControlName="description" placeholder="Enter description"><u></u>
+                                    <em>Please enter description here</em>
+                                </div><!--.form-control-->
+                                <div class="alert alert-danger" *ngIf="lookupCodeForm.controls['description'].hasError('required') && lookupCodeForm.controls['description'].touched">
+                                    Please enter look up code here
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="row">
+                            <div class="col-12">
+                                <div class="form-footer text-right">
+                                    <button class="button" (click)="onSubmit(lookupCodeForm.value)">Submit</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </form>
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="button">Submit</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->
+
+<div id="modal-sample1" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <h5 class="modal-title h4">Large modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button> -->
+                <!-- <div class="mh-top">
+                    <h6>Page Name</h6>
+                </div>.mt-top -->
+                <div class="mh-bottom">
+                    <div class="row">
+                        <div class="col-2"></div><!--.col-2-->
+                        <div class="col-8">
+                            <h4>LookUp Code</h4>
+                        </div><!--.col-8-->
+                        <div class="col-2">
+                            <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                        </div><!--.col-2-->
+                    </div><!--.row-->
+                </div><!--.mh-bottom-->
+            </div><!--.modal-header-->
+            <div class="modal-body">
+                <div class="modal-overflow">
+                    <div class="table-box">
+                        <div class="table-responsivebox">
+                            <div class="tableresponsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@fat</td>
+                                            <td>
+                                                <a href="javascript:;" class="viewmorebutton"><span class="icon-back"></span>Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>
+                                                <a href="javascript:;" class="viewmorebutton"><span class="icon-back"></span>Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>
+                                                <a href="javascript:;" class="viewmorebutton"><span class="icon-back"></span>Edit</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!--.restable-box-->
+                        </div><!--.table-responsivebox-->
+                    </div><!--.table-box-->
+                </div><!--.modal-overflow-->
+            </div><!--.modal-body-->
+            <div class="modal-footer">
+                <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="button">Proceed</button>
+            </div><!--.modal-footer-->
+        </div><!--.modal-content-->
+    </div><!--.modal-dialog-->
+</div><!--.modal-->

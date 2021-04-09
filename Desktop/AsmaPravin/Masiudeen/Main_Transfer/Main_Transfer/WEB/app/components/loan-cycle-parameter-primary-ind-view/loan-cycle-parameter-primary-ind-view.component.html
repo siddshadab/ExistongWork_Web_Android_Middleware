@@ -1,0 +1,371 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/loan-cycle-parameter-primary-view">{{ 'HOME.LOAN_CYCLE' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <div class="category">
+                            <div class="row">
+                                <div class="col-6">{{ 'HOME.PRIMARY_LOAN_CYCLE' | translate }}</div>
+                                <div class="col-6 text-right">
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" />
+                                    </div>
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.delete == 1" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" />
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="loanCycleParPriEditForm" >
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.BRANCH_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.loanCycleParameterPrimaryCompositeEntity.mlbrcode | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mlbrcode">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of branchDropdownData" value="{{data.mpbrcode}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mlbrcode'].hasError('required') && (loanCycleParPriEditForm.controls['mlbrcode'].dirty || loanCycleParPriEditForm.controls['mlbrcode'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.LOAN_CYCLE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.loanCycleDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+                                            <select formControlName="mloancycle">
+                                                <option value="Select">Select [ 909060 ]</option>
+                                                <option *ngFor="let data of loanCycleLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mloancycle'].hasError('required') && (loanCycleParPriEditForm.controls['mloancycle'].dirty || loanCycleParPriEditForm.controls['mloancycle'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.GROUP_TYPE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.groupTypeDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mgrtype">
+                                                <option value="Select">Select [ 1076 ]</option>
+                                                <option *ngFor="let data of groupTypeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mgrtype'].hasError('required') && (loanCycleParPriEditForm.controls['mgrtype'].dirty || loanCycleParPriEditForm.controls['mgrtype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.GROUP_CYCLE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.groupCycleDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mgrpcycyn">
+												<option value="Select">Select [ 30125 ]</option>
+												<option *ngFor="let data of groupCycleLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mgrpcycyn'].hasError('required') && (loanCycleParPriEditForm.controls['mgrpcycyn'].dirty || loanCycleParPriEditForm.controls['mgrpcycyn'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.CUSTOMER_TYPE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.customerTypeDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mcusttype">
+                                                <option value="Select">Select [ 1060 ]</option>
+                                                <option *ngFor="let data of customerTypeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mcusttype'].hasError('required') && (loanCycleParPriEditForm.controls['mcusttype'].dirty || loanCycleParPriEditForm.controls['mcusttype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.EFFECTIVE_DATE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.loanCycleParameterPrimaryCompositeEntity.meffdate | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="meffdate" placeholder="Enter date" bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', adaptivePosition: true }"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['meffdate'].hasError('required') && (loanCycleParPriEditForm.controls['meffdate'].dirty || loanCycleParPriEditForm.controls['meffdate'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.PRODUCT_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.loanCycleParameterPrimaryCompositeEntity.mprdcd | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mprdcd">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of productDropdownData" value="{{data.mprdCd}}">{{data.mname}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mprdcd'].hasError('required') && (loanCycleParPriEditForm.controls['mprdcd'].dirty || loanCycleParPriEditForm.controls['mprdcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                
+                            </div>
+
+                            <div class="category">{{ 'HOME.FREQUENCY' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <div class="row form-group">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.FREQUENCY' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.frequencyDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mfrequency">
+                                                <option value="Select">Select  [ 909019 ]</option>
+                                                <option *ngFor="let data of frequencyLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mfrequency'].hasError('required') && (loanCycleParPriEditForm.controls['mfrequency'].dirty || loanCycleParPriEditForm.controls['mfrequency'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.GENDER' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.genderDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mgender">
+												<option value="Select">Select [ 1139 ]</option>
+												<option *ngFor="let data of genderLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                            
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.INCREMENT_AMOUNT' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mincramount | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mincramount" placeholder="Enter increment amount"><u></u>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.LOGIC' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.logicDesc | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mlogic">
+												<option value="Select">Select [ 909061 ]</option>
+												<option *ngFor="let data of groupCycleLogicLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.MAX_AGE_GROUP' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mmaxage | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmaxage" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxage'].hasError('pattern') && (loanCycleParPriEditForm.controls['mmaxage'].dirty || loanCycleParPriEditForm.controls['mmaxage'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxage'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mmaxage'].dirty || loanCycleParPriEditForm.controls['mmaxage'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.MIN_AGE_GROUP' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mminage | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mminage" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminage'].hasError('pattern') && (loanCycleParPriEditForm.controls['mminage'].dirty || loanCycleParPriEditForm.controls['mminage'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminage'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mminage'].dirty || loanCycleParPriEditForm.controls['mminage'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.MAX_NO_OF_GROUP_MEMBERS' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mmaxnoofgrpmems | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmaxnoofgrpmems" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].hasError('required') && (loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].dirty || loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].hasError('pattern') && (loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].dirty || loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].dirty || loanCycleParPriEditForm.controls['mmaxnoofgrpmems'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.MIN_NO_OF_GROUP_MEMBERS' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mminnoofgrpmems | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mminnoofgrpmems" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminnoofgrpmems'].hasError('required') && (loanCycleParPriEditForm.controls['mminnoofgrpmems'].dirty || loanCycleParPriEditForm.controls['mminnoofgrpmems'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminnoofgrpmems'].hasError('pattern') && (loanCycleParPriEditForm.controls['mminnoofgrpmems'].dirty || loanCycleParPriEditForm.controls['mminnoofgrpmems'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminnoofgrpmems'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mminnoofgrpmems'].dirty || loanCycleParPriEditForm.controls['mminnoofgrpmems'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.MAX_PERIOD' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mmaxperiod | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmaxperiod" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxperiod'].hasError('pattern') && (loanCycleParPriEditForm.controls['mmaxperiod'].dirty || loanCycleParPriEditForm.controls['mmaxperiod'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxperiod'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mmaxperiod'].dirty || loanCycleParPriEditForm.controls['mmaxperiod'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.MIN_PERIOD' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mminperiod | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mminperiod" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminperiod'].hasError('pattern') && (loanCycleParPriEditForm.controls['mminperiod'].dirty || loanCycleParPriEditForm.controls['mminperiod'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminperiod'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mminperiod'].dirty || loanCycleParPriEditForm.controls['mminperiod'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.MULTIPLE_FACTOR' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mmultiplefactor | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mmultiplefactor" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmultiplefactor'].hasError('pattern') && (loanCycleParPriEditForm.controls['mmultiplefactor'].dirty || loanCycleParPriEditForm.controls['mmultiplefactor'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmultiplefactor'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mmultiplefactor'].dirty || loanCycleParPriEditForm.controls['mmultiplefactor'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.NO_OF_INSTANCE_CYCLE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mnoofinstlclosure | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mnoofinstlclosure" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mnoofinstlclosure'].hasError('pattern') && (loanCycleParPriEditForm.controls['mnoofinstlclosure'].dirty || loanCycleParPriEditForm.controls['mnoofinstlclosure'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mnoofinstlclosure'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mnoofinstlclosure'].dirty || loanCycleParPriEditForm.controls['mnoofinstlclosure'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass}}">
+                                        <label>{{ 'HOME.TENTOR' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{primaryData.mtenor | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mtenor" placeholder="Enter number"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mtenor'].hasError('pattern') && (loanCycleParPriEditForm.controls['mtenor'].dirty || loanCycleParPriEditForm.controls['mtenor'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mtenor'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mtenor'].dirty || loanCycleParPriEditForm.controls['mtenor'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                
+                            </div><!--.row-->
+
+                            <div class="category" *ngIf="secondaryData.length">{{ 'HOME.SECONDARY_LOAN_CYCLE' | translate }}</div>
+                            <div class="vspacer20"></div>
+
+                            <div class="row form-group" *ngIf="editActivated">
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.RULE_TYPE' | translate }}</label>
+                                        <div>
+											<select formControlName="mruletype">
+                                                <option value="Select">Select [ 75559 ]</option>
+                                                <option *ngFor="let data of ruleTypeLookup" value="{{data.lookupComposite.mcode}}">{{data.mcodedesc}}</option>
+											</select><u></u>
+                                        </div>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mruletype'].hasError('required') && (loanCycleParPriEditForm.controls['mruletype'].dirty || loanCycleParPriEditForm.controls['mruletype'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.UPTO_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="muptoamount" placeholder="{{ 'HOME.UPTO_AMOUNT' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['muptoamount'].hasError('required') && (loanCycleParPriEditForm.controls['muptoamount'].dirty || loanCycleParPriEditForm.controls['muptoamount'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['muptoamount'].hasError('pattern') && (loanCycleParPriEditForm.controls['muptoamount'].dirty || loanCycleParPriEditForm.controls['muptoamount'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['muptoamount'].hasError('maxlength') && (loanCycleParPriEditForm.controls['muptoamount'].dirty || loanCycleParPriEditForm.controls['muptoamount'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MIN_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mminamount" placeholder="{{ 'HOME.MIN_AMOUNT' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminamount'].hasError('required') && (loanCycleParPriEditForm.controls['mminamount'].dirty || loanCycleParPriEditForm.controls['mminamount'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminamount'].hasError('pattern') && (loanCycleParPriEditForm.controls['mminamount'].dirty || loanCycleParPriEditForm.controls['mminamount'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mminamount'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mminamount'].dirty || loanCycleParPriEditForm.controls['mminamount'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.MAX_AMOUNT' | translate }}</label>
+                                        <input type="text" formControlName="mmaxamount" placeholder="{{ 'HOME.MAX_AMOUNT' | translate }}"><u></u>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxamount'].hasError('required') && (loanCycleParPriEditForm.controls['mmaxamount'].dirty || loanCycleParPriEditForm.controls['mmaxamount'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxamount'].hasError('pattern') && (loanCycleParPriEditForm.controls['mmaxamount'].dirty || loanCycleParPriEditForm.controls['mmaxamount'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                        <em *ngIf="loanCycleParPriEditForm.controls['mmaxamount'].hasError('maxlength') && (loanCycleParPriEditForm.controls['mmaxamount'].dirty || loanCycleParPriEditForm.controls['mmaxamount'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <button class="button mr-2" *ngIf=" updaterow" (click)="updateRecords(loanCycleParPriEditForm.value)">{{ 'ACTION.UPDATE' | translate }}</button>
+                                    <button class="button" *ngIf="showcodetype && !updaterow"  (click)="addNewRecords(loanCycleParPriEditForm.value)" >{{ 'ACTION.ADD' | translate }}</button>
+                                    <button class="linkbutton" (click)=" removeRecords(loanCycleParPriEditForm.value)" *ngIf=" updaterow">{{ 'ACTION.REMOVE' | translate }}</button>
+                                    <!-- <button class="button" (click)="onSubmit(loanCycleParPriEditForm.value)">{{ 'ACTION.ADD' | translate }}</button> -->
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <div class="datatable-box" *ngIf="secondaryData.length">
+                                         <div class=" table-responsivebox">                              
+                                            <table id="dt-sample" class="table table-hover previewTable">                                        
+                                                <thead>
+                                                    <tr>  
+                                                        <th scope="col" *ngIf="editActivated"></th> 
+                                                        <th scope="col">{{ 'HOME.FREQUENCY' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.RULE_TYPE' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.UPTO_AMOUNT' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.MIN_AMOUNT' | translate }}</th>
+                                                        <th scope="col">{{ 'HOME.MAX_AMOUNT' | translate }}</th>                                   
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr *ngFor="let list of secondaryData; let i = index" (dblclick)="dataNavigate(list)">
+                                                    <td *ngIf="editActivated">
+                                                        <label class="selection">
+                                                            <input type="checkbox" [(ngModel)]="list.checked" [ngModelOptions]="{standalone: true}" (change)="editfield(list.checked,list,i)" [disabled]="selectedItem != i && tempcond == true" >
+                                                        </label>
+                                                    </td>    
+                                                    <td>{{list.frequencyDesc}}</td>
+                                                    <td>{{list.ruleTypeDesc}}</td>
+                                                    <td>{{list.muptoamount}}</td>
+                                                    <td>{{list.mminamount}}</td>                                          
+                                                    <td>{{list.mmaxamount}}</td>
+                                                        
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                               
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="row form-footer">
+                                <div class="col-6" *ngIf="!editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/loan-cycle-parameter-primary-view">Back</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" (click)="backToView();">Back</button>
+                                    </div>
+                                </div>
+                                <div *ngIf="editActivated && primaryUpdate" class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(loanCycleParPriEditForm.value)">Update</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->

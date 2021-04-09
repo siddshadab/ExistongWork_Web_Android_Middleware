@@ -1,0 +1,183 @@
+<div class="breadcrumb">
+        <ul class="lst-breadcrumb">
+            <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/loan-level-view">{{ 'HOME.LOAN_LEVEL_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+        </ul><!--.lst-breadcrumb-->
+    </div>
+    <div class="vspacer20"></div>
+    
+    <main class="main-container">
+        <div class="in-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="in-mcontainer">
+                            <div class="category">{{ 'HOME.LOAN_LEVEL_DETAILS' | translate }}</div>
+                            <div class="vspacer20"></div>
+                            <form [formGroup]="loanLvlForm">
+                                <div class="row form-group">
+                                    <!-- <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.MREF_NO' | translate }}</label>
+                                            <input type="text" formControlName="mrefno" placeholder="Enter mref number"><u></u>
+                                            <em *ngIf="loanLvlForm.controls['mrefno'].hasError('required') && (loanLvlForm.controls['mrefno'].dirty || loanLvlForm.controls['mrefno'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mrefno'].hasError('pattern') && (loanLvlForm.controls['mrefno'].dirty || loanLvlForm.controls['mrefno'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mrefno'].hasError('maxlength') && (loanLvlForm.controls['mrefno'].dirty || loanLvlForm.controls['mrefno'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.BUTTON_ID' | translate }}</label>
+                                            <input type="text" formControlName="mbuttonid" placeholder="{{ 'HOME.BUTTON_ID' | translate }}"><u></u>
+                                            <em *ngIf="loanLvlForm.controls['mbuttonid'].hasError('required') && (loanLvlForm.controls['mbuttonid'].dirty || loanLvlForm.controls['mbuttonid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mbuttonid'].hasError('pattern') && (loanLvlForm.controls['mbuttonid'].dirty || loanLvlForm.controls['mbuttonid'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mbuttonid'].hasError('maxlength') && (loanLvlForm.controls['mbuttonid'].dirty || loanLvlForm.controls['mbuttonid'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>  
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.BUTTON_NAME' | translate }}</label>
+                                            <input type="text" formControlName="mbuttonname" placeholder="{{ 'HOME.BUTTON_NAME' | translate }}"><u></u>
+                                            <em *ngIf="loanLvlForm.controls['mbuttonname'].hasError('required') && (loanLvlForm.controls['mbuttonname'].dirty || loanLvlForm.controls['mbuttonname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mbuttonname'].hasError('maxlength') && (loanLvlForm.controls['mbuttonname'].dirty || loanLvlForm.controls['mbuttonname'].touched)">{{ 'VALIDATION.MAX_30' | translate }}</em>
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.PRODUCT_CODE' | translate }}</label>
+                                            <!-- <input type="text" formControlName="mprdcd" placeholder="{{ 'HOME.PRODUCT_CODE' | translate }}"><u></u> -->
+                                            <input type="text" formControlName="mprdcd" placeholder="{{ 'HOME.PRODUCT_CODE' | translate }}" [attr.disabled]="true"><u></u>
+                                            <a href="javascript:;" data-toggle="modal" data-target="#modal-sample-2"><button class="button sm over-input">Search</button></a>
+                                            <em *ngIf="loanLvlForm.controls['mprdcd'].hasError('required') && (loanLvlForm.controls['mprdcd'].dirty || loanLvlForm.controls['mprdcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <!-- <em *ngIf="loanLvlForm.controls['mprdcd'].hasError('maxlength') && (loanLvlForm.controls['mprdcd'].dirty || loanLvlForm.controls['mprdcd'].touched)">{{ 'VALIDATION.MAX_8' | translate }}</em> -->
+                                        </div><!--.form-control-->
+                                    </div>                             
+                                    <!-- <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.PRODUCT_NAME' | translate }}</label>
+                                            <input type="text" formControlName="mproductname" placeholder="{{ 'HOME.PRODUCT_NAME' | translate }}"><u></u>
+                                            <em *ngIf="loanLvlForm.controls['mproductname'].hasError('required') && (loanLvlForm.controls['mproductname'].dirty || loanLvlForm.controls['mproductname'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mproductname'].hasError('maxlength') && (loanLvlForm.controls['mproductname'].dirty || loanLvlForm.controls['mproductname'].touched)">{{ 'VALIDATION.MAX_75' | translate }}</em>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.STAGE_ID' | translate }}</label>
+                                            <input type="text" formControlName="mstageid" placeholder="{{ 'HOME.STAGE_ID' | translate }}"><u></u>
+                                            <em *ngIf="loanLvlForm.controls['mstageid'].hasError('required') && (loanLvlForm.controls['mstageid'].dirty || loanLvlForm.controls['mstageid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mstageid'].hasError('pattern') && (loanLvlForm.controls['mstageid'].dirty || loanLvlForm.controls['mstageid'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['mstageid'].hasError('maxlength') && (loanLvlForm.controls['mstageid'].dirty || loanLvlForm.controls['mstageid'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em> 
+                                        </div><!--.form-control-->
+                                    </div>
+                                    
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.ORDER_ID' | translate }}</label>
+                                            <input type="text" formControlName="morderid" placeholder="{{ 'HOME.ORDER_ID' | translate }}"><u></u>
+                                            <em *ngIf="loanLvlForm.controls['morderid'].hasError('required') && (loanLvlForm.controls['morderid'].dirty || loanLvlForm.controls['morderid'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['morderid'].hasError('pattern') && (loanLvlForm.controls['morderid'].dirty || loanLvlForm.controls['morderid'].touched)">{{ 'VALIDATION.NUMBERS' | translate }}</em>
+                                            <em *ngIf="loanLvlForm.controls['morderid'].hasError('maxlength') && (loanLvlForm.controls['morderid'].dirty || loanLvlForm.controls['morderid'].touched)">{{ 'VALIDATION.MAX_2' | translate }}</em>
+                                        </div><!--.form-control-->
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-controller control-mandatory">
+                                            <label>{{ 'HOME.MANDATORY' | translate }}</label>
+                                            <div>
+                                                <select formControlName="mismandatory">
+                                                    <option value="Select" [selected]="true">Select</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select><u></u>
+                                            </div>
+                                            <em *ngIf="loanLvlForm.controls['mismandatory'].hasError('required') && (loanLvlForm.controls['mismandatory'].dirty || loanLvlForm.controls['mismandatory'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>                                        
+                                        </div>
+                                    </div>    
+                                </div>                            
+                                <div class="row form-footer">
+                                    <div class="col-6">
+                                        <div class="text-left">
+                                            <button class="linkbutton" routerLink="/loan-level-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-footer text-right">
+                                            <button class="button" (click)="onSubmit(loanLvlForm.value)">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                        </div>
+                                    </div>
+                                </div><!--.row-->
+                            </form>
+    
+                        </div><!--.in-mcontainer-->
+                    </div><!--.col-12-->
+                </div><!--.row-->
+            </div><!--.container-fluid-->
+        </div><!--.in-main-->
+    </main><!--.main-container-->
+    <!-- ================ Main Page Content - End   ==============-->
+
+    <div id="modal-sample-2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <div class="mh-top">
+                        <h6>Page Name</h6>
+                    </div>.mt-top -->
+                    <div class="mh-bottom">
+                        <div class="row">
+                            <div class="col-2"></div><!--.col-2-->
+                            <div class="col-8">
+                                <h4>Pick List</h4>
+                            </div><!--.col-8-->
+                            <div class="col-2">
+                                <a href="javascript:;" class="mh-cross" data-dismiss="modal"></a>
+                            </div><!--.col-2-->
+                        </div><!--.row-->
+                    </div><!--.mh-bottom-->
+                </div><!--.modal-header-->
+                <div class="modal-body">
+                    <div class="modal-overflow">
+                        <div class="datatable-box">
+                            <div class="table-responsivebox">
+                                <table id="dt-sample" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">{{ 'HOME.CODE' | translate }}</th>
+                                            <th scope="col">{{ 'HOME.DESCRIPTION' | translate }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="highlight" *ngFor="let list of productDropdownData; let i = index" (click)="productCodeSelected(list.mprdCd,list.mname,i);" [class.active]="i == highlightRowProduct">
+                                            <td>{{list.mprdCd}}</td>
+                                            <td>{{list.mname}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- <div class="dt-extras">
+                                <div class="dt-exports">
+                                    <em>Export to :<span class="chevron"></span></em>
+                                    <button class="linkbutton exp-excel">Excel <b>(.xlsx)</b></button>
+                                    <button class="linkbutton exp-pdf">Pdf <b>(.pdf)</b></button>
+                                    <button class="linkbutton exp-word">word <b>(.docx)</b></button>
+                                    <button class="linkbutton exp-xml">XML <b>(.xml)</b></button>
+                                    <button class="linkbutton exp-csv">csv <b>(.csv)</b></button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div><!--.modal-overflow-->
+                </div><!--.modal-body-->
+                <div class="modal-footer">
+                    <button type="button" class="button secondary" data-dismiss="modal">Cancel</button>
+                    <button *ngIf="proceedButtonProduct" type="button" class="button" (click)="proceedActionProduct();">Proceed</button>
+                </div><!--.modal-footer-->
+            </div><!--.modal-content-->
+        </div><!--.modal-dialog-->
+    </div><!--.modal-->
+    
+    
+    

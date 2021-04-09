@@ -1,0 +1,91 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master</a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/sub-district-master-view">{{ 'HOME.SUB_DISTRICT_MASTER' | translate }}</a>
+        </li>
+        <li class="current">{{ 'ACTION.TEXT_ADD' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <!--Alert Start-->
+                        <div *ngIf="!code_exist" class="alert alert-danger code-exist-alert" role="alert">
+                            {{code_exist_message}}
+                        </div>
+                        <!--Alert End-->
+                        <div class="category">{{ 'HOME.SUB_DISTRICT_DETAILS' | translate }}</div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="subDistrictForm" (ngSubmit)="onSubmit(subDistrictForm.value)">
+                            <div class="row form-group">
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.STATE_CODE' | translate }}</label>
+                                        <div>
+											<select formControlName="mstatecd"  #stateSelect (change)="getDistrictByState(stateSelect.value);">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of stateDropdownData" value="{{data.mstatecd}}">{{data.mstatedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="subDistrictForm.controls['mstatecd'].hasError('required') && (subDistrictForm.controls['mstatecd'].dirty || subDistrictForm.controls['mstatecd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.DISTRICT_CODE' | translate }}</label>
+                                        <div>
+											<select formControlName="mdistcd">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of districtDropdownData" value="{{data.mdistcd}}">{{data.mdistdesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="subDistrictForm.controls['mdistcd'].hasError('required') && (subDistrictForm.controls['mdistcd'].dirty || subDistrictForm.controls['mdistcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.SUB_DISTRICT_CODE' | translate }}</label>
+                                        <input type="text" formControlName="mplacecd" placeholder="Enter {{ 'HOME.SUB_DISTRICT_CODE' | translate }}"><u></u>
+                                        <em *ngIf="subDistrictForm.controls['mplacecd'].hasError('required') && (subDistrictForm.controls['mplacecd'].dirty || subDistrictForm.controls['mplacecd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-controller control-mandatory">
+                                        <label>{{ 'HOME.SUB_DISTRICT_NAME' | translate }}</label>
+                                        <input type="text" formControlName="mplacecddesc" placeholder="Enter {{ 'HOME.SUB_DISTRICT_NAME' | translate }}"><u></u>
+                                        <em *ngIf="subDistrictForm.controls['mplacecddesc'].hasError('required') && (subDistrictForm.controls['mplacecddesc'].dirty || subDistrictForm.controls['mplacecddesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-control-->
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/sub-district-master-view">{{ 'ACTION.CANCEL' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button">{{ 'ACTION.SUBMIT' | translate }}</button>
+                                    </div><!--.form-footer-->
+                                </div><!--.col-12-->
+                            </div><!--.row-->
+                        </form>
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
+
+

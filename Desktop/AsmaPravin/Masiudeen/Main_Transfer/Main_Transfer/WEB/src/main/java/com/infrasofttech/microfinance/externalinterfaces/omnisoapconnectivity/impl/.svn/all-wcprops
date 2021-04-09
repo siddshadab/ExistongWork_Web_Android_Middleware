@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/impl
+END
+TOmniServiceSoapStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/impl/TOmniServiceSoapStub.java
+END
+TOmniServiceLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/impl/TOmniServiceLocator.java
+END
+TOmniServiceSoap12Stub.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/impl/TOmniServiceSoap12Stub.java
+END
+TOmniServiceSoapProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/eco_mfi/!svn/ver/2452/trunk/eCOWeb/microfinance_V1/src/main/java/com/infrasofttech/microfinance/externalinterfaces/omnisoapconnectivity/impl/TOmniServiceSoapProxy.java
+END

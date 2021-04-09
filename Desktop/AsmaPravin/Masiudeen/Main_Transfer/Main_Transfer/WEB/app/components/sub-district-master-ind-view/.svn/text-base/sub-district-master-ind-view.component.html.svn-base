@@ -1,0 +1,112 @@
+<div class="breadcrumb">
+    <ul class="lst-breadcrumb">
+        <!-- <li>
+            <a href="javascript:;">Master/a>
+        </li> -->
+        <li>
+            <a href="javascript:;" routerLink="/sub-district-master-view">{{ 'HOME.SUB_DISTRICT_MASTER' | translate }}</a>
+        </li>
+        <li class="current" *ngIf="!editActivated">{{ 'ACTION.VIEW' | translate }}</li>
+        <li class="current" *ngIf="editActivated">{{ 'ACTION.EDIT' | translate }}</li>
+    </ul><!--.lst-breadcrumb-->
+</div>
+<div class="vspacer20"></div>
+<main class="main-container">
+    <div class="in-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="in-mcontainer">
+                        <div class="category">
+                            <div class="row">
+                                <div class="col-6">{{ 'HOME.SUB_DISTRICT_DETAILS' | translate }}</div>
+                                <div class="col-6 text-right">
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.authoritye == 1" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" />
+                                        <!-- <img *ngIf="!editActivated" (click)="edit();" src="../../../assets/images/icon/Edit2x.png" /> -->
+                                    </div>
+                                    <div class="action-img">
+                                        <img *ngIf="!editActivated && rightsData.delete == 1" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" />
+                                        <!-- <img *ngIf="!editActivated" (click)="delete();" src="../../../assets/images/icon/Delete2x.png" /> -->
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="vspacer20"></div>
+                        <form [formGroup]="subDistrictViewForm" >
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.STATE_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{subDistrictData.mstatecd | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+                                            <select formControlName="mstatecd">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of stateDropdownData" value="{{data.mstatecd}}">{{data.mstatedesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="subDistrictViewForm.controls['mstatecd'].hasError('required') && (subDistrictViewForm.controls['mstatecd'].dirty || subDistrictViewForm.controls['mstatecd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.DISTRICT_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{subDistrictData.mdistcd | Custom}}</h6>
+                                        <div *ngIf="editActivated">
+											<select formControlName="mdistcd">
+                                                <option value="Select">Select</option>
+                                                <option *ngFor="let data of districtDropdownData" value="{{data.mdistcd}}">{{data.mdistdesc}}</option>
+                                            </select><u></u>
+                                        </div>
+                                        <em *ngIf="subDistrictViewForm.controls['mdistcd'].hasError('required') && (subDistrictViewForm.controls['mdistcd'].dirty || subDistrictViewForm.controls['mdistcd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.SUB_DISTRICT_CODE' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{subDistrictData.mplacecd | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mplacecd" placeholder="Enter {{ 'HOME.SUB_DISTRICT_CODE' | translate }}"><u></u>
+                                        <em *ngIf="subDistrictViewForm.controls['mplacecd'].hasError('required') && (subDistrictViewForm.controls['mplacecd'].dirty || subDistrictViewForm.controls['mplacecd'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="{{formClass +' '+controlMandate}}">
+                                        <label>{{ 'HOME.SUB_DISTRICT_NAME' | translate }}</label>
+                                        <h6 *ngIf="!editActivated">{{subDistrictData.mplacecddesc | Custom}}</h6>
+                                        <input *ngIf="editActivated" type="text" formControlName="mplacecddesc" placeholder="Enter {{ 'HOME.SUB_DISTRICT_NAME' | translate }}"><u></u>
+                                        <em *ngIf="subDistrictViewForm.controls['mplacecddesc'].hasError('required') && (subDistrictViewForm.controls['mplacecddesc'].dirty || subDistrictViewForm.controls['mplacecddesc'].touched)">{{ 'VALIDATION.REQUIRED' | translate }}</em>
+                                    </div><!--.form-readcontroller-->
+                                </div><!--.col-12 col-md-4 col-lg-3-->
+                                             
+                            </div>
+
+                            <div class="row form-footer">
+                                <div class="col-6" *ngIf="!editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" routerLink="/sub-district-master-view">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-6" *ngIf="editActivated">
+                                    <div class="text-left">
+                                        <button class="linkbutton" (click)="backToView();">{{ 'ACTION.BACK' | translate }}</button>
+                                    </div>
+                                </div>
+                                <div *ngIf="editActivated" class="col-6">
+                                    <div class="form-footer text-right">
+                                        <button class="button" (click)="onSubmit(subDistrictViewForm.value)">{{ 'ACTION.UPDATE' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div><!--.row-->
+
+                        </form>
+
+                    </div><!--.in-mcontainer-->
+                </div><!--.col-12-->
+            </div><!--.row-->
+        </div><!--.container-fluid-->
+    </div><!--.in-main-->
+</main><!--.main-container-->
+<!-- ================ Main Page Content - End   ==============-->
